@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.TargetPlatform.cpp.obj": [
+			"DeviceBrowserDefaultPlatformWidgetCreator.cpp.obj",
+			"InstalledPlatformInfo.cpp.obj",
+			"SDeviceBrowserDefaultPlatformAddWidget.cpp.obj",
+			"TargetPlatformBase.cpp.obj",
+			"TargetPlatformManagerModule.cpp.obj"
+		]
+	}
+}

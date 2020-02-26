@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CollectionManager.cpp.obj": [
+			"Collection.cpp.obj",
+			"CollectionManager.cpp.obj",
+			"CollectionManagerModule.cpp.obj"
+		]
+	}
+}

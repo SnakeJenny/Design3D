@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Launch.cpp.obj": [
+			"Launch.cpp.obj",
+			"LaunchEngineLoop.cpp.obj",
+			"LaunchWindows.cpp.obj"
+		]
+	}
+}

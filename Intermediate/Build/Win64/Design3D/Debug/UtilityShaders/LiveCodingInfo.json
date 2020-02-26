@@ -1,0 +1,17 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.UtilityShaders.cpp.obj": [
+			"BuiltInRayTracingShaders.cpp.obj",
+			"ClearQuad.cpp.obj",
+			"ClearReplacementShaders.cpp.obj",
+			"LongGPUTask.cpp.obj",
+			"MediaShaders.cpp.obj",
+			"OculusShaders.cpp.obj",
+			"OneColorShader.cpp.obj",
+			"ResolveShader.cpp.obj",
+			"RGBAToYUV420Shader.cpp.obj",
+			"UtilityShaders.cpp.obj"
+		]
+	}
+}

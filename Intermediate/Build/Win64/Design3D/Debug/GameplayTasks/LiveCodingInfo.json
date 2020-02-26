@@ -1,0 +1,27 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.GameplayTasks.cpp.obj": [
+			"GameplayTask.cpp.obj",
+			"GameplayTaskOwnerInterface.cpp.obj",
+			"GameplayTaskResource.cpp.obj",
+			"GameplayTasksComponent.cpp.obj",
+			"GameplayTasksModule.cpp.obj",
+			"GameplayTask_ClaimResource.cpp.obj",
+			"GameplayTask_SpawnActor.cpp.obj",
+			"GameplayTask_TimeLimitedExecution.cpp.obj",
+			"GameplayTask_WaitDelay.cpp.obj"
+		],
+		"Module.GameplayTasks.gen.cpp.obj": [
+			"GameplayTask.gen.cpp.obj",
+			"GameplayTask_ClaimResource.gen.cpp.obj",
+			"GameplayTask_SpawnActor.gen.cpp.obj",
+			"GameplayTask_TimeLimitedExecution.gen.cpp.obj",
+			"GameplayTask_WaitDelay.gen.cpp.obj",
+			"GameplayTaskOwnerInterface.gen.cpp.obj",
+			"GameplayTaskResource.gen.cpp.obj",
+			"GameplayTasks.init.gen.cpp.obj",
+			"GameplayTasksComponent.gen.cpp.obj"
+		]
+	}
+}

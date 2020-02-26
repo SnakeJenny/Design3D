@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ChaosSolvers.cpp.obj": [
+			"ChaosSolversModule.cpp.obj",
+			"Dispatcher.cpp.obj",
+			"PersistentTask.cpp.obj",
+			"PhysicsProxy.cpp.obj",
+			"PBDRigidsSolver.cpp.obj"
+		]
+	}
+}

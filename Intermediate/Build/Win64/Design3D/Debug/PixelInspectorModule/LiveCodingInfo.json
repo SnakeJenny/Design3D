@@ -1,0 +1,17 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PixelInspectorModule.cpp.obj": [
+			"PixelInspector.cpp.obj",
+			"PixelInspectorDetailsCustomization.cpp.obj",
+			"PixelInspectorModule.cpp.obj",
+			"PixelInspectorResult.cpp.obj",
+			"PixelInspectorStyle.cpp.obj",
+			"PixelInspectorView.cpp.obj"
+		],
+		"Module.PixelInspectorModule.gen.cpp.obj": [
+			"PixelInspectorModule.init.gen.cpp.obj",
+			"PixelInspectorView.gen.cpp.obj"
+		]
+	}
+}

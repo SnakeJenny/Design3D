@@ -1,0 +1,22 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AnimationBlueprintEditor.cpp.obj": [
+			"AnimationBlueprintEditor.cpp.obj",
+			"AnimationBlueprintEditorMode.cpp.obj",
+			"AnimationBlueprintEditorModule.cpp.obj",
+			"AnimationGraphFactory.cpp.obj",
+			"SAnimationGraphNode.cpp.obj",
+			"SGraphNodeAnimationResult.cpp.obj",
+			"SGraphNodeLayeredBoneBlend.cpp.obj",
+			"SGraphNodeSequencePlayer.cpp.obj",
+			"SGraphNodeStateMachineInstance.cpp.obj",
+			"SGraphPinPose.cpp.obj",
+			"SGraphNodeAnimState.cpp.obj",
+			"SGraphNodeAnimStateEntry.cpp.obj",
+			"SGraphNodeAnimTransition.cpp.obj",
+			"AnimGraphConnectionDrawingPolicy.cpp.obj",
+			"StateMachineConnectionDrawingPolicy.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CinematicCamera.cpp.obj": [
+			"CameraRig_Crane.cpp.obj",
+			"CameraRig_Rail.cpp.obj",
+			"CineCameraActor.cpp.obj",
+			"CineCameraComponent.cpp.obj",
+			"CinematicCameraModule.cpp.obj"
+		],
+		"Module.CinematicCamera.gen.cpp.obj": [
+			"CameraRig_Crane.gen.cpp.obj",
+			"CameraRig_Rail.gen.cpp.obj",
+			"CineCameraActor.gen.cpp.obj",
+			"CineCameraComponent.gen.cpp.obj",
+			"CinematicCamera.init.gen.cpp.obj"
+		]
+	}
+}

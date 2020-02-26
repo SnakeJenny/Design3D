@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AnalyticsET.cpp.obj": [
+			"AnalyticsET.cpp.obj",
+			"HttpServiceTracker.cpp.obj",
+			"IAnalyticsProviderET.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.RenderCore.cpp.obj": [
+			"CommonRenderResources.cpp.obj",
+			"DynamicBufferAllocator.cpp.obj",
+			"GlobalShader.cpp.obj",
+			"PixelShaderUtils.cpp.obj",
+			"RenderCore.cpp.obj",
+			"RenderGraphBuilder.cpp.obj",
+			"RenderGraphResourcePool.cpp.obj",
+			"RenderGraphUtils.cpp.obj",
+			"RenderingThread.cpp.obj",
+			"RenderResource.cpp.obj",
+			"RenderTargetPool.cpp.obj",
+			"RenderUtils.cpp.obj",
+			"Shader.cpp.obj",
+			"ShaderCodeLibrary.cpp.obj",
+			"ShaderCore.cpp.obj",
+			"ShaderParameterMetadata.cpp.obj",
+			"ShaderParameters.cpp.obj",
+			"ShaderParameterStruct.cpp.obj",
+			"ShaderPipelineCache.cpp.obj",
+			"StaticBoundShaderState.cpp.obj",
+			"VertexFactory.cpp.obj",
+			"VisualizeTexture.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ChaosSolverEngine.cpp.obj": [
+			"ChaosSolver.cpp.obj",
+			"ChaosSolverActor.cpp.obj",
+			"ChaosSolverEnginePlugin.cpp.obj"
+		],
+		"Module.ChaosSolverEngine.gen.cpp.obj": [
+			"ChaosSolver.gen.cpp.obj",
+			"ChaosSolverActor.gen.cpp.obj",
+			"ChaosSolverEngine.init.gen.cpp.obj"
+		]
+	}
+}

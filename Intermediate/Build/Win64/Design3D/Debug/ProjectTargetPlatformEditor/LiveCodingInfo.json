@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ProjectTargetPlatformEditor.cpp.obj": [
+			"ProjectTargetPlatformEditorModule.cpp.obj",
+			"ProjectTargetPlatformEditorWidgets.cpp.obj",
+			"SProjectTargetPlatformSettings.cpp.obj"
+		]
+	}
+}

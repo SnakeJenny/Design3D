@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SourceCodeAccess.cpp.obj": [
+			"DefaultSourceCodeAccessor.cpp.obj",
+			"SourceCodeAccessModule.cpp.obj",
+			"SourceCodeAccessSettings.cpp.obj"
+		],
+		"Module.SourceCodeAccess.gen.cpp.obj": [
+			"SourceCodeAccess.init.gen.cpp.obj",
+			"SourceCodeAccessSettings.gen.cpp.obj"
+		]
+	}
+}

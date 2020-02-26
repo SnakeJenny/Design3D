@@ -1,0 +1,22 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Cascade.cpp.obj": [
+			"Cascade.cpp.obj",
+			"CascadeActions.cpp.obj",
+			"CascadeEmitterCanvasClient.cpp.obj",
+			"CascadeEmitterHitProxies.cpp.obj",
+			"CascadeModule.cpp.obj",
+			"CascadePreviewViewportClient.cpp.obj",
+			"SCascadeEmitterCanvas.cpp.obj",
+			"SCascadePreviewToolbar.cpp.obj",
+			"SCascadePreviewViewport.cpp.obj",
+			"ParticleSystemTests.cpp.obj"
+		],
+		"Module.Cascade.gen.cpp.obj": [
+			"Cascade.init.gen.cpp.obj",
+			"CascadeConfiguration.gen.cpp.obj",
+			"CascadeParticleSystemComponent.gen.cpp.obj"
+		]
+	}
+}

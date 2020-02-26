@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ScreenShotComparison.cpp.obj": [
+			"ScreenComparisonModel.cpp.obj",
+			"ScreenShotComparisonModule.cpp.obj",
+			"SAsyncImage.cpp.obj",
+			"SScreenComparisonRow.cpp.obj",
+			"SScreenShotBrowser.cpp.obj",
+			"SScreenShotImagePopup.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,11 @@
+﻿  Creating makefile for UE4Editor (UnrealBuildTool.exe is newer)
+  Parsing headers for UE4Editor
+    Running UnrealHeaderTool UE4Editor "D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UE4Editor\Debug\UE4Editor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors
+  Reflection code generated for UE4Editor in 20.6445147 seconds
+  Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.17763.0 SDK (D:\Windows Kits\10).
+  Building 884 actions with 8 processes...
+    [1/884] Module.NiagaraCore.gen.cpp
+    [2/884] Module.NiagaraCore.cpp
+    [3/884] PCH.WindowsMixedRealityHMD.cpp
+    [4/884] Module.Niagara.3_of_3.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.MakeFile.Targets(44,5): warning MSB5021: 终止任务可执行文件“cmd”及其子进程，因为已取消生成。

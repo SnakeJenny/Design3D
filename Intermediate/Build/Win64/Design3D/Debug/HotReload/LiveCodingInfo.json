@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.HotReload.cpp.obj": [
+			"HotReload.cpp.obj",
+			"HotReloadClassReinstancer.cpp.obj"
+		]
+	}
+}

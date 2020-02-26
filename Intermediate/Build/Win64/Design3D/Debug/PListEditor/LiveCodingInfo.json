@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PListEditor.cpp.obj": [
+			"PListEditor.cpp.obj",
+			"PListNode.cpp.obj",
+			"PListNodeArray.cpp.obj",
+			"PListNodeBoolean.cpp.obj",
+			"PListNodeDictionary.cpp.obj",
+			"PListNodeFile.cpp.obj",
+			"PListNodeString.cpp.obj",
+			"SPlistEditor.cpp.obj"
+		]
+	}
+}

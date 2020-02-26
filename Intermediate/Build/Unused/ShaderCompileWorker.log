@@ -1,0 +1,247 @@
+﻿  Cleaning ShaderCompileWorker and UnrealHeaderTool binaries...
+  Creating makefile for ShaderCompileWorker (no existing makefile)
+  Creating makefile for UnrealHeaderTool (no existing makefile)
+  Building UnrealHeaderTool...
+  Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.17763.0 SDK (D:\Windows Kits\10).
+  Building 38 actions with 8 processes...
+    [1/38] BuildSettings.cpp
+    [2/38] Default.rc2
+    [3/38] SharedPCH.Core.cpp
+    [4/38] UnrealHeaderTool-BuildSettings.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\BuildSettings\UnrealHeaderTool-BuildSettings.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\BuildSettings\UnrealHeaderTool-BuildSettings.exp
+    [5/38] UnrealHeaderTool-BuildSettings.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\BuildSettings\UnrealHeaderTool-BuildSettings.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\BuildSettings\UnrealHeaderTool-BuildSettings.suppressed.exp
+    [6/38] Module.Projects.cpp
+    [7/38] PCH.Core.cpp
+    [8/38] UnrealHeaderTool-Projects.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\Projects\UnrealHeaderTool-Projects.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\Projects\UnrealHeaderTool-Projects.exp
+    [9/38] PCH.CoreUObject.cpp
+    [10/38] Module.Json.cpp
+    [11/38] Module.Core.11_of_11.cpp
+    [12/38] Module.Core.2_of_11.cpp
+    [13/38] Module.Core.6_of_11.cpp
+    [14/38] Module.Core.4_of_11.cpp
+    [15/38] Module.Core.7_of_11.cpp
+    [16/38] Module.Core.1_of_11.cpp
+    [17/38] Module.Core.8_of_11.cpp
+    [18/38] Module.Core.9_of_11.cpp
+    [19/38] Module.Core.5_of_11.cpp
+    [20/38] Module.UnrealHeaderTool.cpp
+    [21/38] UnrealHeaderTool.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\UnrealHeaderTool.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\UnrealHeaderTool.exp
+    [22/38] UnrealHeaderTool-Json.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\Json\UnrealHeaderTool-Json.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\Json\UnrealHeaderTool-Json.exp
+    [23/38] Module.CoreUObject.6_of_6.cpp
+    [24/38] Module.CoreUObject.1_of_6.cpp
+    [25/38] Module.Core.10_of_11.cpp
+    [26/38] Module.CoreUObject.4_of_6.cpp
+    [27/38] Module.Core.3_of_11.cpp
+    [28/38] UnrealHeaderTool-Core.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\Core\UnrealHeaderTool-Core.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\Core\UnrealHeaderTool-Core.exp
+    [29/38] UnrealHeaderTool-Json.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\Json\UnrealHeaderTool-Json.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\Json\UnrealHeaderTool-Json.suppressed.exp
+    [30/38] UnrealHeaderTool-Projects.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\Projects\UnrealHeaderTool-Projects.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\Projects\UnrealHeaderTool-Projects.suppressed.exp
+    [31/38] Module.CoreUObject.2_of_6.cpp
+    [32/38] UnrealHeaderTool-Core.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\Core\UnrealHeaderTool-Core.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\Core\UnrealHeaderTool-Core.suppressed.exp
+    [33/38] Module.CoreUObject.3_of_6.cpp
+    [34/38] Module.CoreUObject.5_of_6.cpp
+    [35/38] UnrealHeaderTool-CoreUObject.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\CoreUObject\UnrealHeaderTool-CoreUObject.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\CoreUObject\UnrealHeaderTool-CoreUObject.exp
+    [36/38] UnrealHeaderTool.exe
+    [37/38] UnrealHeaderTool-CoreUObject.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\CoreUObject\UnrealHeaderTool-CoreUObject.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealHeaderTool\Development\CoreUObject\UnrealHeaderTool-CoreUObject.suppressed.exp
+    [38/38] UnrealHeaderTool.target
+  Total time in Parallel executor: 90.14 seconds
+  Parsing headers for ShaderCompileWorker
+    Running UnrealHeaderTool ShaderCompileWorker "D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderCompileWorker.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors
+  Reflection code generated for ShaderCompileWorker in 2.5925903 seconds
+  Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.17763.0 SDK (D:\Windows Kits\10).
+  Building 125 actions with 8 processes...
+    [1/125] Default.rc2
+    [2/125] BuildSettings.cpp
+    [3/125] PCH.ImageWrapper.cpp
+    [4/125] dxil.dll
+    [5/125] ShaderCompileWorker-BuildSettings-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\BuildSettings\ShaderCompileWorker-BuildSettings-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\BuildSettings\ShaderCompileWorker-BuildSettings-Win64-Debug.suppressed.exp
+    [6/125] dxcompiler.dll
+    [7/125] ShaderCompileWorker-BuildSettings-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\BuildSettings\ShaderCompileWorker-BuildSettings-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\BuildSettings\ShaderCompileWorker-BuildSettings-Win64-Debug.exp
+    [8/125] SharedPCH.Core.cpp
+    [9/125] SharedPCH.CoreUObject.cpp
+    [10/125] PCH.Core.cpp
+    [11/125] Module.Json.cpp
+    [12/125] Module.ImageWrapper.cpp
+    [13/125] PCH.CoreUObject.cpp
+    [14/125] Module.ShaderCompileWorker.cpp
+    [15/125] Module.ShaderCompilerCommon.cpp
+    [16/125] Module.Core.2_of_11.cpp
+    [17/125] Module.ApplicationCore.cpp
+    [18/125] Module.Core.8_of_11.cpp
+    [19/125] Module.Core.5_of_11.cpp
+    [20/125] Module.Core.1_of_11.cpp
+    [21/125] Module.Core.6_of_11.cpp
+    [22/125] SharedPCH.Slate.cpp
+    [23/125] Module.Core.4_of_11.cpp
+    [24/125] Module.Core.9_of_11.cpp
+    [25/125] Module.Core.11_of_11.cpp
+    [26/125] Module.CoreUObject.gen.cpp
+    [27/125] Module.Core.10_of_11.cpp
+    [28/125] Module.Core.7_of_11.cpp
+    [29/125] ImageCore.cpp
+    [30/125] Module.CoreUObject.4_of_6.cpp
+    [31/125] ShaderPreprocessor.cpp
+    [32/125] Module.CoreUObject.3_of_6.cpp
+    [33/125] Module.CoreUObject.6_of_6.cpp
+    [34/125] Module.Projects.cpp
+    [35/125] Module.CoreUObject.5_of_6.cpp
+    [36/125] Module.InputCore.gen.cpp
+    [37/125] Module.InputCore.cpp
+    [38/125] Module.Slate.gen.cpp
+    [39/125] Module.SlateCore.gen.cpp
+    [40/125] TextureFormatIntelISPCTexComp.cpp
+    [41/125] Module.AudioPlatformConfiguration.gen.cpp
+    [42/125] Module.DesktopPlatform.cpp
+    [43/125] Module.LauncherPlatform.cpp
+    [44/125] Module.AudioPlatformConfiguration.cpp
+    [45/125] Module.EditorStyle.gen.cpp
+    [46/125] Module.CoreUObject.2_of_6.cpp
+    [47/125] Module.RHI.cpp
+    [48/125] Module.EditorStyle.cpp
+    [49/125] Module.Slate.5_of_5.cpp
+    [50/125] Module.Slate.1_of_5.cpp
+    [51/125] Module.Slate.4_of_5.cpp
+    [52/125] IPlatformFileSandboxWrapper.cpp
+    [53/125] TextureFormatPVR.cpp
+    [54/125] Module.Slate.3_of_5.cpp
+    [55/125] TextureFormatASTC.cpp
+    [56/125] Module.Slate.2_of_5.cpp
+    [57/125] ShaderCompileWorker-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderCompileWorker-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderCompileWorker-Win64-Debug.exp
+    [58/125] ShaderCompileWorker-TextureFormatPVR-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\TextureFormatPVR\ShaderCompileWorker-TextureFormatPVR-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\TextureFormatPVR\ShaderCompileWorker-TextureFormatPVR-Win64-Debug.exp
+    [59/125] ShaderCompileWorker-TextureFormatASTC-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\TextureFormatASTC\ShaderCompileWorker-TextureFormatASTC-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\TextureFormatASTC\ShaderCompileWorker-TextureFormatASTC-Win64-Debug.exp
+    [60/125] Module.DerivedDataCache.cpp
+    [61/125] ShaderCompileWorker-DerivedDataCache-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\DerivedDataCache\ShaderCompileWorker-DerivedDataCache-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\DerivedDataCache\ShaderCompileWorker-DerivedDataCache-Win64-Debug.exp
+    [62/125] ShaderCompileWorker-ApplicationCore-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ApplicationCore\ShaderCompileWorker-ApplicationCore-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ApplicationCore\ShaderCompileWorker-ApplicationCore-Win64-Debug.exp
+    [63/125] ShaderCompileWorker-Json-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\Json\ShaderCompileWorker-Json-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\Json\ShaderCompileWorker-Json-Win64-Debug.exp
+    [64/125] Module.ShaderFormatD3D.cpp
+    [65/125] ShaderCompileWorker-ShaderFormatD3D-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderFormatD3D\ShaderCompileWorker-ShaderFormatD3D-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderFormatD3D\ShaderCompileWorker-ShaderFormatD3D-Win64-Debug.exp
+    [66/125] ShaderCompileWorker-ShaderPreprocessor-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderPreprocessor\ShaderCompileWorker-ShaderPreprocessor-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderPreprocessor\ShaderCompileWorker-ShaderPreprocessor-Win64-Debug.exp
+    [67/125] ShaderCompileWorker-ImageWrapper-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ImageWrapper\ShaderCompileWorker-ImageWrapper-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ImageWrapper\ShaderCompileWorker-ImageWrapper-Win64-Debug.exp
+    [68/125] Module.Core.3_of_11.cpp
+    [69/125] ShaderCompileWorker-ShaderCompilerCommon-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderCompilerCommon\ShaderCompileWorker-ShaderCompilerCommon-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderCompilerCommon\ShaderCompileWorker-ShaderCompilerCommon-Win64-Debug.exp
+    [70/125] ShaderCompileWorker-Projects-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\Projects\ShaderCompileWorker-Projects-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\Projects\ShaderCompileWorker-Projects-Win64-Debug.exp
+    [71/125] ShaderCompileWorker-ImageCore-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ImageCore\ShaderCompileWorker-ImageCore-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ImageCore\ShaderCompileWorker-ImageCore-Win64-Debug.exp
+    [72/125] ShaderCompileWorker-DesktopPlatform-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\DesktopPlatform\ShaderCompileWorker-DesktopPlatform-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\DesktopPlatform\ShaderCompileWorker-DesktopPlatform-Win64-Debug.exp
+    [73/125] ShaderCompileWorker-RHI-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\RHI\ShaderCompileWorker-RHI-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\RHI\ShaderCompileWorker-RHI-Win64-Debug.exp
+    [74/125] Module.ShaderFormatOpenGL.cpp
+    [75/125] ShaderCompileWorker-SandboxFile-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\SandboxFile\ShaderCompileWorker-SandboxFile-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\SandboxFile\ShaderCompileWorker-SandboxFile-Win64-Debug.exp
+    [76/125] Module.TargetPlatform.cpp
+    [77/125] ShaderCompileWorker-ShaderFormatOpenGL-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderFormatOpenGL\ShaderCompileWorker-ShaderFormatOpenGL-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderFormatOpenGL\ShaderCompileWorker-ShaderFormatOpenGL-Win64-Debug.exp
+    [78/125] ShaderCompileWorker-LauncherPlatform-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\LauncherPlatform\ShaderCompileWorker-LauncherPlatform-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\LauncherPlatform\ShaderCompileWorker-LauncherPlatform-Win64-Debug.exp
+    [79/125] ShaderCompileWorker-TargetPlatform-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\TargetPlatform\ShaderCompileWorker-TargetPlatform-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\TargetPlatform\ShaderCompileWorker-TargetPlatform-Win64-Debug.exp
+    [80/125] ShaderCompileWorker-TextureFormatIntelISPCTexComp-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\TextureFormatIntelISPCTexComp\ShaderCompileWorker-TextureFormatIntelISPCTexComp-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\TextureFormatIntelISPCTexComp\ShaderCompileWorker-TextureFormatIntelISPCTexComp-Win64-Debug.exp
+    [81/125] Module.VulkanShaderFormat.cpp
+    [82/125] ShaderCompileWorker-InputCore-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\InputCore\ShaderCompileWorker-InputCore-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\InputCore\ShaderCompileWorker-InputCore-Win64-Debug.exp
+    [83/125] ShaderCompileWorker-AudioPlatformConfiguration-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\AudioPlatformConfiguration\ShaderCompileWorker-AudioPlatformConfiguration-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\AudioPlatformConfiguration\ShaderCompileWorker-AudioPlatformConfiguration-Win64-Debug.exp
+    [84/125] ShaderCompileWorker-VulkanShaderFormat-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\VulkanShaderFormat\ShaderCompileWorker-VulkanShaderFormat-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\VulkanShaderFormat\ShaderCompileWorker-VulkanShaderFormat-Win64-Debug.exp
+    [85/125] ShaderCompileWorker-EditorStyle-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\EditorStyle\ShaderCompileWorker-EditorStyle-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\EditorStyle\ShaderCompileWorker-EditorStyle-Win64-Debug.exp
+    [86/125] ShaderCompileWorker-Slate-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\Slate\ShaderCompileWorker-Slate-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\Slate\ShaderCompileWorker-Slate-Win64-Debug.exp
+    [87/125] Module.MetalShaderFormat.cpp
+    [88/125] ShaderCompileWorker-Core-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\Core\ShaderCompileWorker-Core-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\Core\ShaderCompileWorker-Core-Win64-Debug.exp
+    [89/125] ShaderCompileWorker-MetalShaderFormat-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\MetalShaderFormat\ShaderCompileWorker-MetalShaderFormat-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\MetalShaderFormat\ShaderCompileWorker-MetalShaderFormat-Win64-Debug.exp
+    [90/125] ShaderCompileWorker-Core-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\Core\ShaderCompileWorker-Core-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\Core\ShaderCompileWorker-Core-Win64-Debug.suppressed.exp
+    [91/125] Module.CoreUObject.1_of_6.cpp
+    [92/125] Module.RenderCore.cpp
+    [93/125] ShaderCompileWorker-RHI-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\RHI\ShaderCompileWorker-RHI-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\RHI\ShaderCompileWorker-RHI-Win64-Debug.suppressed.exp
+    [94/125] ShaderCompileWorker-DesktopPlatform-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\DesktopPlatform\ShaderCompileWorker-DesktopPlatform-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\DesktopPlatform\ShaderCompileWorker-DesktopPlatform-Win64-Debug.suppressed.exp
+    [95/125] ShaderCompileWorker-Projects-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\Projects\ShaderCompileWorker-Projects-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\Projects\ShaderCompileWorker-Projects-Win64-Debug.suppressed.exp
+    [96/125] ShaderCompileWorker-SandboxFile-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\SandboxFile\ShaderCompileWorker-SandboxFile-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\SandboxFile\ShaderCompileWorker-SandboxFile-Win64-Debug.suppressed.exp
+    [97/125] ShaderCompileWorker-RenderCore-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\RenderCore\ShaderCompileWorker-RenderCore-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\RenderCore\ShaderCompileWorker-RenderCore-Win64-Debug.exp
+    [98/125] ShaderCompileWorker-ImageCore-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ImageCore\ShaderCompileWorker-ImageCore-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ImageCore\ShaderCompileWorker-ImageCore-Win64-Debug.suppressed.exp
+    [99/125] ShaderCompileWorker-LauncherPlatform-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\LauncherPlatform\ShaderCompileWorker-LauncherPlatform-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\LauncherPlatform\ShaderCompileWorker-LauncherPlatform-Win64-Debug.suppressed.exp
+    [100/125] ShaderCompileWorker-Json-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\Json\ShaderCompileWorker-Json-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\Json\ShaderCompileWorker-Json-Win64-Debug.suppressed.exp
+    [101/125] ShaderCompileWorker-ShaderCompilerCommon-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderCompilerCommon\ShaderCompileWorker-ShaderCompilerCommon-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderCompilerCommon\ShaderCompileWorker-ShaderCompilerCommon-Win64-Debug.suppressed.exp
+    [102/125] ShaderCompileWorker-ApplicationCore-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ApplicationCore\ShaderCompileWorker-ApplicationCore-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ApplicationCore\ShaderCompileWorker-ApplicationCore-Win64-Debug.suppressed.exp
+    [103/125] ShaderCompileWorker-ShaderPreprocessor-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderPreprocessor\ShaderCompileWorker-ShaderPreprocessor-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderPreprocessor\ShaderCompileWorker-ShaderPreprocessor-Win64-Debug.suppressed.exp
+    [104/125] ShaderCompileWorker-TextureFormatIntelISPCTexComp-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\TextureFormatIntelISPCTexComp\ShaderCompileWorker-TextureFormatIntelISPCTexComp-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\TextureFormatIntelISPCTexComp\ShaderCompileWorker-TextureFormatIntelISPCTexComp-Win64-Debug.suppressed.exp
+    [105/125] ShaderCompileWorker-CoreUObject-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\CoreUObject\ShaderCompileWorker-CoreUObject-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\CoreUObject\ShaderCompileWorker-CoreUObject-Win64-Debug.suppressed.exp
+    [106/125] ShaderCompileWorker-TextureFormatPVR-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\TextureFormatPVR\ShaderCompileWorker-TextureFormatPVR-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\TextureFormatPVR\ShaderCompileWorker-TextureFormatPVR-Win64-Debug.suppressed.exp
+    [107/125] ShaderCompileWorker-RenderCore-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\RenderCore\ShaderCompileWorker-RenderCore-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\RenderCore\ShaderCompileWorker-RenderCore-Win64-Debug.suppressed.exp
+    [108/125] ShaderCompileWorker-DerivedDataCache-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\DerivedDataCache\ShaderCompileWorker-DerivedDataCache-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\DerivedDataCache\ShaderCompileWorker-DerivedDataCache-Win64-Debug.suppressed.exp
+    [109/125] ShaderCompileWorker-TextureFormatASTC-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\TextureFormatASTC\ShaderCompileWorker-TextureFormatASTC-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\TextureFormatASTC\ShaderCompileWorker-TextureFormatASTC-Win64-Debug.suppressed.exp
+    [110/125] ShaderCompileWorker-Win64-Debug.exe
+    [111/125] ShaderCompileWorker-ShaderFormatD3D-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderFormatD3D\ShaderCompileWorker-ShaderFormatD3D-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderFormatD3D\ShaderCompileWorker-ShaderFormatD3D-Win64-Debug.suppressed.exp
+    [112/125] ShaderCompileWorker-CoreUObject-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\CoreUObject\ShaderCompileWorker-CoreUObject-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\CoreUObject\ShaderCompileWorker-CoreUObject-Win64-Debug.exp
+    [113/125] Module.SlateCore.cpp
+    [114/125] ShaderCompileWorker-InputCore-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\InputCore\ShaderCompileWorker-InputCore-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\InputCore\ShaderCompileWorker-InputCore-Win64-Debug.suppressed.exp
+    [115/125] ShaderCompileWorker-AudioPlatformConfiguration-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\AudioPlatformConfiguration\ShaderCompileWorker-AudioPlatformConfiguration-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\AudioPlatformConfiguration\ShaderCompileWorker-AudioPlatformConfiguration-Win64-Debug.suppressed.exp
+    [116/125] ShaderCompileWorker-SlateCore-Win64-Debug.lib
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\SlateCore\ShaderCompileWorker-SlateCore-Win64-Debug.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\SlateCore\ShaderCompileWorker-SlateCore-Win64-Debug.exp
+    [117/125] ShaderCompileWorker-TargetPlatform-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\TargetPlatform\ShaderCompileWorker-TargetPlatform-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\TargetPlatform\ShaderCompileWorker-TargetPlatform-Win64-Debug.suppressed.exp
+    [118/125] ShaderCompileWorker-EditorStyle-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\EditorStyle\ShaderCompileWorker-EditorStyle-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\EditorStyle\ShaderCompileWorker-EditorStyle-Win64-Debug.suppressed.exp
+    [119/125] ShaderCompileWorker-SlateCore-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\SlateCore\ShaderCompileWorker-SlateCore-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\SlateCore\ShaderCompileWorker-SlateCore-Win64-Debug.suppressed.exp
+    [120/125] ShaderCompileWorker-ImageWrapper-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ImageWrapper\ShaderCompileWorker-ImageWrapper-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ImageWrapper\ShaderCompileWorker-ImageWrapper-Win64-Debug.suppressed.exp
+    [121/125] ShaderCompileWorker-Slate-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\Slate\ShaderCompileWorker-Slate-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\Slate\ShaderCompileWorker-Slate-Win64-Debug.suppressed.exp
+    [122/125] ShaderCompileWorker-ShaderFormatOpenGL-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderFormatOpenGL\ShaderCompileWorker-ShaderFormatOpenGL-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\ShaderFormatOpenGL\ShaderCompileWorker-ShaderFormatOpenGL-Win64-Debug.suppressed.exp
+    [123/125] ShaderCompileWorker-MetalShaderFormat-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\MetalShaderFormat\ShaderCompileWorker-MetalShaderFormat-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\MetalShaderFormat\ShaderCompileWorker-MetalShaderFormat-Win64-Debug.suppressed.exp
+    [124/125] ShaderCompileWorker-VulkanShaderFormat-Win64-Debug.dll
+      正在创建库 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\VulkanShaderFormat\ShaderCompileWorker-VulkanShaderFormat-Win64-Debug.suppressed.lib 和对象 D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Debug\VulkanShaderFormat\ShaderCompileWorker-VulkanShaderFormat-Win64-Debug.suppressed.exp
+    [125/125] ShaderCompileWorker-Win64-Debug.target
+  Total time in Parallel executor: 61.93 seconds
+  Total execution time: 162.38 seconds

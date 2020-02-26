@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Media.cpp.obj": [
+			"IMediaTextureSample.cpp.obj",
+			"MediaClock.cpp.obj",
+			"MediaModule.cpp.obj",
+			"MediaTicker.cpp.obj"
+		]
+	}
+}

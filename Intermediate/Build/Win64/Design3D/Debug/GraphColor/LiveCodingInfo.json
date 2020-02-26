@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.GraphColor.cpp.obj": [
+			"GraphColor.cpp.obj",
+			"graphColorVertices.cpp.obj",
+			"graphColorVertices_Extensions.cpp.obj",
+			"graphExtensions.cpp.obj",
+			"graphUtils.cpp.obj",
+			"listcoll.cpp.obj",
+			"stack.cpp.obj"
+		]
+	}
+}

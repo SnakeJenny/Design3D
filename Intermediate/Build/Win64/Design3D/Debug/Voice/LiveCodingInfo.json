@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Voice.cpp.obj": [
+			"VoiceCodecOpus.cpp.obj",
+			"VoiceModule.cpp.obj",
+			"VoiceCaptureWindows.cpp.obj",
+			"VoiceModuleWindows.cpp.obj"
+		]
+	}
+}

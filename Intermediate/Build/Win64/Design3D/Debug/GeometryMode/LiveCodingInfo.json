@@ -1,0 +1,28 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.GeometryMode.cpp.obj": [
+			"EditorGeometry.cpp.obj",
+			"GeometryEdMode.cpp.obj",
+			"GeometryMode.cpp.obj",
+			"GeometryModifiers.cpp.obj"
+		],
+		"Module.GeometryMode.gen.cpp.obj": [
+			"GeometryMode.init.gen.cpp.obj",
+			"GeomModifier.gen.cpp.obj",
+			"GeomModifier_Clip.gen.cpp.obj",
+			"GeomModifier_Create.gen.cpp.obj",
+			"GeomModifier_Delete.gen.cpp.obj",
+			"GeomModifier_Edit.gen.cpp.obj",
+			"GeomModifier_Extrude.gen.cpp.obj",
+			"GeomModifier_Flip.gen.cpp.obj",
+			"GeomModifier_Lathe.gen.cpp.obj",
+			"GeomModifier_Optimize.gen.cpp.obj",
+			"GeomModifier_Pen.gen.cpp.obj",
+			"GeomModifier_Split.gen.cpp.obj",
+			"GeomModifier_Triangulate.gen.cpp.obj",
+			"GeomModifier_Turn.gen.cpp.obj",
+			"GeomModifier_Weld.gen.cpp.obj"
+		]
+	}
+}

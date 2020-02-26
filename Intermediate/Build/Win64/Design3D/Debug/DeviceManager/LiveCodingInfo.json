@@ -1,0 +1,16 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.DeviceManager.cpp.obj": [
+			"DeviceManagerModule.cpp.obj",
+			"SDeviceApps.cpp.obj",
+			"SDeviceBrowser.cpp.obj",
+			"SDeviceBrowserDeviceAdder.cpp.obj",
+			"SDeviceBrowserFilterBar.cpp.obj",
+			"SDeviceDetails.cpp.obj",
+			"SDeviceProcesses.cpp.obj",
+			"SDeviceManager.cpp.obj",
+			"SDeviceToolbar.cpp.obj"
+		]
+	}
+}

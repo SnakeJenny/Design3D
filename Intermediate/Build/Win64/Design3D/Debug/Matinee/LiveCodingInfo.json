@@ -1,0 +1,43 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Matinee.cpp.obj": [
+			"Matinee.cpp.obj",
+			"MatineeActions.cpp.obj",
+			"MatineeCurveEd.cpp.obj",
+			"MatineeDraw.cpp.obj",
+			"MatineeFilterButton.cpp.obj",
+			"MatineeKeyReduction.cpp.obj",
+			"MatineeMenus.cpp.obj",
+			"MatineeModule.cpp.obj",
+			"MatineeOptions.cpp.obj",
+			"MatineePropertyWindow.cpp.obj",
+			"MatineeToolbars.cpp.obj",
+			"MatineeTools.cpp.obj",
+			"MatineeTrackHelpers.cpp.obj",
+			"MatineeTrackView.cpp.obj",
+			"MatineeTransaction.cpp.obj",
+			"MatineeTransBuffer.cpp.obj",
+			"MatineeViewportClient.cpp.obj",
+			"SMatineeRecorder.cpp.obj"
+		],
+		"Module.Matinee.gen.cpp.obj": [
+			"InterpTrackHelper.gen.cpp.obj",
+			"Matinee.init.gen.cpp.obj",
+			"MatineeOptions.gen.cpp.obj",
+			"MatineeTrackAnimControlHelper.gen.cpp.obj",
+			"MatineeTrackBoolPropHelper.gen.cpp.obj",
+			"MatineeTrackColorPropHelper.gen.cpp.obj",
+			"MatineeTrackDirectorHelper.gen.cpp.obj",
+			"MatineeTrackEventHelper.gen.cpp.obj",
+			"MatineeTrackFloatPropHelper.gen.cpp.obj",
+			"MatineeTrackLinearColorPropHelper.gen.cpp.obj",
+			"MatineeTrackParticleReplayHelper.gen.cpp.obj",
+			"MatineeTrackSoundHelper.gen.cpp.obj",
+			"MatineeTrackToggleHelper.gen.cpp.obj",
+			"MatineeTrackVectorPropHelper.gen.cpp.obj",
+			"MatineeTrackVisibilityHelper.gen.cpp.obj",
+			"MatineeTransBuffer.gen.cpp.obj"
+		]
+	}
+}

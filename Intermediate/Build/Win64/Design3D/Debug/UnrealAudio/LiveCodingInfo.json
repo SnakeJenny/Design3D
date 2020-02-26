@@ -1,0 +1,28 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.UnrealAudio.cpp.obj": [
+			"UnrealAudioDeviceTests.cpp.obj",
+			"UnrealAudioSystemTests.cpp.obj",
+			"UnrealAudioTestGenerators.cpp.obj",
+			"UnrealAudio.cpp.obj",
+			"UnrealAudioBuffer.cpp.obj",
+			"UnrealAudioDecode.cpp.obj",
+			"UnrealAudioDevice.cpp.obj",
+			"UnrealAudioDeviceFormat.cpp.obj",
+			"UnrealAudioEmitter.cpp.obj",
+			"UnrealAudioEmitterManager.cpp.obj",
+			"UnrealAudioPitchManager.cpp.obj",
+			"UnrealAudioSampleRateConverter.cpp.obj",
+			"UnrealAudioSoundFile.cpp.obj",
+			"UnrealAudioSoundFileConvert.cpp.obj",
+			"UnrealAudioSoundFileManager.cpp.obj",
+			"UnrealAudioSoundFileReader.cpp.obj",
+			"UnrealAudioUtilities.cpp.obj",
+			"UnrealAudioVoice.cpp.obj",
+			"UnrealAudioVoiceManager.cpp.obj",
+			"UnrealAudioVoiceMixer.cpp.obj",
+			"UnrealAudioVolumeManager.cpp.obj"
+		]
+	}
+}

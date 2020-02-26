@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AudioMixerXAudio2.cpp.obj": [
+			"AudioMixerPlatformWindows.cpp.obj",
+			"AudioMixerPlatformXAudio2.cpp.obj",
+			"AudioMixerXAudio2.cpp.obj"
+		]
+	}
+}

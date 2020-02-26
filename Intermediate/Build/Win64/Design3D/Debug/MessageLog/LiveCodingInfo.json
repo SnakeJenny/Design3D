@@ -1,0 +1,16 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MessageLog.cpp.obj": [
+			"MessageFilter.cpp.obj",
+			"MessageLogModule.cpp.obj",
+			"MessageLogListingModel.cpp.obj",
+			"MessageLogModel.cpp.obj",
+			"MessageLogListingViewModel.cpp.obj",
+			"MessageLogViewModel.cpp.obj",
+			"SMessageLog.cpp.obj",
+			"SMessageLogListing.cpp.obj",
+			"SMessageLogMessageListRow.cpp.obj"
+		]
+	}
+}

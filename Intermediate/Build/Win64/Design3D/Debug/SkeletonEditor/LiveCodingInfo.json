@@ -1,0 +1,30 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SkeletonEditor.cpp.obj": [
+			"BoneProxy.cpp.obj",
+			"BoneProxyDetailsCustomization.cpp.obj",
+			"EditableSkeleton.cpp.obj",
+			"SBlendProfilePicker.cpp.obj",
+			"SkeletonEditor.cpp.obj",
+			"SkeletonEditorCommands.cpp.obj",
+			"SkeletonEditorMode.cpp.obj",
+			"SkeletonEditorModule.cpp.obj",
+			"SkeletonTreeAttachedAssetItem.cpp.obj",
+			"SkeletonTreeBoneItem.cpp.obj",
+			"SkeletonTreeBuilder.cpp.obj",
+			"SkeletonTreeCommands.cpp.obj",
+			"SkeletonTreeItem.cpp.obj",
+			"SkeletonTreeManager.cpp.obj",
+			"SkeletonTreeSocketItem.cpp.obj",
+			"SkeletonTreeSummoner.cpp.obj",
+			"SkeletonTreeVirtualBoneItem.cpp.obj",
+			"SSkeletonTree.cpp.obj",
+			"SSkeletonTreeRow.cpp.obj"
+		],
+		"Module.SkeletonEditor.gen.cpp.obj": [
+			"BoneProxy.gen.cpp.obj",
+			"SkeletonEditor.init.gen.cpp.obj"
+		]
+	}
+}

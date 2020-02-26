@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MeshBuilder.cpp.obj": [
+			"MeshBuilder.cpp.obj",
+			"MeshBuilderModule.cpp.obj",
+			"MeshDescriptionHelper.cpp.obj",
+			"StaticMeshBuilder.cpp.obj",
+			"ThirdPartyBuildOptimizationHelper.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SynthBenchmark.cpp.obj": [
+			"FractalBenchmark.cpp.obj",
+			"RayIntersectBenchmark.cpp.obj",
+			"SynthBenchmarkPrivate.cpp.obj"
+		]
+	}
+}

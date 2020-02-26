@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AudioPlatformConfiguration.cpp.obj": [
+			"AudioCompressionSettings.cpp.obj",
+			"AudioPlatformConfigurationModule.cpp.obj",
+			"AudioResampler.cpp.obj"
+		],
+		"Module.AudioPlatformConfiguration.gen.cpp.obj": [
+			"AudioCompressionSettings.gen.cpp.obj",
+			"AudioPlatformConfiguration.init.gen.cpp.obj"
+		]
+	}
+}

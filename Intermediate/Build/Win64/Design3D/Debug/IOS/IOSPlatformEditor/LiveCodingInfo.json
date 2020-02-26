@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.IOSPlatformEditor.cpp.obj": [
+			"IOSCustomIconProjectBuildMutatorFeature.cpp.obj",
+			"IOSPlatformEditorModule.cpp.obj",
+			"IOSTargetSettingsCustomization.cpp.obj"
+		]
+	}
+}

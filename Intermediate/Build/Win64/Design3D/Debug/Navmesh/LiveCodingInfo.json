@@ -1,0 +1,43 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Navmesh.1_of_3.cpp.obj": [
+			"DebugDraw.cpp.obj",
+			"DetourDebugDraw.cpp.obj",
+			"RecastDebugDraw.cpp.obj",
+			"RecastDump.cpp.obj",
+			"DetourAlloc.cpp.obj",
+			"DetourCommon.cpp.obj",
+			"DetourNavMesh.cpp.obj",
+			"DetourNavMeshBuilder.cpp.obj",
+			"DetourNavMeshQuery.cpp.obj",
+			"DetourNode.cpp.obj",
+			"DetourCrowd.cpp.obj",
+			"DetourLocalBoundary.cpp.obj"
+		],
+		"Module.Navmesh.2_of_3.cpp.obj": [
+			"DetourObstacleAvoidance.cpp.obj",
+			"DetourPathCorridor.cpp.obj",
+			"DetourPathQueue.cpp.obj",
+			"DetourProximityGrid.cpp.obj",
+			"DetourSharedBoundary.cpp.obj",
+			"DetourTileCache.cpp.obj",
+			"DetourTileCacheBuilder.cpp.obj",
+			"DetourTileCacheDetail.cpp.obj",
+			"DetourTileCacheRegion.cpp.obj",
+			"NavmeshModule.cpp.obj",
+			"Recast.cpp.obj",
+			"RecastAlloc.cpp.obj",
+			"RecastArea.cpp.obj",
+			"RecastContour.cpp.obj",
+			"RecastFilter.cpp.obj",
+			"RecastLayers.cpp.obj",
+			"RecastMesh.cpp.obj",
+			"RecastMeshDetail.cpp.obj"
+		],
+		"Module.Navmesh.3_of_3.cpp.obj": [
+			"RecastRasterization.cpp.obj",
+			"RecastRegion.cpp.obj"
+		]
+	}
+}

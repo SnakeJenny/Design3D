@@ -1,0 +1,18 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AutomationWindow.cpp.obj": [
+			"AutomationPresetManager.cpp.obj",
+			"AutomationWindowModule.cpp.obj",
+			"SAutomationExportMenu.cpp.obj",
+			"SAutomationGraphicalResultBox.cpp.obj",
+			"SAutomationTestItem.cpp.obj",
+			"SAutomationWindow.cpp.obj",
+			"SAutomationWindowCommandBar.cpp.obj"
+		],
+		"Module.AutomationWindow.gen.cpp.obj": [
+			"AutomationPresetManager.gen.cpp.obj",
+			"AutomationWindow.init.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,107 @@
+/Zc:inline
+/nologo
+/Oi
+/c
+/Gw
+/Gy
+/Zm850
+/wd4819
+/D_CRT_STDIO_LEGACY_WIDE_SPECIFIERS=1
+/D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1
+/D_DISABLE_EXTENDED_ALIGNED_STORAGE
+/source-charset:utf-8
+/execution-charset:utf-8
+/Od
+/Os
+/Ob2
+/RTCs
+/errorReport:prompt
+/Z7
+/MD
+/bigobj
+/fp:fast
+/Zp8
+/wd4463
+/wd4838
+/we4668
+/I .
+/I Developer\MeshBoneReduction\Private
+/I Runtime
+/I Runtime\Core\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\CoreUObject
+/I Runtime\CoreUObject\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\Engine
+/I Runtime\Engine\Classes
+/I Runtime\Engine\Public
+/I Runtime\ApplicationCore\Public
+/I Runtime\RHI\Public
+/I Runtime\Json\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\SlateCore
+/I Runtime\SlateCore\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\InputCore
+/I Runtime\InputCore\Classes
+/I Runtime\InputCore\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\Slate
+/I Runtime\Slate\Public
+/I Runtime\ImageWrapper\Public
+/I Runtime\Messaging\Public
+/I Runtime\MessagingCommon\Public
+/I Runtime\RenderCore\Public
+/I Runtime\Sockets\Public
+/I Runtime\UtilityShaders\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\AssetRegistry
+/I Runtime\AssetRegistry\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\EngineMessages
+/I Runtime\EngineMessages\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\EngineSettings
+/I Runtime\EngineSettings\Classes
+/I Runtime\EngineSettings\Public
+/I Runtime\SynthBenchmark\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\Renderer
+/I Runtime\Renderer\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\GameplayTags
+/I Runtime\GameplayTags\Classes
+/I Runtime\GameplayTags\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\PacketHandler
+/I Runtime\PacketHandlers
+/I Runtime\PacketHandlers\PacketHandler\Classes
+/I Runtime\PacketHandlers\PacketHandler\Public
+/I Runtime\PacketHandlers\ReliabilityHandlerComponent\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\AudioPlatformConfiguration
+/I Runtime\AudioPlatformConfiguration\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\MeshDescription
+/I Runtime\MeshDescription\Public
+/I Runtime\PakFile\Public
+/I Runtime\RSA\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\ClothingSystemRuntimeInterface
+/I Runtime\ClothingSystemRuntimeInterface\Public
+/I Runtime\NetworkReplayStreaming
+/I Runtime\NetworkReplayStreaming\NetworkReplayStreaming\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\AudioMixer
+/I Runtime\AudioMixer\Classes
+/I Runtime\AudioMixer\Public
+/I ThirdParty
+/I ThirdParty\libSampleRate\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\AnimationCore
+/I Runtime\AnimationCore\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\AnimationModifiers
+/I Editor
+/I Editor\AnimationModifiers\Public
+/I Developer
+/I Developer\MeshBoneReduction\Public
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\INCLUDE"
+/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"
+/I "D:\Windows Kits\10\include\10.0.17763.0\ucrt"
+/I "D:\Windows Kits\10\include\10.0.17763.0\shared"
+/I "D:\Windows Kits\10\include\10.0.17763.0\um"
+/I "D:\Windows Kits\10\include\10.0.17763.0\winrt"
+/D_HAS_EXCEPTIONS=0
+/FI"D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Debug\Engine\SharedPCH.Engine.h"
+/Yu"D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Debug\Engine\SharedPCH.Engine.h"
+/Fp"D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Debug\Engine\SharedPCH.Engine.h.pch"
+"D:\Github\UnrealEngine4\Engine\Source\Developer\MeshBoneReduction\Private\MeshBoneReduction.cpp"
+/FI"D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Debug\MeshBoneReduction\Definitions.MeshBoneReduction.h"
+/Fo"D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Debug\MeshBoneReduction\MeshBoneReduction.cpp.obj"
+/TP
+/GR-
+/W4

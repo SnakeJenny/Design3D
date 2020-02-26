@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.XmlParser.cpp.obj": [
+			"FastXml.cpp.obj",
+			"XmlFile.cpp.obj",
+			"XmlNode.cpp.obj",
+			"XmlParser.cpp.obj"
+		]
+	}
+}

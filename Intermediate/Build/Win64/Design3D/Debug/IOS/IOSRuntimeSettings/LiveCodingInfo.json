@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.IOSRuntimeSettings.cpp.obj": [
+			"IOSRuntimeSettings.cpp.obj",
+			"IOSRuntimeSettingsModule.cpp.obj"
+		],
+		"Module.IOSRuntimeSettings.gen.cpp.obj": [
+			"IOSRuntimeSettings.gen.cpp.obj",
+			"IOSRuntimeSettings.init.gen.cpp.obj"
+		]
+	}
+}

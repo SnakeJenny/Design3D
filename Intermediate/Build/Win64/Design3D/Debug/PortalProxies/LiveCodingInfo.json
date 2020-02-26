@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PortalProxies.cpp.obj": [
+			"PortalUserLoginProxy.cpp.obj",
+			"PortalUserProxy.cpp.obj",
+			"PortalApplicationWindowProxy.cpp.obj",
+			"PortalProxiesModule.cpp.obj"
+		]
+	}
+}

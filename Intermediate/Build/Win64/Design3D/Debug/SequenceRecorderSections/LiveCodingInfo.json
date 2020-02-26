@@ -1,0 +1,17 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SequenceRecorderSections.cpp.obj": [
+			"MovieScene3DAttachSectionRecorder.cpp.obj",
+			"MovieSceneParticleTrackSectionRecorder.cpp.obj",
+			"MovieSceneSpawnSectionRecorder.cpp.obj",
+			"MovieSceneVisibilitySectionRecorder.cpp.obj",
+			"SequenceRecorderSectionsModule.cpp.obj"
+		],
+		"Module.SequenceRecorderSections.gen.cpp.obj": [
+			"MovieSceneParticleTrackSectionRecorder.gen.cpp.obj",
+			"MovieSceneVisibilitySectionRecorderSettings.gen.cpp.obj",
+			"SequenceRecorderSections.init.gen.cpp.obj"
+		]
+	}
+}

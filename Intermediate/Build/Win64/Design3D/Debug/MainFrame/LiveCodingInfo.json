@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MainFrame.cpp.obj": [
+			"MainFrameActions.cpp.obj",
+			"MainFrameHandler.cpp.obj",
+			"MainFrameModule.cpp.obj",
+			"MainMenu.cpp.obj"
+		]
+	}
+}

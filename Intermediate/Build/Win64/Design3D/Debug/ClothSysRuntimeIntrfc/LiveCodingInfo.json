@@ -1,0 +1,17 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ClothSysRuntimeIntrfc.cpp.obj": [
+			"ClothingSimulationFactoryInterface.cpp.obj",
+			"ClothingSystemRuntimeInterfaceModule.cpp.obj",
+			"ClothingSystemRuntimeTypes.cpp.obj"
+		],
+		"Module.ClothSysRuntimeIntrfc.gen.cpp.obj": [
+			"ClothingAssetInterface.gen.cpp.obj",
+			"ClothingSimulationFactoryInterface.gen.cpp.obj",
+			"ClothingSimulationInteractor.gen.cpp.obj",
+			"ClothingSystemRuntimeInterface.init.gen.cpp.obj",
+			"ClothingSystemRuntimeTypes.gen.cpp.obj"
+		]
+	}
+}

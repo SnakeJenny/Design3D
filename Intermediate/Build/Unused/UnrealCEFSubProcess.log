@@ -1,0 +1,2 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets(4194,5): warning MSB3026: 无法将“obj\Development\UnrealBuildTool.exe”复制到“..\..\..\Binaries\DotNET\UnrealBuildTool.exe”。1000 毫秒后将开始第 1 次重试。文件“..\..\..\Binaries\DotNET\UnrealBuildTool.exe”正由另一进程使用，因此该进程无法访问此文件。  [D:\Github\UnrealEngine4\Engine\Source\Programs\UnrealBuildTool\UnrealBuildTool.csproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.MakeFile.Targets(49,5): warning MSB5021: 终止任务可执行文件“cmd”及其子进程，因为已取消生成。

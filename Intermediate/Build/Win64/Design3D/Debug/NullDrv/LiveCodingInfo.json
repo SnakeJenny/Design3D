@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.NullDrv.cpp.obj": [
+			"NullDrv.cpp.obj",
+			"NullRHI.cpp.obj"
+		]
+	}
+}

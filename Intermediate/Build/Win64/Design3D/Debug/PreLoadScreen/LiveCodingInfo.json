@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PreLoadScreen.cpp.obj": [
+			"BuildPatchServicesPreLoadManager.cpp.obj",
+			"PreLoadScreenBase.cpp.obj",
+			"PreLoadScreenManager.cpp.obj",
+			"PreLoadSettingsContainer.cpp.obj",
+			"PreLoadSlateThreading.cpp.obj",
+			"SimplePreLoadScreenWidget.cpp.obj"
+		]
+	}
+}

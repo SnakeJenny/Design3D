@@ -1,0 +1,2 @@
+D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\UE4Editor\Debug\Design3D\Definitions.Design3D.h
+d:\github\master_szu\ue4_project\design3d\source\design3d\Design3D.h

@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.BlueprintRuntime.cpp.obj": [
+			"BlueprintRuntime.cpp.obj",
+			"BlueprintRuntimeSettings.cpp.obj"
+		],
+		"Module.BlueprintRuntime.gen.cpp.obj": [
+			"BlueprintRuntime.init.gen.cpp.obj",
+			"BlueprintRuntimeSettings.gen.cpp.obj"
+		]
+	}
+}

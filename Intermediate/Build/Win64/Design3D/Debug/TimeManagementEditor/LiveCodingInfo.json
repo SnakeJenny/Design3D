@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.TimeManagementEditor.cpp.obj": [
+			"STimecodeProvider.cpp.obj",
+			"STimecodeProviderTab.cpp.obj",
+			"TimeManagementEditorModule.cpp.obj"
+		]
+	}
+}

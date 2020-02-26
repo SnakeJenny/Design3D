@@ -1,0 +1,36 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.FoliageEdit.cpp.obj": [
+			"ActorFactoryProceduralFoliage.cpp.obj",
+			"FoliageEditActions.cpp.obj",
+			"FoliageEditModule.cpp.obj",
+			"FoliageEditUtility.cpp.obj",
+			"FoliageEdMode.cpp.obj",
+			"FoliageEdModeToolkit.cpp.obj",
+			"FoliagePaletteCommands.cpp.obj",
+			"FoliagePaletteItem.cpp.obj",
+			"FoliageType_InstancedStaticMeshPaintingCustomization.cpp.obj",
+			"FoliageType_ISMThumbnailRenderer.cpp.obj",
+			"FoliageTypeCustomizationHelpers.cpp.obj",
+			"FoliageTypeDetails.cpp.obj",
+			"FoliageTypeFactory.cpp.obj",
+			"FoliageTypeObjectCustomization.cpp.obj",
+			"FoliageTypePaintingCustomization.cpp.obj",
+			"LandscapeGrassTypeFactory.cpp.obj",
+			"ProceduralFoliageComponentDetails.cpp.obj",
+			"ProceduralFoliageComponentVisualizer.cpp.obj",
+			"ProceduralFoliageSpawnerFactory.cpp.obj",
+			"SFoliageEdit.cpp.obj",
+			"SFoliagePalette.cpp.obj"
+		],
+		"Module.FoliageEdit.gen.cpp.obj": [
+			"ActorFactoryProceduralFoliage.gen.cpp.obj",
+			"FoliageEdit.init.gen.cpp.obj",
+			"FoliageType_ISMThumbnailRenderer.gen.cpp.obj",
+			"FoliageTypeFactory.gen.cpp.obj",
+			"LandscapeGrassTypeFactory.gen.cpp.obj",
+			"ProceduralFoliageSpawnerFactory.gen.cpp.obj"
+		]
+	}
+}

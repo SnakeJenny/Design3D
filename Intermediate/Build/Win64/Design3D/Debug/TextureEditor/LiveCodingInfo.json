@@ -1,0 +1,20 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.TextureEditor.cpp.obj": [
+			"CurveLinearColorAtlasDetailsCustomization.cpp.obj",
+			"TextureDetailsCustomization.cpp.obj",
+			"TextureEditorCommands.cpp.obj",
+			"TextureEditorViewportClient.cpp.obj",
+			"TextureEditorClasses.cpp.obj",
+			"TextureEditorModule.cpp.obj",
+			"TextureEditorToolkit.cpp.obj",
+			"STextureEditorViewport.cpp.obj",
+			"STextureEditorViewportToolbar.cpp.obj"
+		],
+		"Module.TextureEditor.gen.cpp.obj": [
+			"TextureEditor.init.gen.cpp.obj",
+			"TextureEditorSettings.gen.cpp.obj"
+		]
+	}
+}

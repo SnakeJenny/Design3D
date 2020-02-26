@@ -1,0 +1,39 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SequenceRecorder.cpp.obj": [
+			"ActorGroupDetailsCustomization.cpp.obj",
+			"ActorRecording.cpp.obj",
+			"ActorRecordingDetailsCustomization.cpp.obj",
+			"ActorRecordingSettings.cpp.obj",
+			"AnimationRecorder.cpp.obj",
+			"PropertiesToRecordForClassDetailsCustomization.cpp.obj",
+			"SClassPropertyRecorderSettings.cpp.obj",
+			"SCreateAnimationDlg.cpp.obj",
+			"MovieScene3DTransformSectionRecorder.cpp.obj",
+			"MovieSceneAnimationSectionRecorder.cpp.obj",
+			"MovieSceneMultiPropertyRecorder.cpp.obj",
+			"MovieScenePropertyRecorder.cpp.obj",
+			"SequenceRecorder.cpp.obj",
+			"SequenceRecorderActorGroup.cpp.obj",
+			"SequenceRecorderBlueprintLibrary.cpp.obj",
+			"SequenceRecorderCommands.cpp.obj",
+			"SequenceRecorderDetailsCustomization.cpp.obj",
+			"SequenceRecorderModule.cpp.obj",
+			"SequenceRecorderSettings.cpp.obj",
+			"SequenceRecorderUtils.cpp.obj",
+			"SSequenceRecorder.cpp.obj"
+		],
+		"Module.SequenceRecorder.gen.cpp.obj": [
+			"ActorRecording.gen.cpp.obj",
+			"ActorRecordingSettings.gen.cpp.obj",
+			"MovieScene3DTransformSectionRecorderSettings.gen.cpp.obj",
+			"SequenceRecorder.init.gen.cpp.obj",
+			"SequenceRecorderActorFilter.gen.cpp.obj",
+			"SequenceRecorderActorGroup.gen.cpp.obj",
+			"SequenceRecorderBlueprintLibrary.gen.cpp.obj",
+			"SequenceRecorderSettings.gen.cpp.obj",
+			"SequenceRecordingBase.gen.cpp.obj"
+		]
+	}
+}

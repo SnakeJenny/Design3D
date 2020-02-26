@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.FontEditor.cpp.obj": [
+			"FontEditor.cpp.obj",
+			"FontEditorModule.cpp.obj",
+			"FontFaceDetailsCustomization.cpp.obj",
+			"SCompositeFontEditor.cpp.obj",
+			"SFontEditorViewport.cpp.obj"
+		]
+	}
+}

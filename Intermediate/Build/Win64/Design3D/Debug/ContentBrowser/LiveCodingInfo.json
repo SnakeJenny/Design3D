@@ -1,0 +1,46 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ContentBrowser.1_of_3.cpp.obj": [
+			"AssetContextMenu.cpp.obj",
+			"AssetViewSortManager.cpp.obj",
+			"AssetViewWidgets.cpp.obj",
+			"CollectionAssetManagement.cpp.obj",
+			"CollectionAssetRegistryBridge.cpp.obj",
+			"CollectionContextMenu.cpp.obj",
+			"CollectionViewUtils.cpp.obj",
+			"ContentBrowserCommands.cpp.obj",
+			"ContentBrowserDelegates.cpp.obj",
+			"ContentBrowserModule.cpp.obj",
+			"ContentBrowserSingleton.cpp.obj",
+			"ContentBrowserUtils.cpp.obj",
+			"DragDropHandler.cpp.obj",
+			"EmptyFolderVisibilityManager.cpp.obj",
+			"FrontendFilters.cpp.obj"
+		],
+		"Module.ContentBrowser.2_of_3.cpp.obj": [
+			"HistoryManager.cpp.obj",
+			"NativeClassHierarchy.cpp.obj",
+			"NewAssetOrClassContextMenu.cpp.obj",
+			"PathContextMenu.cpp.obj",
+			"SAssetDialog.cpp.obj",
+			"SAssetPicker.cpp.obj",
+			"SAssetView.cpp.obj",
+			"SCollectionPicker.cpp.obj",
+			"SCollectionView.cpp.obj",
+			"SContentBrowser.cpp.obj"
+		],
+		"Module.ContentBrowser.3_of_3.cpp.obj": [
+			"SFilterList.cpp.obj",
+			"SMetaDataView.cpp.obj",
+			"SourcesViewWidgets.cpp.obj",
+			"SPathPicker.cpp.obj",
+			"SPathView.cpp.obj",
+			"SThumbnailEditModeTools.cpp.obj"
+		],
+		"Module.ContentBrowser.gen.cpp.obj": [
+			"ContentBrowser.init.gen.cpp.obj",
+			"ContentBrowserFrontEndFilterExtension.gen.cpp.obj"
+		]
+	}
+}

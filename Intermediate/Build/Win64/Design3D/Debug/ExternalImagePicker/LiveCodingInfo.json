@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ExternalImagePicker.cpp.obj": [
+			"ExternalImagePickerModule.cpp.obj",
+			"SExternalImagePicker.cpp.obj"
+		]
+	}
+}

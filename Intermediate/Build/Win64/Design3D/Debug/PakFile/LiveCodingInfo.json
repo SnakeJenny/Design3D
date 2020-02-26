@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PakFile.cpp.obj": [
+			"IPlatformFilePak.cpp.obj",
+			"SignedArchiveReader.cpp.obj"
+		]
+	}
+}

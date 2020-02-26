@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.FieldSystemSimulationCore.cpp.obj": [
+			"FieldSystemSimulationCoreAlgo.cpp.obj",
+			"FieldSystemSimulationCoreCallbacks.cpp.obj",
+			"FieldSystemSimulationCorePlugin.cpp.obj",
+			"FieldSystemSimulationCoreProxy.cpp.obj"
+		]
+	}
+}

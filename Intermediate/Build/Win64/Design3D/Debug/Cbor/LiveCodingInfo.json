@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Cbor.cpp.obj": [
+			"CborModule.cpp.obj",
+			"CborReader.cpp.obj",
+			"CborWriter.cpp.obj",
+			"CborTests.cpp.obj"
+		]
+	}
+}

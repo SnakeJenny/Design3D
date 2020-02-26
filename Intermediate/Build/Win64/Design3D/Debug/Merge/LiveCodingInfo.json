@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Merge.cpp.obj": [
+			"Merge.cpp.obj",
+			"MergeUtils.cpp.obj",
+			"SBlueprintMerge.cpp.obj",
+			"SMergeAssetPickerView.cpp.obj",
+			"SMergeDetailsView.cpp.obj",
+			"SMergeGraphView.cpp.obj",
+			"SMergeTreeView.cpp.obj"
+		]
+	}
+}

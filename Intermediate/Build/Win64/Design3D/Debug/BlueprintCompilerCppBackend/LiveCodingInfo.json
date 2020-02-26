@@ -1,0 +1,16 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.BlueprintCompilerCppBackend.cpp.obj": [
+			"BlueprintCompilerCppBackend.cpp.obj",
+			"BlueprintCompilerCppBackendAnim.cpp.obj",
+			"BlueprintCompilerCppBackendBase.cpp.obj",
+			"BlueprintCompilerCppBackendGatherDependencies.cpp.obj",
+			"BlueprintCompilerCppBackendModule.cpp.obj",
+			"BlueprintCompilerCppBackendUMG.cpp.obj",
+			"BlueprintCompilerCppBackendUtils.cpp.obj",
+			"BlueprintCompilerCppBackendValueHelper.cpp.obj",
+			"BPCompilerTests.cpp.obj"
+		]
+	}
+}

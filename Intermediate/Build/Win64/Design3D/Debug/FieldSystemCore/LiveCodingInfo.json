@@ -1,0 +1,16 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.FieldSystemCore.cpp.obj": [
+			"FieldSystem.cpp.obj",
+			"FieldSystemCoreAlgo.cpp.obj",
+			"FieldSystemCorePlugin.cpp.obj",
+			"FieldSystemNodes.cpp.obj"
+		],
+		"Module.FieldSystemCore.gen.cpp.obj": [
+			"FieldSystem.gen.cpp.obj",
+			"FieldSystemCore.init.gen.cpp.obj",
+			"FieldSystemTypes.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.StringTableEditor.cpp.obj": [
+			"AssetTypeActions_StringTable.cpp.obj",
+			"StringTableEditor.cpp.obj",
+			"StringTableEditorModule.cpp.obj"
+		]
+	}
+}

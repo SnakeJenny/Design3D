@@ -1,0 +1,25 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SlateRHIRenderer.cpp.obj": [
+			"Slate3DRenderer.cpp.obj",
+			"SlateAtlasedTextureResource.cpp.obj",
+			"SlateElementIndexBuffer.cpp.obj",
+			"SlateElementVertexBuffer.cpp.obj",
+			"SlateMaterialResource.cpp.obj",
+			"SlateMaterialShader.cpp.obj",
+			"SlateNativeTextureResource.cpp.obj",
+			"SlatePostProcessor.cpp.obj",
+			"SlatePostProcessResource.cpp.obj",
+			"SlateRHIFontTexture.cpp.obj",
+			"SlateRHIRenderer.cpp.obj",
+			"SlateRHIRendererModule.cpp.obj",
+			"SlateRHIRenderingPolicy.cpp.obj",
+			"SlateRHIResourceManager.cpp.obj",
+			"SlateRHITextureAtlas.cpp.obj",
+			"SlateShaders.cpp.obj",
+			"SlateUpdatableBuffer.cpp.obj",
+			"SlateUTextureResource.cpp.obj"
+		]
+	}
+}

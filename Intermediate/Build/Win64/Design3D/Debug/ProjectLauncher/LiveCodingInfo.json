@@ -1,0 +1,38 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ProjectLauncher.cpp.obj": [
+			"ProjectLauncherModule.cpp.obj",
+			"SProjectLauncherArchivePage.cpp.obj",
+			"SProjectLauncherBuildPage.cpp.obj",
+			"SProjectLauncherBuildTaskSettings.cpp.obj",
+			"SProjectLauncherCookByTheBookSettings.cpp.obj",
+			"SProjectLauncherCookedPlatforms.cpp.obj",
+			"SProjectLauncherCookOnTheFlySettings.cpp.obj",
+			"SProjectLauncherCookPage.cpp.obj",
+			"SProjectLauncherSimpleCookPage.cpp.obj",
+			"SProjectLauncherDeployFileServerSettings.cpp.obj",
+			"SProjectLauncherDeployPage.cpp.obj",
+			"SProjectLauncherDeployRepositorySettings.cpp.obj",
+			"SProjectLauncherDeployTargets.cpp.obj",
+			"SProjectLauncherDeployTaskSettings.cpp.obj",
+			"SProjectLauncherDeployToDeviceSettings.cpp.obj",
+			"SProjectLauncherDeviceGroupSelector.cpp.obj",
+			"SProjectLauncherSimpleDeviceListView.cpp.obj",
+			"SProjectLauncherLaunchCustomRoles.cpp.obj",
+			"SProjectLauncherLaunchPage.cpp.obj",
+			"SProjectLauncherLaunchRoleEditor.cpp.obj",
+			"SProjectLauncherLaunchTaskSettings.cpp.obj",
+			"SProjectLauncherPackagePage.cpp.obj",
+			"SProjectLauncherPackagingSettings.cpp.obj",
+			"SProjectLauncherPreviewPage.cpp.obj",
+			"SProjectLauncherProfileListView.cpp.obj",
+			"SProjectLauncherTaskListRow.cpp.obj",
+			"SProjectLauncherProjectPage.cpp.obj",
+			"SProjectLauncherProjectPicker.cpp.obj",
+			"SProjectLauncherSettings.cpp.obj",
+			"SProjectLauncherProfileNameDescEditor.cpp.obj",
+			"SProjectLauncher.cpp.obj"
+		]
+	}
+}

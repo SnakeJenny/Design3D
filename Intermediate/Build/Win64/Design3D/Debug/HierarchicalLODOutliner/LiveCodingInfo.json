@@ -1,0 +1,18 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.HierarchicalLODOutliner.cpp.obj": [
+			"HierarchicalLODOutlinerModule.cpp.obj",
+			"HLODOutliner.cpp.obj",
+			"HLODOutlinerDragDrop.cpp.obj",
+			"HLODTreeWidgetItem.cpp.obj",
+			"LODActorItem.cpp.obj",
+			"LODLevelItem.cpp.obj",
+			"StaticMeshActorItem.cpp.obj"
+		],
+		"Module.HierarchicalLODOutliner.gen.cpp.obj": [
+			"HierarchicalLODOutliner.init.gen.cpp.obj",
+			"HierarchicalLODType.gen.cpp.obj"
+		]
+	}
+}

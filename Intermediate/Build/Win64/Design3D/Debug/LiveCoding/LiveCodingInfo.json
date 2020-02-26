@@ -1,0 +1,40 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.LiveCoding.cpp.obj": [
+			"LC_ClientCommandActions.cpp.obj",
+			"LC_ClientCommandThread.cpp.obj",
+			"LC_ClientStartupThread.cpp.obj",
+			"LC_ClientUserCommandThread.cpp.obj",
+			"LC_CommandMap.cpp.obj",
+			"LC_CriticalSection.cpp.obj",
+			"LC_DuplexPipe.cpp.obj",
+			"LC_DuplexPipeClient.cpp.obj",
+			"LC_EntryPoint.cpp.obj",
+			"LC_Event.cpp.obj",
+			"LC_Executable.cpp.obj",
+			"LC_HeartBeat.cpp.obj",
+			"LC_InterprocessMutex.cpp.obj",
+			"LC_Logging.cpp.obj",
+			"LC_Memory.cpp.obj",
+			"LC_MemoryFile.cpp.obj",
+			"LC_NamedSharedMemory.cpp.obj",
+			"LC_PrimitiveNames.cpp.obj",
+			"LC_Process.cpp.obj",
+			"LC_Semaphore.cpp.obj",
+			"LC_Shortcut.cpp.obj",
+			"LC_StringUtil.cpp.obj",
+			"LC_SyncPoint.cpp.obj",
+			"LC_Thread.cpp.obj",
+			"LC_UtcTime.cpp.obj",
+			"LC_VirtualMemory.cpp.obj",
+			"LiveCodingLog.cpp.obj",
+			"LiveCodingModule.cpp.obj",
+			"LiveCodingSettings.cpp.obj"
+		],
+		"Module.LiveCoding.gen.cpp.obj": [
+			"LiveCoding.init.gen.cpp.obj",
+			"LiveCodingSettings.gen.cpp.obj"
+		]
+	}
+}

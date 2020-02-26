@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CurveAssetEditor.cpp.obj": [
+			"CurveAssetEditor.cpp.obj",
+			"CurveAssetEditorModule.cpp.obj"
+		]
+	}
+}

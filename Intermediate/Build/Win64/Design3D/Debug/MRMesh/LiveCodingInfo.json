@@ -1,0 +1,17 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MRMesh.cpp.obj": [
+			"MockDataMeshTrackerComponent.cpp.obj",
+			"MRMeshComponent.cpp.obj",
+			"MRMeshModule.cpp.obj",
+			"MeshReconstructorBase.cpp.obj"
+		],
+		"Module.MRMesh.gen.cpp.obj": [
+			"MeshReconstructorBase.gen.cpp.obj",
+			"MockDataMeshTrackerComponent.gen.cpp.obj",
+			"MRMesh.init.gen.cpp.obj",
+			"MRMeshComponent.gen.cpp.obj"
+		]
+	}
+}

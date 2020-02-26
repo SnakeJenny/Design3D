@@ -1,0 +1,45 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.FunctionalTesting.cpp.obj": [
+			"AutomationBlueprintFunctionLibrary.cpp.obj",
+			"DelayForFramesLatentAction.cpp.obj",
+			"FuncTestRenderingComponent.cpp.obj",
+			"FunctionalAITest.cpp.obj",
+			"FunctionalTest.cpp.obj",
+			"FunctionalTestGameMode.cpp.obj",
+			"FunctionalTestingHelper.cpp.obj",
+			"FunctionalTestingManager.cpp.obj",
+			"FunctionalTestingModule.cpp.obj",
+			"FunctionalTestLevelScript.cpp.obj",
+			"FunctionalTestUtilityLibrary.cpp.obj",
+			"FunctionalUIScreenshotTest.cpp.obj",
+			"GroundTruthData.cpp.obj",
+			"ScreenshotFunctionalTest.cpp.obj",
+			"ScreenshotFunctionalTestBase.cpp.obj",
+			"TakeScreenshotAfterTimeLatentAction.cpp.obj",
+			"TestPhaseComponent.cpp.obj",
+			"ClientFuncTestPerforming.cpp.obj",
+			"TraceQueryTestResults.cpp.obj"
+		],
+		"Module.FunctionalTesting.gen.cpp.obj": [
+			"AutomationBlueprintFunctionLibrary.gen.cpp.obj",
+			"AutomationScreenshotOptions.gen.cpp.obj",
+			"AutomationViewSettings.gen.cpp.obj",
+			"FuncTestRenderingComponent.gen.cpp.obj",
+			"FunctionalAITest.gen.cpp.obj",
+			"FunctionalTest.gen.cpp.obj",
+			"FunctionalTestGameMode.gen.cpp.obj",
+			"FunctionalTesting.init.gen.cpp.obj",
+			"FunctionalTestingManager.gen.cpp.obj",
+			"FunctionalTestLevelScript.gen.cpp.obj",
+			"FunctionalTestUtilityLibrary.gen.cpp.obj",
+			"FunctionalUIScreenshotTest.gen.cpp.obj",
+			"GroundTruthData.gen.cpp.obj",
+			"ScreenshotFunctionalTest.gen.cpp.obj",
+			"ScreenshotFunctionalTestBase.gen.cpp.obj",
+			"TestPhaseComponent.gen.cpp.obj",
+			"TraceQueryTestResults.gen.cpp.obj"
+		]
+	}
+}

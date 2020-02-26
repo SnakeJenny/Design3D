@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PackagesDialog.cpp.obj": [
+			"PackagesDialog.cpp.obj",
+			"SPackagesDialog.cpp.obj"
+		]
+	}
+}

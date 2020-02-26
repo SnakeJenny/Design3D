@@ -1,0 +1,16 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MeshMergeUtilities.cpp.obj": [
+			"MeshMergeDataTracker.cpp.obj",
+			"MeshMergeEditorExtensions.cpp.obj",
+			"MeshMergeHelpers.cpp.obj",
+			"MeshMergeModule.cpp.obj",
+			"MeshMergeUtilities.cpp.obj",
+			"ProxyGenerationProcessor.cpp.obj",
+			"SkeletalMeshAdapter.cpp.obj",
+			"StaticMeshAdapter.cpp.obj",
+			"StaticMeshComponentAdapter.cpp.obj"
+		]
+	}
+}

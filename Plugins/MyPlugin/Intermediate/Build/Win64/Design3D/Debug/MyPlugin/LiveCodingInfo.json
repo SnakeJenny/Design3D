@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MyPlugin.cpp.obj": [
+			"MyPlugin.cpp.obj",
+			"MyPluginCommands.cpp.obj",
+			"MyPluginStyle.cpp.obj",
+			"SimplePixelShader.cpp.obj"
+		],
+		"Module.MyPlugin.gen.cpp.obj": [
+			"MyPlugin.init.gen.cpp.obj",
+			"SimplePixelShader.gen.cpp.obj"
+		]
+	}
+}

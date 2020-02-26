@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-MyPlugin-Win64-Debug.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Github\master_szu\ue4_project\Design3D\Plugins\MyPlugin\Intermediate\Build\Win64\UE4Editor\Debug\MyPlugin\Module.MyPlugin.cpp.obj"
+"D:\Github\master_szu\ue4_project\Design3D\Plugins\MyPlugin\Intermediate\Build\Win64\UE4Editor\Debug\MyPlugin\Module.MyPlugin.gen.cpp.obj"
+"D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UE4Editor\Debug\Default.rc2.res"
+/OUT:"D:\Github\master_szu\ue4_project\Design3D\Plugins\MyPlugin\Intermediate\Build\Win64\UE4Editor\Debug\MyPlugin\UE4Editor-MyPlugin-Win64-Debug.lib"
+/INCLUDE:IMPLEMENT_MODULE_MyPlugin

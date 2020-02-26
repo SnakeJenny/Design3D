@@ -1,0 +1,17 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Projects.cpp.obj": [
+			"CustomBuildSteps.cpp.obj",
+			"LocalizationDescriptor.cpp.obj",
+			"ModuleDescriptor.cpp.obj",
+			"PluginDescriptor.cpp.obj",
+			"PluginManager.cpp.obj",
+			"PluginManifest.cpp.obj",
+			"PluginReferenceDescriptor.cpp.obj",
+			"ProjectDescriptor.cpp.obj",
+			"ProjectManager.cpp.obj",
+			"ProjectsModule.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,23 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "MyPlugin",
+  "Description": "Plugin mode for Design3D",
+  "Category": "Other",
+  "CreatedBy": "Eli",
+  "CreatedByURL": "",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "CanContainContent": false,
+  "IsBetaVersion": false,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "MyPlugin",
+      "Type": "Editor",
+      "LoadingPhase": "PostConfigInit"
+    }
+  ]
+}

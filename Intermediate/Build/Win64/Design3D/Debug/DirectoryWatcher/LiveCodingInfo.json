@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.DirectoryWatcher.cpp.obj": [
+			"DirectoryWatcherModule.cpp.obj",
+			"DirectoryWatcherProxy.cpp.obj",
+			"DirectoryWatcherTests.cpp.obj",
+			"FileCache.cpp.obj",
+			"FileCacheUtilities.cpp.obj",
+			"DirectoryWatchterRunTests.cpp.obj",
+			"DirectoryWatcherWindows.cpp.obj",
+			"DirectoryWatchRequestWindows.cpp.obj"
+		]
+	}
+}

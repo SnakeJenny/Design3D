@@ -1,0 +1,27 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SceneOutliner.cpp.obj": [
+			"ActorTreeItem.cpp.obj",
+			"ComponentTreeItem.cpp.obj",
+			"FolderTreeItem.cpp.obj",
+			"SceneOutlinerActorInfoColumn.cpp.obj",
+			"SceneOutlinerDragDrop.cpp.obj",
+			"SceneOutlinerFilters.cpp.obj",
+			"SceneOutlinerGutter.cpp.obj",
+			"SceneOutlinerItemLabelColumn.cpp.obj",
+			"SceneOutlinerModule.cpp.obj",
+			"SceneOutlinerSharedDataBase.cpp.obj",
+			"SceneOutlinerSortingTests.cpp.obj",
+			"SceneOutlinerStandaloneTypes.cpp.obj",
+			"SOutlinerTreeView.cpp.obj",
+			"SSceneOutliner.cpp.obj",
+			"SubComponentTreeItem.cpp.obj",
+			"WorldTreeItem.cpp.obj"
+		],
+		"Module.SceneOutliner.gen.cpp.obj": [
+			"SceneOutliner.init.gen.cpp.obj",
+			"SceneOutlinerSettings.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.LuminPlatformEditor.cpp.obj": [
+			"LuminPlatformEditorModule.cpp.obj",
+			"LuminTargetSettingsDetails.cpp.obj",
+			"MagicLeapSDKSettings.cpp.obj"
+		],
+		"Module.LuminPlatformEditor.gen.cpp.obj": [
+			"LuminPlatformEditor.init.gen.cpp.obj",
+			"MagicLeapSDKSettings.gen.cpp.obj"
+		]
+	}
+}

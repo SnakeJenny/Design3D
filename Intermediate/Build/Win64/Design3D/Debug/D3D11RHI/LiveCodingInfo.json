@@ -1,0 +1,28 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.D3D11RHI.cpp.obj": [
+			"D3D11Commands.cpp.obj",
+			"D3D11ConstantBuffer.cpp.obj",
+			"D3D11Device.cpp.obj",
+			"D3D11IndexBuffer.cpp.obj",
+			"D3D11Query.cpp.obj",
+			"D3D11RenderTarget.cpp.obj",
+			"D3D11RHI.cpp.obj",
+			"D3D11Shaders.cpp.obj",
+			"D3D11State.cpp.obj",
+			"D3D11StateCache.cpp.obj",
+			"D3D11StructuredBuffer.cpp.obj",
+			"D3D11Texture.cpp.obj",
+			"D3D11UAV.cpp.obj",
+			"D3D11UniformBuffer.cpp.obj",
+			"D3D11Util.cpp.obj",
+			"D3D11VertexBuffer.cpp.obj",
+			"D3D11VertexDeclaration.cpp.obj",
+			"D3D11Viewport.cpp.obj",
+			"WindowsD3D11ConstantBuffer.cpp.obj",
+			"WindowsD3D11Device.cpp.obj",
+			"WindowsD3D11Viewport.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.JsonUtilities.cpp.obj": [
+			"JsonObjectConverter.cpp.obj",
+			"JsonObjectWrapper.cpp.obj",
+			"JsonUtilitiesModule.cpp.obj"
+		],
+		"Module.JsonUtilities.gen.cpp.obj": [
+			"JsonObjectWrapper.gen.cpp.obj",
+			"JsonUtilities.init.gen.cpp.obj"
+		]
+	}
+}

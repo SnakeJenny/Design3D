@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PortalServices.cpp.obj": [
+			"PortalServiceLocator.cpp.obj",
+			"PortalServicesModule.cpp.obj"
+		],
+		"Module.PortalServices.gen.cpp.obj": [
+			"IPortalUser.gen.cpp.obj",
+			"PortalServices.init.gen.cpp.obj"
+		]
+	}
+}

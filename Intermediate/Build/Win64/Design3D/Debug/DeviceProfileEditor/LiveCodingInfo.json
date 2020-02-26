@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.DeviceProfileEditor.cpp.obj": [
+			"SDeviceProfileDetailsPanel.cpp.obj",
+			"DeviceProfileConsoleVariableColumn.cpp.obj",
+			"DeviceProfileEditorModule.cpp.obj",
+			"DeviceProfileTextureLODSettingsColumn.cpp.obj",
+			"SDeviceProfileCreateProfilePanel.cpp.obj",
+			"SDeviceProfileEditor.cpp.obj",
+			"SDeviceProfileEditorSingleProfileView.cpp.obj",
+			"SDeviceProfileSelectionPanel.cpp.obj"
+		]
+	}
+}

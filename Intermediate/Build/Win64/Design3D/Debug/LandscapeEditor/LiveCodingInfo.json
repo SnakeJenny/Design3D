@@ -1,0 +1,49 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.LandscapeEditor.1_of_2.cpp.obj": [
+			"ActorFactoryLandscape.cpp.obj",
+			"LandscapeEditorCommands.cpp.obj",
+			"LandscapeEditorDetailCustomization_AlphaBrush.cpp.obj",
+			"LandscapeEditorDetailCustomization_Base.cpp.obj",
+			"LandscapeEditorDetailCustomization_CopyPaste.cpp.obj",
+			"LandscapeEditorDetailCustomization_MiscTools.cpp.obj",
+			"LandscapeEditorDetailCustomization_NewLandscape.cpp.obj",
+			"LandscapeEditorDetailCustomization_ProceduralBrushStack.cpp.obj",
+			"LandscapeEditorDetailCustomization_ProceduralLayers.cpp.obj",
+			"LandscapeEditorDetailCustomization_ResizeLandscape.cpp.obj",
+			"LandscapeEditorDetailCustomization_TargetLayers.cpp.obj",
+			"LandscapeEditorDetails.cpp.obj",
+			"LandscapeEditorDetailWidgets.cpp.obj",
+			"LandscapeEditorModule.cpp.obj",
+			"LandscapeEditorObject.cpp.obj",
+			"LandscapeEdMode.cpp.obj"
+		],
+		"Module.LandscapeEditor.2_of_2.cpp.obj": [
+			"LandscapeEdModeBPCustomTools.cpp.obj",
+			"LandscapeEdModeBrushes.cpp.obj",
+			"LandscapeEdModeComponentTools.cpp.obj",
+			"LandscapeEdModeErosionTools.cpp.obj",
+			"LandscapeEdModeMirrorTool.cpp.obj",
+			"LandscapeEdModePaintTools.cpp.obj",
+			"LandscapeEdModeRampTool.cpp.obj",
+			"LandscapeEdModeSplineTools.cpp.obj",
+			"LandscapeEdModeXYOffset.cpp.obj",
+			"LandscapeFileFormatPng.cpp.obj",
+			"LandscapeFileFormatRaw.cpp.obj",
+			"LandscapeSplineDetails.cpp.obj",
+			"LandscapeSplineImportExport.cpp.obj",
+			"NewLandscapeUtils.cpp.obj",
+			"SFlattenHeightEyeDropperButton.cpp.obj",
+			"SLandscapeEditor.cpp.obj",
+			"LandscapeAutomationTests.cpp.obj"
+		],
+		"Module.LandscapeEditor.gen.cpp.obj": [
+			"ActorFactoryLandscape.gen.cpp.obj",
+			"LandscapeEditor.init.gen.cpp.obj",
+			"LandscapeEditorObject.gen.cpp.obj",
+			"LandscapeFileFormatInterface.gen.cpp.obj",
+			"LandscapePlaceholder.gen.cpp.obj"
+		]
+	}
+}

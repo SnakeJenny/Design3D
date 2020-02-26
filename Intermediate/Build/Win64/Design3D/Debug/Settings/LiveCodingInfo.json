@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Settings.cpp.obj": [
+			"SettingsCategory.cpp.obj",
+			"SettingsContainer.cpp.obj",
+			"SettingsModule.cpp.obj",
+			"SettingsSection.cpp.obj"
+		]
+	}
+}

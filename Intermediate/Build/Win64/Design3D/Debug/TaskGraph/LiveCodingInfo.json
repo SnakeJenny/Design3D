@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.TaskGraph.cpp.obj": [
+			"SBarVisualizer.cpp.obj",
+			"SEventsTree.cpp.obj",
+			"SGraphBar.cpp.obj",
+			"SProfileVisualizer.cpp.obj",
+			"STaskGraph.cpp.obj",
+			"STimeline.cpp.obj",
+			"TaskGraphStyle.cpp.obj",
+			"VisualizerEvents.cpp.obj"
+		]
+	}
+}

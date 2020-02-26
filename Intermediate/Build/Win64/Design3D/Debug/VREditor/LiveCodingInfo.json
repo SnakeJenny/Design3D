@@ -1,0 +1,51 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.VREditor.cpp.obj": [
+			"VREditorAutoScaler.cpp.obj",
+			"VREditorTeleporter.cpp.obj",
+			"VREditorBaseUserWidget.cpp.obj",
+			"VREditorDockableWindow.cpp.obj",
+			"VREditorFloatingCameraUI.cpp.obj",
+			"VREditorFloatingUI.cpp.obj",
+			"VREditorRadialFloatingUI.cpp.obj",
+			"VREditorUISystem.cpp.obj",
+			"VRRadialMenuHandler.cpp.obj",
+			"VREditorActions.cpp.obj",
+			"VREditorAvatarActor.cpp.obj",
+			"VREditorBaseActor.cpp.obj",
+			"VREditorFloatingText.cpp.obj",
+			"VREditorInteractor.cpp.obj",
+			"VREditorMode.cpp.obj",
+			"VREditorModeManager.cpp.obj",
+			"VREditorModule.cpp.obj",
+			"VREditorPlacement.cpp.obj",
+			"VREditorStyle.cpp.obj",
+			"VREditorWidgetComponent.cpp.obj",
+			"VRModeSettings.cpp.obj",
+			"VRScoutingInteractor.cpp.obj"
+		],
+		"Module.VREditor.gen.cpp.obj": [
+			"VREditor.init.gen.cpp.obj",
+			"VREditorAssetContainer.gen.cpp.obj",
+			"VREditorAutoScaler.gen.cpp.obj",
+			"VREditorAvatarActor.gen.cpp.obj",
+			"VREditorBaseActor.gen.cpp.obj",
+			"VREditorBaseUserWidget.gen.cpp.obj",
+			"VREditorDockableWindow.gen.cpp.obj",
+			"VREditorFloatingCameraUI.gen.cpp.obj",
+			"VREditorFloatingText.gen.cpp.obj",
+			"VREditorFloatingUI.gen.cpp.obj",
+			"VREditorInteractor.gen.cpp.obj",
+			"VREditorMode.gen.cpp.obj",
+			"VREditorPlacement.gen.cpp.obj",
+			"VREditorRadialFloatingUI.gen.cpp.obj",
+			"VREditorTeleporter.gen.cpp.obj",
+			"VREditorUISystem.gen.cpp.obj",
+			"VREditorWidgetComponent.gen.cpp.obj",
+			"VRModeSettings.gen.cpp.obj",
+			"VRRadialMenuHandler.gen.cpp.obj",
+			"VRScoutingInteractor.gen.cpp.obj"
+		]
+	}
+}

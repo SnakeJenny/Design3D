@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.DesktopWidgets.cpp.obj": [
+			"DesktopWidgetsModule.cpp.obj",
+			"SDirectoryPicker.cpp.obj",
+			"SFilePathPicker.cpp.obj"
+		]
+	}
+}

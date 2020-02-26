@@ -1,0 +1,27 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CurveEditor.cpp.obj": [
+			"CurveEditor.cpp.obj",
+			"CurveEditorCommands.cpp.obj",
+			"CurveEditorContextMenu.cpp.obj",
+			"CurveEditorModule.cpp.obj",
+			"CurveEditorScreenSpace.cpp.obj",
+			"CurveEditorSelection.cpp.obj",
+			"CurveEditorSettings.cpp.obj",
+			"CurveModel.cpp.obj",
+			"CurveEditorDragOperation_Marquee.cpp.obj",
+			"CurveEditorDragOperation_MoveKeys.cpp.obj",
+			"CurveEditorDragOperation_Pan.cpp.obj",
+			"CurveEditorDragOperation_Tangent.cpp.obj",
+			"CurveEditorDragOperation_Zoom.cpp.obj",
+			"ICurveEditorDragOperation.cpp.obj",
+			"SCurveEditorPanel.cpp.obj"
+		],
+		"Module.CurveEditor.gen.cpp.obj": [
+			"CurveEditor.init.gen.cpp.obj",
+			"CurveEditorKeyProxy.gen.cpp.obj",
+			"CurveEditorSettings.gen.cpp.obj"
+		]
+	}
+}

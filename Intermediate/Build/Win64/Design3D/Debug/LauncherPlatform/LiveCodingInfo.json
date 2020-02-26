@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.LauncherPlatform.cpp.obj": [
+			"LauncherPlatformModule.cpp.obj",
+			"LauncherPlatformWindows.cpp.obj"
+		]
+	}
+}

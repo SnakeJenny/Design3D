@@ -1,0 +1,34 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MovieSceneCapture.cpp.obj": [
+			"ActiveMovieSceneCaptures.cpp.obj",
+			"CompositionGraphCaptureProtocol.cpp.obj",
+			"FrameGrabber.cpp.obj",
+			"FrameGrabberProtocol.cpp.obj",
+			"ImageSequenceProtocol.cpp.obj",
+			"LevelCapture.cpp.obj",
+			"MovieSceneCapture.cpp.obj",
+			"MovieSceneCaptureEnvironment.cpp.obj",
+			"MovieSceneCaptureModule.cpp.obj",
+			"MovieSceneCaptureProtocolBase.cpp.obj",
+			"UserDefinedCaptureProtocol.cpp.obj",
+			"VideoCaptureProtocol.cpp.obj"
+		],
+		"Module.MovieSceneCapture.gen.cpp.obj": [
+			"AudioCaptureProtocol.gen.cpp.obj",
+			"CompositionGraphCaptureProtocol.gen.cpp.obj",
+			"FrameGrabberProtocol.gen.cpp.obj",
+			"ImageSequenceProtocol.gen.cpp.obj",
+			"IMovieSceneCapture.gen.cpp.obj",
+			"LevelCapture.gen.cpp.obj",
+			"MovieSceneCapture.gen.cpp.obj",
+			"MovieSceneCapture.init.gen.cpp.obj",
+			"MovieSceneCaptureEnvironment.gen.cpp.obj",
+			"MovieSceneCaptureProtocolBase.gen.cpp.obj",
+			"MovieSceneCaptureSettings.gen.cpp.obj",
+			"UserDefinedCaptureProtocol.gen.cpp.obj",
+			"VideoCaptureProtocol.gen.cpp.obj"
+		]
+	}
+}

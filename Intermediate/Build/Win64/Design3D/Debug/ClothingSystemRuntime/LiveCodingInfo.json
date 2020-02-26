@@ -1,0 +1,21 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ClothingSystemRuntime.cpp.obj": [
+			"ClothingAsset.cpp.obj",
+			"ClothingSimulation.cpp.obj",
+			"ClothingSimulationFactory.cpp.obj",
+			"ClothingSimulationInteractorNv.cpp.obj",
+			"ClothingSimulationNv.cpp.obj",
+			"ClothingSystemRuntimeModule.cpp.obj",
+			"NvClothSupport.cpp.obj",
+			"ClothingMeshUtils.cpp.obj"
+		],
+		"Module.ClothingSystemRuntime.gen.cpp.obj": [
+			"ClothingAsset.gen.cpp.obj",
+			"ClothingSimulationFactory.gen.cpp.obj",
+			"ClothingSimulationInteractorNv.gen.cpp.obj",
+			"ClothingSystemRuntime.init.gen.cpp.obj"
+		]
+	}
+}

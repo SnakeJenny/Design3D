@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.DataTableEditor.cpp.obj": [
+			"CompositeDataTableEditor.cpp.obj",
+			"DataTableEditor.cpp.obj",
+			"DataTableEditorModule.cpp.obj",
+			"SCompositeRowEditor.cpp.obj",
+			"SDataTableListViewRowName.cpp.obj",
+			"SRowEditor.cpp.obj",
+			"DataTableRowUtlis.cpp.obj"
+		]
+	}
+}

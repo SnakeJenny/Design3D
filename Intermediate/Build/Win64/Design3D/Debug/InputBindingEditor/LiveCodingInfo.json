@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.InputBindingEditor.cpp.obj": [
+			"InputBindingEditorModule.cpp.obj",
+			"SChordEditBox.cpp.obj",
+			"SChordEditor.cpp.obj",
+			"SInputBindingEditorPanel.cpp.obj"
+		],
+		"Module.InputBindingEditor.gen.cpp.obj": [
+			"EditorKeyboardShortcutSettings.gen.cpp.obj",
+			"InputBindingEditor.init.gen.cpp.obj"
+		]
+	}
+}

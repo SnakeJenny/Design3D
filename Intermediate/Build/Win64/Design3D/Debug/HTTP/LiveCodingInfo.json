@@ -1,0 +1,20 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.HTTP.cpp.obj": [
+			"CurlHttp.cpp.obj",
+			"CurlHttpManager.cpp.obj",
+			"CurlHttpThread.cpp.obj",
+			"GenericPlatformHttp.cpp.obj",
+			"HttpRequestImpl.cpp.obj",
+			"HttpRequestPayload.cpp.obj",
+			"HttpManager.cpp.obj",
+			"HttpModule.cpp.obj",
+			"HttpRetrySystem.cpp.obj",
+			"HttpTests.cpp.obj",
+			"HttpThread.cpp.obj",
+			"NullHttp.cpp.obj",
+			"WindowsPlatformHttp.cpp.obj"
+		]
+	}
+}

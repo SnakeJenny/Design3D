@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SequencerWidgets.cpp.obj": [
+			"SequencerWidgetsModule.cpp.obj",
+			"SSequencerTimeSlider.cpp.obj",
+			"STimeRange.cpp.obj",
+			"STimeRangeSlider.cpp.obj"
+		]
+	}
+}

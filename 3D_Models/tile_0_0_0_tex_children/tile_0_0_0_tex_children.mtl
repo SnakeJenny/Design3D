@@ -1,0 +1,12 @@
+newmtl material_2
+       Ka 0 0 0 1
+       Kd 1 1 1 1
+       Ks 0 0 0 1
+       map_Kd tile_1_512_0_tex_tex0.png
+
+newmtl material_1
+       Ka 0 0 0 1
+       Kd 1 1 1 1
+       Ks 0 0 0 1
+       map_Kd tile_1_0_0_tex_tex0.png
+

@@ -1,0 +1,22 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AppFramework.cpp.obj": [
+			"AppFrameworkModule.cpp.obj",
+			"SLayoutExample.cpp.obj",
+			"STableViewTesting.cpp.obj",
+			"SUserWidgetTest.cpp.obj",
+			"SWidgetGallery.cpp.obj",
+			"TestStyle.cpp.obj",
+			"SColorGradingPicker.cpp.obj",
+			"SColorPicker.cpp.obj",
+			"SColorThemes.cpp.obj",
+			"SComplexGradient.cpp.obj",
+			"SEyeDropperButton.cpp.obj",
+			"SSimpleGradient.cpp.obj",
+			"SPerfSuite.cpp.obj",
+			"STestSuite.cpp.obj",
+			"SWizard.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.EnvironmentQueryEditor.cpp.obj": [
+			"AssetTypeActions_EnvironmentQuery.cpp.obj",
+			"EnvDirectionCustomization.cpp.obj",
+			"EnvQueryTestDetails.cpp.obj",
+			"EnvTraceDataCustomization.cpp.obj",
+			"EdGraphSchema_EnvironmentQuery.cpp.obj",
+			"EnvironmentQueryEditor.cpp.obj",
+			"EnvironmentQueryEditorModule.cpp.obj",
+			"EnvironmentQueryFactory.cpp.obj",
+			"EnvironmentQueryGraph.cpp.obj",
+			"EnvironmentQueryGraphNode.cpp.obj",
+			"EnvironmentQueryGraphNode_Option.cpp.obj",
+			"EnvironmentQueryGraphNode_Root.cpp.obj",
+			"EnvironmentQueryGraphNode_Test.cpp.obj",
+			"SEnvQueryLoadGraph.cpp.obj",
+			"SEnvQueryProfiler.cpp.obj",
+			"SGraphNode_EnvironmentQuery.cpp.obj",
+			"STestFunctionWidget.cpp.obj"
+		],
+		"Module.EnvironmentQueryEditor.gen.cpp.obj": [
+			"EdGraphSchema_EnvironmentQuery.gen.cpp.obj",
+			"EnvironmentQueryEditor.init.gen.cpp.obj",
+			"EnvironmentQueryFactory.gen.cpp.obj",
+			"EnvironmentQueryGraph.gen.cpp.obj",
+			"EnvironmentQueryGraphNode.gen.cpp.obj",
+			"EnvironmentQueryGraphNode_Option.gen.cpp.obj",
+			"EnvironmentQueryGraphNode_Root.gen.cpp.obj",
+			"EnvironmentQueryGraphNode_Test.gen.cpp.obj"
+		]
+	}
+}

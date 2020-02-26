@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.LuminRuntimeSettings.cpp.obj": [
+			"LuminRuntimeSettings.cpp.obj",
+			"LuminRuntimeSettingsModule.cpp.obj"
+		],
+		"Module.LuminRuntimeSettings.gen.cpp.obj": [
+			"LuminRuntimeSettings.gen.cpp.obj",
+			"LuminRuntimeSettings.init.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.InternationalizationSettings.cpp.obj": [
+			"InternationalizationSettings.cpp.obj",
+			"InternationalizationSettingsModel.cpp.obj",
+			"InternationalizationSettingsModelDetails.cpp.obj",
+			"InternationalizationSettingsModule.cpp.obj",
+			"SCulturePicker.cpp.obj"
+		],
+		"Module.InternationalizationSettings.gen.cpp.obj": [
+			"InternationalizationSettings.init.gen.cpp.obj",
+			"InternationalizationSettingsModel.gen.cpp.obj"
+		]
+	}
+}

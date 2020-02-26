@@ -1,0 +1,39 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.IntroTutorials.cpp.obj": [
+			"ClassTypeActions_EditorTutorial.cpp.obj",
+			"EditorTutorial.cpp.obj",
+			"EditorTutorialDetailsCustomization.cpp.obj",
+			"EditorTutorialFactory.cpp.obj",
+			"EditorTutorialImportFactory.cpp.obj",
+			"EditorTutorialSettings.cpp.obj",
+			"IntroTutorials.cpp.obj",
+			"SEditorTutorials.cpp.obj",
+			"STutorialButton.cpp.obj",
+			"STutorialContent.cpp.obj",
+			"STutorialEditableText.cpp.obj",
+			"STutorialLoading.cpp.obj",
+			"STutorialNavigation.cpp.obj",
+			"STutorialOverlay.cpp.obj",
+			"STutorialRoot.cpp.obj",
+			"STutorialsBrowser.cpp.obj",
+			"TutorialHyperlinkDecorator.cpp.obj",
+			"TutorialHyperlinkRun.cpp.obj",
+			"TutorialImageDecorator.cpp.obj",
+			"TutorialSettings.cpp.obj",
+			"TutorialStateSettings.cpp.obj",
+			"TutorialStructCustomization.cpp.obj",
+			"TutorialText.cpp.obj"
+		],
+		"Module.IntroTutorials.gen.cpp.obj": [
+			"EditorTutorial.gen.cpp.obj",
+			"EditorTutorialFactory.gen.cpp.obj",
+			"EditorTutorialImportFactory.gen.cpp.obj",
+			"EditorTutorialSettings.gen.cpp.obj",
+			"IntroTutorials.init.gen.cpp.obj",
+			"TutorialSettings.gen.cpp.obj",
+			"TutorialStateSettings.gen.cpp.obj"
+		]
+	}
+}

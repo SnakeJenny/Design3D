@@ -1,0 +1,24 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.TranslationEditor.cpp.obj": [
+			"CustomFontColumn.cpp.obj",
+			"InternationalizationExportSettings.cpp.obj",
+			"ITranslationEditor.cpp.obj",
+			"TranslationDataManager.cpp.obj",
+			"TranslationEditor.cpp.obj",
+			"TranslationEditorMenu.cpp.obj",
+			"TranslationEditorModule.cpp.obj",
+			"TranslationPickerEditWindow.cpp.obj",
+			"TranslationPickerFloatingWindow.cpp.obj",
+			"TranslationPickerWidget.cpp.obj",
+			"TranslationUnit.cpp.obj"
+		],
+		"Module.TranslationEditor.gen.cpp.obj": [
+			"InternationalizationExportSettings.gen.cpp.obj",
+			"TranslationEditor.init.gen.cpp.obj",
+			"TranslationPickerEditWindow.gen.cpp.obj",
+			"TranslationUnit.gen.cpp.obj"
+		]
+	}
+}

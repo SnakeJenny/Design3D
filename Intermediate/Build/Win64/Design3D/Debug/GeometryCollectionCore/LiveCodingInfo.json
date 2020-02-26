@@ -1,0 +1,21 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.GeometryCollectionCore.cpp.obj": [
+			"GeometryCollection.cpp.obj",
+			"GeometryCollectionAlgo.cpp.obj",
+			"GeometryCollectionClusteringUtility.cpp.obj",
+			"GeometryCollectionPlugin.cpp.obj",
+			"GeometryCollectionProximityUtility.cpp.obj",
+			"GeometryCollectionSection.cpp.obj",
+			"GeometryCollectionUtility.cpp.obj",
+			"ManagedArrayCollection.cpp.obj",
+			"RecordedTransformTrack.cpp.obj",
+			"TransformCollection.cpp.obj"
+		],
+		"Module.GeometryCollectionCore.gen.cpp.obj": [
+			"GeometryCollectionCore.init.gen.cpp.obj",
+			"RecordedTransformTrack.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PacketHandler.cpp.obj": [
+			"DDoSDetection.cpp.obj",
+			"HandlerComponentFactory.cpp.obj",
+			"NetAnalytics.cpp.obj",
+			"NetAnalyticsAggregatorConfig.cpp.obj",
+			"PacketAudit.cpp.obj",
+			"PacketHandler.cpp.obj",
+			"PacketHandlerProfileConfig.cpp.obj"
+		],
+		"Module.PacketHandler.gen.cpp.obj": [
+			"HandlerComponentFactory.gen.cpp.obj",
+			"NetAnalyticsAggregatorConfig.gen.cpp.obj",
+			"PacketHandler.init.gen.cpp.obj",
+			"PacketHandlerProfileConfig.gen.cpp.obj"
+		]
+	}
+}

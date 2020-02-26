@@ -1,0 +1,20 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Sockets.cpp.obj": [
+			"IPAddressBSDIPv6.cpp.obj",
+			"SocketsBSDIPv6.cpp.obj",
+			"SocketSubsystemBSDIPv6.cpp.obj",
+			"IPAddressBSD.cpp.obj",
+			"SocketsBSD.cpp.obj",
+			"SocketSubsystemBSD.cpp.obj",
+			"IPAddress.cpp.obj",
+			"MultichannelTcpGlobals.cpp.obj",
+			"NetworkMessage.cpp.obj",
+			"ServerTOC.cpp.obj",
+			"Sockets.cpp.obj",
+			"SocketSubsystem.cpp.obj",
+			"SocketSubsystemWindows.cpp.obj"
+		]
+	}
+}

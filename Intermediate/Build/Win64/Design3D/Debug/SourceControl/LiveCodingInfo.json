@@ -1,0 +1,19 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SourceControl.cpp.obj": [
+			"DefaultSourceControlProvider.cpp.obj",
+			"ISourceControlProvider.cpp.obj",
+			"ScopedSourceControlProgress.cpp.obj",
+			"SourceControlHelpers.cpp.obj",
+			"SourceControlModule.cpp.obj",
+			"SourceControlSettings.cpp.obj",
+			"SSourceControlLogin.cpp.obj",
+			"SSourceControlPicker.cpp.obj"
+		],
+		"Module.SourceControl.gen.cpp.obj": [
+			"SourceControl.init.gen.cpp.obj",
+			"SourceControlHelpers.gen.cpp.obj"
+		]
+	}
+}

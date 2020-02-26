@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SharedSettingsWidgets.cpp.obj": [
+			"ManifestUpdateHelper.cpp.obj",
+			"SExternalImageReference.cpp.obj",
+			"ShaderFormatsPropertyDetails.cpp.obj",
+			"SharedSettingsWidgetsModule.cpp.obj",
+			"SHyperlinkLaunchURL.cpp.obj",
+			"SPlatformSetupMessage.cpp.obj",
+			"SSettingsEditorCheckoutNotice.cpp.obj"
+		]
+	}
+}

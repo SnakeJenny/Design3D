@@ -1,0 +1,36 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MaterialEditor.cpp.obj": [
+			"FindInMaterial.cpp.obj",
+			"MaterialEditingLibrary.cpp.obj",
+			"MaterialEditor.cpp.obj",
+			"MaterialEditorActions.cpp.obj",
+			"MaterialEditorDetailCustomization.cpp.obj",
+			"MaterialEditorInstanceDetailCustomization.cpp.obj",
+			"MaterialEditorModule.cpp.obj",
+			"MaterialEditorUtilities.cpp.obj",
+			"MaterialExpressionClasses.cpp.obj",
+			"MaterialInstanceEditor.cpp.obj",
+			"MaterialLayersFunctionsCustomization.cpp.obj",
+			"MaterialPropertyHelpers.cpp.obj",
+			"MaterialStats.cpp.obj",
+			"MaterialStatsCommon.cpp.obj",
+			"MaterialStatsGrid.cpp.obj",
+			"SMaterialEditorStatsWidget.cpp.obj",
+			"SMaterialEditorTitleBar.cpp.obj",
+			"SMaterialEditorViewport.cpp.obj",
+			"SMaterialEditorViewportToolBar.cpp.obj",
+			"SMaterialLayersFunctionsTree.cpp.obj",
+			"SMaterialPalette.cpp.obj",
+			"SMaterialParametersOverviewWidget.cpp.obj",
+			"MaterialEditorTests.cpp.obj"
+		],
+		"Module.MaterialEditor.gen.cpp.obj": [
+			"MaterialEditingLibrary.gen.cpp.obj",
+			"MaterialEditor.init.gen.cpp.obj",
+			"MaterialEditorSettings.gen.cpp.obj",
+			"MaterialPropertyHelpers.gen.cpp.obj"
+		]
+	}
+}

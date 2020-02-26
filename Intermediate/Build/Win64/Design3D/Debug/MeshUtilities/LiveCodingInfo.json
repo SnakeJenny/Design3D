@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MeshUtilities.cpp.obj": [
+			"MeshDistanceFieldUtilities.cpp.obj",
+			"MeshUtilities.cpp.obj",
+			"SkeletalMeshTools.cpp.obj"
+		]
+	}
+}

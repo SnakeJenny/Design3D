@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SceneDepthPickerMode.cpp.obj": [
+			"EditorModeSceneDepthPicker.cpp.obj",
+			"SceneDepthPickerMode.cpp.obj"
+		]
+	}
+}

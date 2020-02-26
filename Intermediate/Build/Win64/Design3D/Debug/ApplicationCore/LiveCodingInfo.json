@@ -1,0 +1,26 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ApplicationCore.cpp.obj": [
+			"ApplicationCore.cpp.obj",
+			"GenericApplication.cpp.obj",
+			"GenericPlatformApplicationMisc.cpp.obj",
+			"GenericPlatformSoftwareCursor.cpp.obj",
+			"GenericPlatformSplash.cpp.obj",
+			"GenericPlatformSurvey.cpp.obj",
+			"GenericWindow.cpp.obj",
+			"TextStoreACP.cpp.obj",
+			"WindowsApplication.cpp.obj",
+			"WindowsApplicationErrorOutputDevice.cpp.obj",
+			"WindowsConsoleOutputDevice.cpp.obj",
+			"WindowsCursor.cpp.obj",
+			"WindowsFeedbackContext.cpp.obj",
+			"WindowsPlatformApplicationMisc.cpp.obj",
+			"WindowsPlatformSplash.cpp.obj",
+			"WindowsPlatformSurvey.cpp.obj",
+			"WindowsTextInputMethodSystem.cpp.obj",
+			"WindowsWindow.cpp.obj",
+			"XInputInterface.cpp.obj"
+		]
+	}
+}

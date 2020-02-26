@@ -1,0 +1,45 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Blutility.cpp.obj": [
+			"AssetTypeActions_EditorUtilityBlueprint.cpp.obj",
+			"AssetTypeActions_EditorUtilityWidgetBlueprint.cpp.obj",
+			"BlutilityContentBrowserExtensions.cpp.obj",
+			"BlutilityDetailsPanel.cpp.obj",
+			"BlutilityLevelEditorExtensions.cpp.obj",
+			"BlutilityMenuExtensions.cpp.obj",
+			"BlutilityModule.cpp.obj",
+			"BlutilityShelf.cpp.obj",
+			"EditorAutomationActor.cpp.obj",
+			"EditorAutomationActorComponent.cpp.obj",
+			"EditorAutomationObject.cpp.obj",
+			"EditorUtilityBlueprint.cpp.obj",
+			"EditorUtilityBlueprintFactory.cpp.obj",
+			"EditorUtilityContext.cpp.obj",
+			"EditorUtilityDialog.cpp.obj",
+			"EditorUtilityLibrary.cpp.obj",
+			"EditorUtilityWidget.cpp.obj",
+			"EditorUtilityWidgetBlueprint.cpp.obj",
+			"EditorUtilityWidgetBlueprintFactory.cpp.obj",
+			"GlobalEditorUtilityBase.cpp.obj",
+			"PlacedEditorUtilityBase.cpp.obj"
+		],
+		"Module.Blutility.gen.cpp.obj": [
+			"ActorActionUtility.gen.cpp.obj",
+			"AssetActionUtility.gen.cpp.obj",
+			"Blutility.init.gen.cpp.obj",
+			"EditorAutomationActor.gen.cpp.obj",
+			"EditorAutomationActorComponent.gen.cpp.obj",
+			"EditorAutomationObject.gen.cpp.obj",
+			"EditorUtilityBlueprint.gen.cpp.obj",
+			"EditorUtilityBlueprintFactory.gen.cpp.obj",
+			"EditorUtilityContext.gen.cpp.obj",
+			"EditorUtilityLibrary.gen.cpp.obj",
+			"EditorUtilityWidget.gen.cpp.obj",
+			"EditorUtilityWidgetBlueprint.gen.cpp.obj",
+			"EditorUtilityWidgetBlueprintFactory.gen.cpp.obj",
+			"GlobalEditorUtilityBase.gen.cpp.obj",
+			"PlacedEditorUtilityBase.gen.cpp.obj"
+		]
+	}
+}

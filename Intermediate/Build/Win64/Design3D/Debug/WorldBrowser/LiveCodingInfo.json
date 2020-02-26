@@ -1,0 +1,37 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.WorldBrowser.cpp.obj": [
+			"LevelCollectionModel.cpp.obj",
+			"LevelFolders.cpp.obj",
+			"LevelModel.cpp.obj",
+			"SLevelsTreeWidget.cpp.obj",
+			"SPropertyEditorLevelPackage.cpp.obj",
+			"StreamingLevelCollectionModel.cpp.obj",
+			"StreamingLevelCustomization.cpp.obj",
+			"StreamingLevelEdMode.cpp.obj",
+			"StreamingLevelModel.cpp.obj",
+			"SWorldDetails.cpp.obj",
+			"SWorldHierarchy.cpp.obj",
+			"SWorldHierarchyImpl.cpp.obj",
+			"SWorldHierarchyItem.cpp.obj",
+			"STiledLandscapeImportDlg.cpp.obj",
+			"SWorldComposition.cpp.obj",
+			"SWorldLayers.cpp.obj",
+			"SWorldTileItem.cpp.obj",
+			"WorldTileCollectionModel.cpp.obj",
+			"WorldTileDetails.cpp.obj",
+			"WorldTileDetailsCustomization.cpp.obj",
+			"WorldTileModel.cpp.obj",
+			"WorldTileThumbnails.cpp.obj",
+			"WorldBrowserDragDrop.cpp.obj",
+			"WorldBrowserModule.cpp.obj",
+			"WorldTreeItemTypes.cpp.obj"
+		],
+		"Module.WorldBrowser.gen.cpp.obj": [
+			"LevelFolders.gen.cpp.obj",
+			"WorldBrowser.init.gen.cpp.obj",
+			"WorldTileDetails.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SlateReflector.cpp.obj": [
+			"WidgetReflectorNode.cpp.obj",
+			"SlateReflectorModule.cpp.obj",
+			"VisualTreeCapture.cpp.obj",
+			"SAtlasVisualizer.cpp.obj",
+			"SWidgetEventLog.cpp.obj",
+			"SWidgetReflector.cpp.obj",
+			"SWidgetReflectorTreeWidgetItem.cpp.obj",
+			"SWidgetSnapshotVisualizer.cpp.obj",
+			"WidgetSnapshotService.cpp.obj"
+		],
+		"Module.SlateReflector.gen.cpp.obj": [
+			"SlateReflector.init.gen.cpp.obj",
+			"WidgetSnapshotMessages.gen.cpp.obj"
+		]
+	}
+}

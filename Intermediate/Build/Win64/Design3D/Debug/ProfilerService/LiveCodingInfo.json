@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ProfilerService.cpp.obj": [
+			"ProfilerServiceFileTransfer.cpp.obj",
+			"ProfilerServiceManager.cpp.obj",
+			"ProfilerServiceModule.cpp.obj"
+		]
+	}
+}

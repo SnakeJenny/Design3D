@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ScreenShotComparisonTools.cpp.obj": [
+			"ImageComparer.cpp.obj",
+			"ScreenShotManager.cpp.obj",
+			"ScreenShotToolsModule.cpp.obj"
+		],
+		"Module.ScreenShotComparisonTools.gen.cpp.obj": [
+			"ImageComparer.gen.cpp.obj",
+			"ScreenShotComparisonTools.init.gen.cpp.obj"
+		]
+	}
+}

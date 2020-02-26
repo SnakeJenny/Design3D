@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Messaging.cpp.obj": [
+			"MessageBridge.cpp.obj",
+			"MessageBus.cpp.obj",
+			"MessageContext.cpp.obj",
+			"MessageDispatchTask.cpp.obj",
+			"MessageRouter.cpp.obj",
+			"MessageTracer.cpp.obj",
+			"MessagingModule.cpp.obj"
+		]
+	}
+}

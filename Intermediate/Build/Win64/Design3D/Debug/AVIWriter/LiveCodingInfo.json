@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AVIWriter.cpp.obj": [
+			"AVIWriter.cpp.obj",
+			"CapturePin.cpp.obj",
+			"CaptureSource.cpp.obj"
+		]
+	}
+}

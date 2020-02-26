@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SwarmInterface.cpp.obj": [
+			"SwarmInterface.cpp.obj",
+			"SwarmInterfaceLocal.cpp.obj",
+			"SwarmInterfaceModule.cpp.obj"
+		],
+		"Module.SwarmInterface.gen.cpp.obj": [
+			"SwarmInterface.init.gen.cpp.obj",
+			"SwarmMessages.gen.cpp.obj"
+		]
+	}
+}

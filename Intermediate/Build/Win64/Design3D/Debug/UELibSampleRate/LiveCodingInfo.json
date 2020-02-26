@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.UELibSampleRate.cpp.obj": [
+			"LibSampleRateModule.cpp.obj",
+			"samplerate.cpp.obj",
+			"src_linear.cpp.obj",
+			"src_sinc.cpp.obj",
+			"src_zoh.cpp.obj"
+		]
+	}
+}

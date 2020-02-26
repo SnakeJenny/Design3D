@@ -1,0 +1,22 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AnimationModifiers.cpp.obj": [
+			"AnimationBlueprintLibrary.cpp.obj",
+			"AnimationModifier.cpp.obj",
+			"AnimationModifierDetailCustomization.cpp.obj",
+			"AnimationModifiersAssetUserData.cpp.obj",
+			"AnimationModifiersModule.cpp.obj",
+			"SAnimationModifierContentBrowserWindow.cpp.obj",
+			"SAnimationModifiersTab.cpp.obj",
+			"SModifierItemRow.cpp.obj",
+			"SModifierListview.cpp.obj"
+		],
+		"Module.AnimationModifiers.gen.cpp.obj": [
+			"AnimationBlueprintLibrary.gen.cpp.obj",
+			"AnimationModifier.gen.cpp.obj",
+			"AnimationModifiers.init.gen.cpp.obj",
+			"AnimationModifiersAssetUserData.gen.cpp.obj"
+		]
+	}
+}

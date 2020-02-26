@@ -1,0 +1,19 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MeshPaintMode.cpp.obj": [
+			"MeshPaintEdMode.cpp.obj",
+			"MeshPaintModeModule.cpp.obj",
+			"MeshPaintModeToolKit.cpp.obj",
+			"PaintModeCommands.cpp.obj",
+			"PaintModePainter.cpp.obj",
+			"PaintModeSettings.cpp.obj",
+			"PaintModeSettingsCustomization.cpp.obj",
+			"SPaintModeWidget.cpp.obj"
+		],
+		"Module.MeshPaintMode.gen.cpp.obj": [
+			"MeshPaintMode.init.gen.cpp.obj",
+			"PaintModeSettings.gen.cpp.obj"
+		]
+	}
+}

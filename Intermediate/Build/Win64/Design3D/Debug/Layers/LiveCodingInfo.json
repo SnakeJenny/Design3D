@@ -1,0 +1,17 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Layers.cpp.obj": [
+			"ActorLayerCollectionViewModel.cpp.obj",
+			"ActorLayerViewModel.cpp.obj",
+			"LayerCollectionViewModel.cpp.obj",
+			"LayersDragDropOp.cpp.obj",
+			"LayersModule.cpp.obj",
+			"LayerViewModel.cpp.obj",
+			"SceneOutlinerLayerContentsColumn.cpp.obj",
+			"SLayerBrowser.cpp.obj",
+			"SLayersCommandsMenu.cpp.obj",
+			"SLayersViewRow.cpp.obj"
+		]
+	}
+}

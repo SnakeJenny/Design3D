@@ -1,0 +1,27 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Localization.cpp.obj": [
+			"LocalizationConfigurationScript.cpp.obj",
+			"LocalizationModule.cpp.obj",
+			"LocalizationSettings.cpp.obj",
+			"LocalizationSourceControlUtil.cpp.obj",
+			"LocalizationTargetTypes.cpp.obj",
+			"LocTextHelper.cpp.obj",
+			"LocTextHelperTests.cpp.obj",
+			"PortableObjectFormatDOM.cpp.obj",
+			"PortableObjectPipeline.cpp.obj",
+			"JsonInternationalizationArchiveSerializer.cpp.obj",
+			"JsonInternationalizationManifestSerializer.cpp.obj",
+			"JsonInternationalizationMetadataSerializer.cpp.obj",
+			"TextLocalizationResourceGenerator.cpp.obj"
+		],
+		"Module.Localization.gen.cpp.obj": [
+			"Localization.init.gen.cpp.obj",
+			"LocalizationSettings.gen.cpp.obj",
+			"LocalizationTargetTypes.gen.cpp.obj",
+			"LocTextHelper.gen.cpp.obj",
+			"PortableObjectPipeline.gen.cpp.obj"
+		]
+	}
+}

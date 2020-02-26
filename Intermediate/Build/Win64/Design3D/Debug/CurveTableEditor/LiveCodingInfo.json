@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CurveTableEditor.cpp.obj": [
+			"CompositeCurveTableEditor.cpp.obj",
+			"CurveTableEditor.cpp.obj",
+			"CurveTableEditorCommands.cpp.obj",
+			"CurveTableEditorHandle.cpp.obj",
+			"CurveTableEditorModule.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CommonMenuExtensions.cpp.obj": [
+			"BufferVisualizationMenuCommands.cpp.obj",
+			"CommonMenuExtensionsModule.cpp.obj",
+			"ShowFlagFilter.cpp.obj",
+			"ShowFlagMenuCommands.cpp.obj"
+		]
+	}
+}

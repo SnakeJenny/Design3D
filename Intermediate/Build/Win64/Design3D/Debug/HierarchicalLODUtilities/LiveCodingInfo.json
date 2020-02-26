@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.HierarchicalLODUtilities.cpp.obj": [
+			"HierarchicalLODProxyProcessor.cpp.obj",
+			"HierarchicalLODUtilities.cpp.obj",
+			"HierarchicalLODUtilitiesModule.cpp.obj"
+		]
+	}
+}

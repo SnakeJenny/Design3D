@@ -1,0 +1,16 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ImageWriteQueue.cpp.obj": [
+			"ImageWriteBlueprintLibrary.cpp.obj",
+			"ImageWriteQueue.cpp.obj",
+			"ImageWriteStream.cpp.obj",
+			"ImageWriteTask.cpp.obj"
+		],
+		"Module.ImageWriteQueue.gen.cpp.obj": [
+			"ImageWriteBlueprintLibrary.gen.cpp.obj",
+			"ImageWriteQueue.init.gen.cpp.obj",
+			"ImageWriteTypes.gen.cpp.obj"
+		]
+	}
+}

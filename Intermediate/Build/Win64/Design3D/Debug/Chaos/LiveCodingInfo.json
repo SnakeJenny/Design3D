@@ -1,0 +1,36 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Chaos.cpp.obj": [
+			"BoundingVolumeHierarchy.cpp.obj",
+			"DebugDrawQueue.cpp.obj",
+			"FFT.cpp.obj",
+			"Parallel.cpp.obj",
+			"ImplicitObject.cpp.obj",
+			"Levelset.cpp.obj",
+			"MassProperties.cpp.obj",
+			"PBDCollisionConstraint.cpp.obj",
+			"PBDCollisionConstraintPGS.cpp.obj",
+			"PBDCollisionConstraintUtil.cpp.obj",
+			"PBDCollisionSpringConstraintsBase.cpp.obj",
+			"PBDContactGraph.cpp.obj",
+			"PBDEvolution.cpp.obj",
+			"PBDJointConstraintsBase.cpp.obj",
+			"PBDLongRangeConstraintsBase.cpp.obj",
+			"PBDRigidClustering.cpp.obj",
+			"PBDRigidsEvolution.cpp.obj",
+			"PBDRigidsEvolutionGBF.cpp.obj",
+			"PBDRigidsEvolutionPGS.cpp.obj",
+			"PBDRigidSpringConstraintsBase.cpp.obj",
+			"RigidParticles.cpp.obj",
+			"SegmentMesh.cpp.obj",
+			"SmokeEvolution.cpp.obj",
+			"SpatialHash.cpp.obj",
+			"Transform.cpp.obj",
+			"TriangleMesh.cpp.obj",
+			"UniformGrid.cpp.obj",
+			"ChaosModule.cpp.obj",
+			"ChaosStats.cpp.obj"
+		]
+	}
+}

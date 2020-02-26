@@ -1,0 +1,21 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PIEPreviewDeviceProfileSelector.cpp.obj": [
+			"PIEPreviewDevice.cpp.obj",
+			"PIEPreviewDeviceEnumeration.cpp.obj",
+			"PIEPreviewDeviceProfileSelectorModule.cpp.obj",
+			"PIEPreviewModule.cpp.obj",
+			"PIEPreviewSettings.cpp.obj",
+			"PIEPreviewWindow.cpp.obj",
+			"PIEPreviewWindowCoreStyle.cpp.obj",
+			"PIEPreviewWindowStyle.cpp.obj",
+			"PIEPreviewWindowTitleBar.cpp.obj"
+		],
+		"Module.PIEPreviewDeviceProfileSelector.gen.cpp.obj": [
+			"PIEPreviewDeviceProfileSelector.init.gen.cpp.obj",
+			"PIEPreviewSettings.gen.cpp.obj",
+			"PIEPreviewWindowStyle.gen.cpp.obj"
+		]
+	}
+}

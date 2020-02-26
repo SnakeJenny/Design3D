@@ -1,0 +1,39 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.VulkanRHI.1_of_3.cpp.obj": [
+			"VulkanCommandBuffer.cpp.obj",
+			"VulkanCommands.cpp.obj",
+			"VulkanDebug.cpp.obj",
+			"VulkanDevice.cpp.obj",
+			"VulkanGenericPlatform.cpp.obj",
+			"VulkanIndexBuffer.cpp.obj",
+			"VulkanLayers.cpp.obj",
+			"VulkanLLM.cpp.obj",
+			"VulkanMemory.cpp.obj",
+			"VulkanPendingState.cpp.obj"
+		],
+		"Module.VulkanRHI.2_of_3.cpp.obj": [
+			"VulkanPipeline.cpp.obj",
+			"VulkanPipelineState.cpp.obj",
+			"VulkanQuery.cpp.obj",
+			"VulkanQueue.cpp.obj",
+			"VulkanRenderTarget.cpp.obj",
+			"VulkanRHI.cpp.obj",
+			"VulkanShaders.cpp.obj",
+			"VulkanState.cpp.obj",
+			"VulkanStructuredBuffer.cpp.obj",
+			"VulkanSwapChain.cpp.obj",
+			"VulkanTexture.cpp.obj"
+		],
+		"Module.VulkanRHI.3_of_3.cpp.obj": [
+			"VulkanUAV.cpp.obj",
+			"VulkanUniformBuffer.cpp.obj",
+			"VulkanUtil.cpp.obj",
+			"VulkanVertexBuffer.cpp.obj",
+			"VulkanVertexDeclaration.cpp.obj",
+			"VulkanViewport.cpp.obj",
+			"VulkanWindowsPlatform.cpp.obj"
+		]
+	}
+}

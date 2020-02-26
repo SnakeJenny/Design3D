@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.KismetCompiler.cpp.obj": [
+			"AnimBlueprintCompiler.cpp.obj",
+			"EdGraphCompiler.cpp.obj",
+			"KismetCompiler.cpp.obj",
+			"KismetCompilerMisc.cpp.obj",
+			"KismetCompilerModule.cpp.obj",
+			"KismetCompilerVMBackend.cpp.obj",
+			"UserDefinedStructureCompilerUtils.cpp.obj"
+		]
+	}
+}

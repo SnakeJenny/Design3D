@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PluginWarden.cpp.obj": [
+			"PluginWardenAuthorizer.cpp.obj",
+			"PluginWardenModule.cpp.obj",
+			"SAuthorizingPlugin.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Networking.cpp.obj": [
+			"IPv4Address.cpp.obj",
+			"IPv4Endpoint.cpp.obj",
+			"IPv4Subnet.cpp.obj",
+			"IPv4SubnetMask.cpp.obj",
+			"NetworkingModule.cpp.obj",
+			"SteamEndpoint.cpp.obj",
+			"IPv4AddressTest.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SSL.cpp.obj": [
+			"SslCertificateManager.cpp.obj",
+			"SslError.cpp.obj",
+			"SslManager.cpp.obj",
+			"SslModule.cpp.obj",
+			"WindowsPlatformSslCertificateManager.cpp.obj"
+		]
+	}
+}

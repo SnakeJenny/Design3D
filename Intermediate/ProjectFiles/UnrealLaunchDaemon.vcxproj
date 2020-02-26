@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Invalid|Win32">
+      <Configuration>Invalid</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="IOS_Debug_Program|Win32">
+      <Configuration>IOS_Debug_Program</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="IOS_DebugGame_Program|Win32">
+      <Configuration>IOS_DebugGame_Program</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="IOS_Development_Program|Win32">
+      <Configuration>IOS_Development_Program</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="IOS_Shipping_Program|Win32">
+      <Configuration>IOS_Shipping_Program</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="IOS_Test_Program|Win32">
+      <Configuration>IOS_Test_Program</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{08F06C48-FAE4-4760-A326-5070CA22C9BA}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+    <RootNamespace>UnrealLaunchDaemon</RootNamespace>
+    <PlatformToolset>v141</PlatformToolset>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <TargetRuntime>Native</TargetRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectCapability Include="MLProject" />
+    <PropertyPageSchema Include="$(LOCALAPPDATA)\Microsoft\VisualStudio\MagicLeap\debugger.xaml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Invalid|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_DebugGame_Program|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Shipping_Program|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Test_Program|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Invalid|Win32'">
+    <NMakeBuildCommandLine>echo The selected platform/configuration is not valid for this target.</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>echo The selected platform/configuration is not valid for this target.</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>echo The selected platform/configuration is not valid for this target.</NMakeCleanCommandLine>
+    <NMakeOutput>Invalid Output</NMakeOutput>
+    <OutDir>D:\Github\UnrealEngine4\Engine\Intermediate\Build\Unused\</OutDir>
+    <IntDir>D:\Github\UnrealEngine4\Engine\Intermediate\Build\Unused\</IntDir>
+  </PropertyGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'">
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+    <OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+    <IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+    <NMakeBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Build.bat UnrealLaunchDaemon IOS Debug -WaitMutex -FromMsBuild</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Rebuild.bat UnrealLaunchDaemon IOS Debug -WaitMutex -FromMsBuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Clean.bat UnrealLaunchDaemon IOS Debug -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
+    <NMakeOutput>D:\Github\UnrealEngine4\Engine\Binaries\IOS\UnrealLaunchDaemon-IOS-Debug</NMakeOutput>
+  </PropertyGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='IOS_DebugGame_Program|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_DebugGame_Program|Win32'">
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+    <OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+    <IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+    <NMakeBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Build.bat UnrealLaunchDaemon IOS DebugGame -WaitMutex -FromMsBuild</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Rebuild.bat UnrealLaunchDaemon IOS DebugGame -WaitMutex -FromMsBuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Clean.bat UnrealLaunchDaemon IOS DebugGame -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
+    <NMakeOutput>D:\Github\UnrealEngine4\Engine\Binaries\IOS\UnrealLaunchDaemon-IOS-DebugGame</NMakeOutput>
+  </PropertyGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'">
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+    <OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+    <IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+    <NMakeBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Build.bat UnrealLaunchDaemon IOS Development -WaitMutex -FromMsBuild</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Rebuild.bat UnrealLaunchDaemon IOS Development -WaitMutex -FromMsBuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Clean.bat UnrealLaunchDaemon IOS Development -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
+    <NMakeOutput>D:\Github\UnrealEngine4\Engine\Binaries\IOS\UnrealLaunchDaemon</NMakeOutput>
+  </PropertyGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Shipping_Program|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Shipping_Program|Win32'">
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+    <OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+    <IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+    <NMakeBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Build.bat UnrealLaunchDaemon IOS Shipping -WaitMutex -FromMsBuild</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Rebuild.bat UnrealLaunchDaemon IOS Shipping -WaitMutex -FromMsBuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Clean.bat UnrealLaunchDaemon IOS Shipping -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
+    <NMakeOutput>D:\Github\UnrealEngine4\Engine\Binaries\IOS\UnrealLaunchDaemon-IOS-Shipping</NMakeOutput>
+  </PropertyGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Test_Program|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Test_Program|Win32'">
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+    <OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+    <IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+    <NMakeBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Build.bat UnrealLaunchDaemon IOS Test -WaitMutex -FromMsBuild</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Rebuild.bat UnrealLaunchDaemon IOS Test -WaitMutex -FromMsBuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Clean.bat UnrealLaunchDaemon IOS Test -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
+    <NMakeOutput>D:\Github\UnrealEngine4\Engine\Binaries\IOS\UnrealLaunchDaemon-IOS-Test</NMakeOutput>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\IOS\UnrealLaunchDaemon\UnrealLaunchDaemon.Target.cs"/>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\IOS\UnrealLaunchDaemon\UnrealLaunchDaemon.Build.cs"/>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\IOS\UnrealLaunchDaemon\UnrealLaunchDaemon.tps"/>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\IOS\UnrealLaunchDaemon\UnrealLaunchDaemon.uproject"/>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\IOS\UnrealLaunchDaemon\Build\IOS\UnrealLaunchDaemon-Info.plist"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\IOS\UnrealLaunchDaemon\Private\LaunchDaemonMessageHandler.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\IOS\UnrealLaunchDaemon\Private\LaunchDaemonMessageHandler.h"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\IOS\UnrealLaunchDaemon\Private\UnrealLaunchDaemon.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\IOS\UnrealLaunchDaemon\Private\UnrealLaunchDaemonApp.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\IOS\UnrealLaunchDaemon\Private\UnrealLaunchDaemonApp.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\IOS\UnrealLaunchDaemon\Private\IOS\IOSLaunchDaemonAppMain.cpp"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\IOS\UnrealLaunchDaemon\Private\IOS\IOSLaunchDaemonView.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\IOS\UnrealLaunchDaemon\Private\IOS\IOSLaunchDaemonView.h"/>
+  </ItemGroup>
+  <PropertyGroup>
+    <NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);IS_PROGRAM=1;ENABLE_PGO_PROFILE=0;USE_VORBIS_FOR_STREAMING=1;WITH_DEV_AUTOMATION_TESTS=1;WITH_PERF_AUTOMATION_TESTS=1;UNICODE;_UNICODE;__UNREAL__;IS_MONOLITHIC=1;WITH_ENGINE=0;WITH_UNREAL_DEVELOPER_TOOLS=0;WITH_APPLICATION_CORE=1;WITH_COREUOBJECT=1;USE_STATS_WITHOUT_ENGINE=0;WITH_PLUGIN_SUPPORT=0;WITH_PERFCOUNTERS=0;USE_LOGGING_IN_SHIPPING=0;WITH_LOGGING_TO_MEMORY=0;USE_CACHE_FREED_OS_ALLOCS=1;USE_CHECKS_IN_SHIPPING=0;WITH_EDITOR=0;WITH_SERVER_CODE=1;WITH_CEF3=1;WITH_LIVE_CODING=1;WITH_XGE_CONTROLLER=0;UBT_MODULE_MANIFEST="UnrealLaunchDaemon.modules";UBT_MODULE_MANIFEST_DEBUGGAME="UnrealLaunchDaemon-Win64-DebugGame.modules";UBT_COMPILED_PLATFORM=Win64;UBT_COMPILED_TARGET=Program;UE_APP_NAME="UnrealLaunchDaemon";WIN32=1;_WIN32_WINNT=0x0601;WINVER=0x0601;PLATFORM_WINDOWS=1;OVERRIDE_PLATFORM_HEADER_NAME=Windows;NDEBUG=1;UE_BUILD_DEVELOPMENT=1;UE_IS_ENGINE_MODULE=0;IMPLEMENT_ENCRYPTION_KEY_REGISTRATION()=;IMPLEMENT_SIGNING_KEY_REGISTRATION()=;DEPRECATED_FORGAME=DEPRECATED;UE_DEPRECATED_FORGAME=UE_DEPRECATED;UE_ENABLE_ICU=1;WITH_VS_PERF_PROFILER=0;WITH_DIRECTXMATH=0;WITH_MALLOC_STOMP=1;CORE_API=;APPLICATIONCORE_API=;RHI_API=;ENABLE_HTTP_FOR_NF=0;NETWORKFILE_API=;LOAD_PLUGINS_FOR_TARGET_PLATFORMS=0;PROJECTS_API=;JSON_API=;STREAMINGFILE_API=;SOCKETS_PACKAGE=1;SOCKETS_API=;SLATE_API=;COREUOBJECT_API=;INPUTCORE_API=;WITH_FREETYPE=1;SLATECORE_API=;WITH_UNREALPNG=1;WITH_UNREALJPEG=1;WITH_UNREALEXR=1;IMAGEWRAPPER_API=;EDITORSTYLE_API=;STANDALONERENDERER_API=;LAUNCHDAEMONMESSAGES_API=;MESSAGING_API=;UDPMESSAGING_API=;UNREALLAUNCHDAEMON_API=</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);D:\Github\UnrealEngine4\Engine\Source;D:\Github\UnrealEngine4\Engine\Source\Runtime\Launch\Private;D:\Github\UnrealEngine4\Engine\Source\Programs\IOS\UnrealLaunchDaemon\Private;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\Core;D:\Github\UnrealEngine4\Engine\Source\Runtime;D:\Github\UnrealEngine4\Engine\Source\Runtime\Core\Public;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\ApplicationCore;D:\Github\UnrealEngine4\Engine\Source\Runtime\ApplicationCore\Public;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\RHI;D:\Github\UnrealEngine4\Engine\Source\Runtime\RHI\Public;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\NetworkFile;D:\Github\UnrealEngine4\Engine\Source\Runtime\CoreUObject\Public\UObject;D:\Github\UnrealEngine4\Engine\Source\Runtime\CoreUObject\Public;D:\Github\UnrealEngine4\Engine\Source\Runtime\NetworkFile\Public;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\Projects;D:\Github\UnrealEngine4\Engine\Source\Runtime\Projects\Public;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\Json;D:\Github\UnrealEngine4\Engine\Source\Runtime\Json\Public;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\StreamingFile;D:\Github\UnrealEngine4\Engine\Source\Runtime\StreamingFile\Public;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\Sockets;D:\Github\UnrealEngine4\Engine\Source\Runtime\Sockets\Public;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\Slate;D:\Github\UnrealEngine4\Engine\Source\Runtime\Slate\Public;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\CoreUObject;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\InputCore;D:\Github\UnrealEngine4\Engine\Source\Runtime\InputCore\Classes;D:\Github\UnrealEngine4\Engine\Source\Runtime\InputCore\Public;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\SlateCore;D:\Github\UnrealEngine4\Engine\Source\Runtime\SlateCore\Public;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\ImageWrapper;D:\Github\UnrealEngine4\Engine\Source\Runtime\ImageWrapper\Public;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\EditorStyle;D:\Github\UnrealEngine4\Engine\Source\Editor;D:\Github\UnrealEngine4\Engine\Source\Editor\EditorStyle\Public;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\StandaloneRenderer;D:\Github\UnrealEngine4\Engine\Source\Developer;D:\Github\UnrealEngine4\Engine\Source\Developer\StandaloneRenderer\Public;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\LaunchDaemonMessages;D:\Github\UnrealEngine4\Engine\Source\Runtime\IOS;D:\Github\UnrealEngine4\Engine\Source\Runtime\IOS\LaunchDaemonMessages\Classes;D:\Github\UnrealEngine4\Engine\Source\Runtime\IOS\LaunchDaemonMessages\Public;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\Messaging;D:\Github\UnrealEngine4\Engine\Source\Runtime\Messaging\Public;D:\Github\UnrealEngine4\Engine\Plugins\Messaging\UdpMessaging\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\UdpMessaging;D:\Github\UnrealEngine4\Engine\Plugins\Messaging\UdpMessaging\Source;D:\Github\UnrealEngine4\Engine\Plugins\Messaging\UdpMessaging\Source\UdpMessaging\Public;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\UnrealLaunchDaemon\Inc\UnrealLaunchDaemon;D:\Github\UnrealEngine4\Engine\Source\Programs\IOS;D:\Github\UnrealEngine4\Engine\Source\Runtime\Launch\Public;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\INCLUDE;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um;D:\Windows Kits\10\include\10.0.17763.0\ucrt;D:\Windows Kits\10\include\10.0.17763.0\shared;D:\Windows Kits\10\include\10.0.17763.0\um;D:\Windows Kits\10\include\10.0.17763.0\winrt;;</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+    <NMakeForcedUsingAssemblies>$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SourceControlWindows.cpp.obj": [
+			"SourceControlWindows.cpp.obj",
+			"SSourceControlHistory.cpp.obj",
+			"SSourceControlRevert.cpp.obj",
+			"SSourceControlSubmit.cpp.obj"
+		]
+	}
+}

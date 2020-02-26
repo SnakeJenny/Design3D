@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.XAudio2.cpp.obj": [
+			"XAudio2Buffer.cpp.obj",
+			"XAudio2Device.cpp.obj",
+			"XAudio2Effects.cpp.obj",
+			"XAudio2Source.cpp.obj"
+		]
+	}
+}

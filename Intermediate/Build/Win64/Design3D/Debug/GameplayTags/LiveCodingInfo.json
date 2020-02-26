@@ -1,0 +1,22 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.GameplayTags.cpp.obj": [
+			"BlueprintGameplayTagLibrary.cpp.obj",
+			"GameplayTagAssetInterface.cpp.obj",
+			"GameplayTagContainer.cpp.obj",
+			"GameplayTagsManager.cpp.obj",
+			"GameplayTagsModule.cpp.obj",
+			"GameplayTagsSettings.cpp.obj",
+			"GameplayTagTests.cpp.obj"
+		],
+		"Module.GameplayTags.gen.cpp.obj": [
+			"BlueprintGameplayTagLibrary.gen.cpp.obj",
+			"GameplayTagAssetInterface.gen.cpp.obj",
+			"GameplayTagContainer.gen.cpp.obj",
+			"GameplayTags.init.gen.cpp.obj",
+			"GameplayTagsManager.gen.cpp.obj",
+			"GameplayTagsSettings.gen.cpp.obj"
+		]
+	}
+}

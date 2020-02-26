@@ -1,0 +1,39 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AugmentedReality.cpp.obj": [
+			"ARBlueprintLibrary.cpp.obj",
+			"ARBlueprintProxy.cpp.obj",
+			"ARDebugDrawHelpers.cpp.obj",
+			"ARLightEstimate.cpp.obj",
+			"ARPin.cpp.obj",
+			"ARSessionConfig.cpp.obj",
+			"ARSharedWorldGameMode.cpp.obj",
+			"ARSharedWorldGameState.cpp.obj",
+			"ARSharedWorldPlayerController.cpp.obj",
+			"ARSkyLight.cpp.obj",
+			"ARSupportInterface.cpp.obj",
+			"ARTextures.cpp.obj",
+			"ARTraceResult.cpp.obj",
+			"ARTrackable.cpp.obj",
+			"ARTypes.cpp.obj",
+			"AugmentedRealityModule.cpp.obj"
+		],
+		"Module.AugmentedReality.gen.cpp.obj": [
+			"ARBlueprintLibrary.gen.cpp.obj",
+			"ARBlueprintProxy.gen.cpp.obj",
+			"ARLightEstimate.gen.cpp.obj",
+			"ARPin.gen.cpp.obj",
+			"ARSessionConfig.gen.cpp.obj",
+			"ARSharedWorldGameMode.gen.cpp.obj",
+			"ARSharedWorldGameState.gen.cpp.obj",
+			"ARSharedWorldPlayerController.gen.cpp.obj",
+			"ARSkyLight.gen.cpp.obj",
+			"ARTextures.gen.cpp.obj",
+			"ARTraceResult.gen.cpp.obj",
+			"ARTrackable.gen.cpp.obj",
+			"ARTypes.gen.cpp.obj",
+			"AugmentedReality.init.gen.cpp.obj"
+		]
+	}
+}

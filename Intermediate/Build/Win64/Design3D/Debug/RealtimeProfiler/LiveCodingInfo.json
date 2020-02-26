@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.RealtimeProfiler.cpp.obj": [
+			"RealtimeProfiler.cpp.obj",
+			"SRealtimeProfilerFrame.cpp.obj",
+			"SRealtimeProfilerLineGraph.cpp.obj",
+			"SRealtimeProfilerTimeline.cpp.obj",
+			"SRealtimeProfilerVisualizer.cpp.obj"
+		]
+	}
+}

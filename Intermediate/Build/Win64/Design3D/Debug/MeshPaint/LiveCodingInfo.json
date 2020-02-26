@@ -1,0 +1,28 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MeshPaint.cpp.obj": [
+			"BaseMeshPaintGeometryAdapter.cpp.obj",
+			"IMeshPainter.cpp.obj",
+			"IMeshPaintGeometryAdapter.cpp.obj",
+			"IMeshPaintMode.cpp.obj",
+			"ImportVertexColorOptionsCustomization.cpp.obj",
+			"MeshPaintAdapterFactory.cpp.obj",
+			"MeshPainterCommands.cpp.obj",
+			"MeshPaintHelpers.cpp.obj",
+			"MeshPaintModule.cpp.obj",
+			"MeshPaintSettings.cpp.obj",
+			"MeshPaintSkeletalMeshAdapter.cpp.obj",
+			"MeshPaintSplineMeshAdapter.cpp.obj",
+			"MeshPaintStaticMeshAdapter.cpp.obj",
+			"SImportVertexColorOptions.cpp.obj",
+			"TexturePaintHelpers.cpp.obj"
+		],
+		"Module.MeshPaint.gen.cpp.obj": [
+			"MeshPaint.init.gen.cpp.obj",
+			"MeshPaintSettings.gen.cpp.obj",
+			"MeshPaintTypes.gen.cpp.obj",
+			"SImportVertexColorOptions.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.DeviceProfileServices.cpp.obj": [
+			"DeviceProfileServicesModule.cpp.obj",
+			"DeviceProfileServicesUIManager.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,47 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.D3D12RHI.1_of_3.cpp.obj": [
+			"D3D12Adapter.cpp.obj",
+			"D3D12Allocation.cpp.obj",
+			"D3D12Buffer.cpp.obj",
+			"D3D12CommandContext.cpp.obj",
+			"D3D12CommandList.cpp.obj",
+			"D3D12Commands.cpp.obj",
+			"D3D12ConstantBuffer.cpp.obj",
+			"D3D12DescriptorCache.cpp.obj",
+			"D3D12Device.cpp.obj",
+			"D3D12DirectCommandListManager.cpp.obj",
+			"D3D12IndexBuffer.cpp.obj",
+			"D3D12Pipelinestate.cpp.obj",
+			"D3D12Query.cpp.obj",
+			"D3D12RayTracing.cpp.obj"
+		],
+		"Module.D3D12RHI.2_of_3.cpp.obj": [
+			"D3D12RenderTarget.cpp.obj",
+			"D3D12Resources.cpp.obj",
+			"D3D12RHI.cpp.obj",
+			"D3D12RootSignature.cpp.obj",
+			"D3D12Shaders.cpp.obj",
+			"D3D12State.cpp.obj",
+			"D3D12StateCache.cpp.obj",
+			"D3D12Stats.cpp.obj",
+			"D3D12StructuredBuffer.cpp.obj",
+			"D3D12Texture.cpp.obj",
+			"D3D12UAV.cpp.obj",
+			"D3D12UniformBuffer.cpp.obj",
+			"D3D12Util.cpp.obj"
+		],
+		"Module.D3D12RHI.3_of_3.cpp.obj": [
+			"D3D12VertexBuffer.cpp.obj",
+			"D3D12VertexDeclaration.cpp.obj",
+			"D3D12View.cpp.obj",
+			"D3D12Viewport.cpp.obj",
+			"WindowsD3D12Device.cpp.obj",
+			"WindowsD3D12DiskCache.cpp.obj",
+			"WindowsD3D12Fence.cpp.obj",
+			"WindowsD3D12PipelineState.cpp.obj",
+			"WindowsD3D12Viewport.cpp.obj"
+		]
+	}
+}

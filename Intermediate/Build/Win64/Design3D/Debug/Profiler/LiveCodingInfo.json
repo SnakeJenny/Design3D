@@ -1,0 +1,31 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Profiler.cpp.obj": [
+			"ProfilerCommands.cpp.obj",
+			"ProfilerDataProvider.cpp.obj",
+			"ProfilerDataSource.cpp.obj",
+			"ProfilerFPSAnalyzer.cpp.obj",
+			"ProfilerManager.cpp.obj",
+			"ProfilerModule.cpp.obj",
+			"ProfilerRawStatsForMemory.cpp.obj",
+			"ProfilerRawStatsForThreadView.cpp.obj",
+			"ProfilerSample.cpp.obj",
+			"ProfilerSession.cpp.obj",
+			"ProfilerStream.cpp.obj",
+			"SDataGraph.cpp.obj",
+			"SEventGraph.cpp.obj",
+			"SEventGraphTooltip.cpp.obj",
+			"SFiltersAndPresets.cpp.obj",
+			"SHistogram.cpp.obj",
+			"SMultiDumpBrowser.cpp.obj",
+			"SProfilerFPSChartPanel.cpp.obj",
+			"SProfilerGraphPanel.cpp.obj",
+			"SProfilerMiniView.cpp.obj",
+			"SProfilerSettings.cpp.obj",
+			"SProfilerThreadView.cpp.obj",
+			"SProfilerToolbar.cpp.obj",
+			"SProfilerWindow.cpp.obj"
+		]
+	}
+}

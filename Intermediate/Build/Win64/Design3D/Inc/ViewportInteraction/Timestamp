@@ -1,0 +1,17 @@
+D:\Github\UnrealEngine4\Engine\Source\Editor\ViewportInteraction\Public\ActorTransformer.h
+D:\Github\UnrealEngine4\Engine\Source\Editor\ViewportInteraction\Public\ViewportDragOperation.h
+D:\Github\UnrealEngine4\Engine\Source\Editor\ViewportInteraction\Public\MouseCursorInteractor.h
+D:\Github\UnrealEngine4\Engine\Source\Editor\ViewportInteraction\Public\ViewportInteractableInterface.h
+D:\Github\UnrealEngine4\Engine\Source\Editor\ViewportInteraction\Public\ViewportInteractionDragOperations.h
+D:\Github\UnrealEngine4\Engine\Source\Editor\ViewportInteraction\Public\ViewportInteractionTypes.h
+D:\Github\UnrealEngine4\Engine\Source\Editor\ViewportInteraction\Public\ViewportInteractor.h
+D:\Github\UnrealEngine4\Engine\Source\Editor\ViewportInteraction\Public\ViewportInteractionAssetContainer.h
+D:\Github\UnrealEngine4\Engine\Source\Editor\ViewportInteraction\Public\ViewportTransformer.h
+D:\Github\UnrealEngine4\Engine\Source\Editor\ViewportInteraction\Public\ViewportWorldInteraction.h
+D:\Github\UnrealEngine4\Engine\Source\Editor\ViewportInteraction\Public\VIGizmoHandle.h
+D:\Github\UnrealEngine4\Engine\Source\Editor\ViewportInteraction\Public\VIGizmoHandleMeshComponent.h
+D:\Github\UnrealEngine4\Engine\Source\Editor\ViewportInteraction\Public\VISettings.h
+D:\Github\UnrealEngine4\Engine\Source\Editor\ViewportInteraction\Public\VIBaseTransformGizmo.h
+D:\Github\UnrealEngine4\Engine\Source\Editor\ViewportInteraction\Gizmo\VIPivotTransformGizmo.h
+D:\Github\UnrealEngine4\Engine\Source\Editor\ViewportInteraction\Gizmo\VIStretchGizmoHandle.h
+D:\Github\UnrealEngine4\Engine\Source\Editor\ViewportInteraction\Gizmo\VIUniformScaleGizmoHandle.h

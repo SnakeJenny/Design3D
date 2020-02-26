@@ -1,0 +1,16 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SessionFrontend.cpp.obj": [
+			"SessionFrontendModule.cpp.obj",
+			"SSessionBrowser.cpp.obj",
+			"SSessionBrowserCommandBar.cpp.obj",
+			"SSessionConsole.cpp.obj",
+			"SSessionConsoleCommandBar.cpp.obj",
+			"SSessionConsoleFilterBar.cpp.obj",
+			"SSessionConsoleShortcutWindow.cpp.obj",
+			"SSessionConsoleToolbar.cpp.obj",
+			"SSessionFrontend.cpp.obj"
+		]
+	}
+}

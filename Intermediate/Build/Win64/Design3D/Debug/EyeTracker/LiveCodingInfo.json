@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.EyeTracker.cpp.obj": [
+			"EyeTrackerFunctionLibrary.cpp.obj",
+			"EyeTrackerModule.cpp.obj",
+			"EyeTrackerTypes.cpp.obj"
+		],
+		"Module.EyeTracker.gen.cpp.obj": [
+			"EyeTracker.init.gen.cpp.obj",
+			"EyeTrackerFunctionLibrary.gen.cpp.obj",
+			"EyeTrackerTypes.gen.cpp.obj"
+		]
+	}
+}

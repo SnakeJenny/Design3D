@@ -1,0 +1,2 @@
+﻿  Creating makefile for UnrealFrontend (UnrealBuildTool.exe is newer)
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.MakeFile.Targets(44,5): warning MSB5021: 终止任务可执行文件“cmd”及其子进程，因为已取消生成。

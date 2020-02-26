@@ -1,0 +1,40 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.HeadMountedDisplay.cpp.obj": [
+			"DefaultSpectatorScreenController.cpp.obj",
+			"DefaultStereoLayers.cpp.obj",
+			"DefaultXRCamera.cpp.obj",
+			"HeadMountedDisplayBase.cpp.obj",
+			"HeadMountedDisplayConsoleCommands.cpp.obj",
+			"HeadMountedDisplayFunctionLibrary.cpp.obj",
+			"HeadMountedDisplayModule.cpp.obj",
+			"HeadMountedDisplayTypes.cpp.obj",
+			"HeadMountedDisplayVulkanExtensions.cpp.obj",
+			"IIdentifiableXRDevice.cpp.obj",
+			"LateUpdateManager.cpp.obj",
+			"MotionControllerComponent.cpp.obj",
+			"MotionDelayBuffer.cpp.obj",
+			"MotionTrackedDeviceFunctionLibrary.cpp.obj",
+			"StereoLayerManager.cpp.obj",
+			"VRNotificationsComponent.cpp.obj",
+			"XRAssetFunctionLibrary.cpp.obj",
+			"XRMotionControllerBase.cpp.obj",
+			"XRRenderBridge.cpp.obj",
+			"XRRenderTargetManager.cpp.obj",
+			"XRThreadUtils.cpp.obj",
+			"XRTrackingSystemBase.cpp.obj"
+		],
+		"Module.HeadMountedDisplay.gen.cpp.obj": [
+			"HeadMountedDisplay.init.gen.cpp.obj",
+			"HeadMountedDisplayFunctionLibrary.gen.cpp.obj",
+			"HeadMountedDisplayTypes.gen.cpp.obj",
+			"IIdentifiableXRDevice.gen.cpp.obj",
+			"IMotionController.gen.cpp.obj",
+			"MotionControllerComponent.gen.cpp.obj",
+			"MotionTrackedDeviceFunctionLibrary.gen.cpp.obj",
+			"VRNotificationsComponent.gen.cpp.obj",
+			"XRAssetFunctionLibrary.gen.cpp.obj"
+		]
+	}
+}

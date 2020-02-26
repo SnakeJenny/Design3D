@@ -1,0 +1,17 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MoviePlayer.cpp.obj": [
+			"DefaultGameMoviePlayer.cpp.obj",
+			"MoviePlayer.cpp.obj",
+			"MoviePlayerSettings.cpp.obj",
+			"MoviePlayerThreading.cpp.obj",
+			"NullMoviePlayer.cpp.obj"
+		],
+		"Module.MoviePlayer.gen.cpp.obj": [
+			"MoviePlayer.gen.cpp.obj",
+			"MoviePlayer.init.gen.cpp.obj",
+			"MoviePlayerSettings.gen.cpp.obj"
+		]
+	}
+}

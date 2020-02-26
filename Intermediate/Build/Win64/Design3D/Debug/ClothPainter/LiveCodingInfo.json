@@ -1,0 +1,27 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ClothPainter.cpp.obj": [
+			"ClothingAssetListCommands.cpp.obj",
+			"ClothingPaintEditMode.cpp.obj",
+			"ClothMeshAdapter.cpp.obj",
+			"ClothPainter.cpp.obj",
+			"ClothPainterCommands.cpp.obj",
+			"ClothPaintingModule.cpp.obj",
+			"ClothPaintSettingsCustomization.cpp.obj",
+			"ClothPaintToolBase.cpp.obj",
+			"ClothPaintToolCommands.cpp.obj",
+			"ClothPaintTools.cpp.obj",
+			"SClothAssetSelector.cpp.obj",
+			"SClothPaintTab.cpp.obj",
+			"SClothPaintWidget.cpp.obj",
+			"SCopyVertexColorSettingsPanel.cpp.obj"
+		],
+		"Module.ClothPainter.gen.cpp.obj": [
+			"ClothPainter.init.gen.cpp.obj",
+			"ClothPaintSettings.gen.cpp.obj",
+			"ClothPaintTools.gen.cpp.obj",
+			"CopyVertexColorToClothParams.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\WebRTCProxy.Target.cs" />
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\README.md" />
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\WebRTCProxy.Build.cs" />
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\_clang-format" />
+    <Filter Include="bin">
+      <UniqueIdentifier>{46600C42-5611-49F8-9406-182BEE9E140C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\bin\Start_AWS_WebRTCProxy.bat">
+      <Filter>bin</Filter>
+    </None>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\bin\Start_AWS_WebRTCProxy.ps1">
+      <Filter>bin</Filter>
+    </None>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\bin\Start_WebRTCProxy.bat">
+      <Filter>bin</Filter>
+    </None>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\bin\WebRTCProxy.exe">
+      <Filter>bin</Filter>
+    </None>
+    <Filter Include="src">
+      <UniqueIdentifier>{37083078-1774-4BD2-AA74-0C26BF762179}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\AsyncConnection.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\AsyncConnection.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\CirrusConnection.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\CirrusConnection.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\ClientSession.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\ClientSession.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\CmdLine.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\CmdLine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\Conductor.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\Conductor.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\Console.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\Console.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\CrashDetection.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\CrashDetection.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\FileLogOutput.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\FileLogOutput.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\H264FrameBuffer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\Logging.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\Logging.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\NetworkAudioCapturer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\NetworkAudioCapturer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\NetworkVideoCapturer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\NetworkVideoCapturer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\ScopeGuard.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\Semaphore.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\SetSessionDescriptionObserver.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\SharedQueue.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\StringUtils.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\StringUtils.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\targetver.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\TimeUtils.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\TimeUtils.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\UE4Connection.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\UE4Connection.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\VideoEncoder.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\VideoEncoder.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\WebRTCLogging.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\WebRTCLogging.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\WebRTCProxy.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\WebRTCProxyCommon.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\WebRTCProxyCommon.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\WebRTCProxyPCH.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\WebRTCProxyPCH.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

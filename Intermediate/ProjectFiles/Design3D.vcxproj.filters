@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Design3D.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{14F1E88E-2874-4AA9-AEC8-C5C9C09D856B}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Design3D.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\Design3DEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\12000.obj" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{B29BD573-686D-4D65-A5D0-B4C380DB4EDD}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Plugins">
+      <UniqueIdentifier>{20E453C3-8A6D-40B3-91BA-AD021735D6F7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\MyPlugin">
+      <UniqueIdentifier>{711A6C2F-CD1A-4EA5-9464-BF43CF3534A7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\MyPlugin\Source">
+      <UniqueIdentifier>{829F7688-00D0-4E63-A5A0-FA3D2C441495}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\MyPlugin\Source\MyPlugin">
+      <UniqueIdentifier>{244920A8-5783-4D01-8E38-DEBD1561EC68}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\MyPlugin\Source\MyPlugin\MyPlugin.Build.cs">
+      <Filter>Plugins\MyPlugin\Source\MyPlugin</Filter>
+    </None>
+    <Filter Include="Plugins\MyPlugin\Source\MyPlugin\Private">
+      <UniqueIdentifier>{7FB83A3D-10C6-4613-8C7C-98216462868B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\MyPlugin\Source\MyPlugin\Private\MyPlugin.cpp">
+      <Filter>Plugins\MyPlugin\Source\MyPlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\MyPlugin\Source\MyPlugin\Private\MyPluginCommands.cpp">
+      <Filter>Plugins\MyPlugin\Source\MyPlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\MyPlugin\Source\MyPlugin\Private\MyPluginStyle.cpp">
+      <Filter>Plugins\MyPlugin\Source\MyPlugin\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\MyPlugin\Source\MyPlugin\Public">
+      <UniqueIdentifier>{D9CD49CF-01CD-4293-A1B6-4D999F60B293}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\MyPlugin\Source\MyPlugin\Public\MyPlugin.h">
+      <Filter>Plugins\MyPlugin\Source\MyPlugin\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\MyPlugin\Source\MyPlugin\Public\MyPluginCommands.h">
+      <Filter>Plugins\MyPlugin\Source\MyPlugin\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\MyPlugin\Source\MyPlugin\Public\MyPluginStyle.h">
+      <Filter>Plugins\MyPlugin\Source\MyPlugin\Public</Filter>
+    </ClInclude>
+    <None Include="..\..\Plugins\MyPlugin\MyPlugin.uplugin">
+      <Filter>Plugins\MyPlugin</Filter>
+    </None>
+    <Filter Include="Plugins\MyPlugin\Resources">
+      <UniqueIdentifier>{CC732E39-7989-47A1-A8CF-AA2161485096}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\MyPlugin\Resources\ButtonIcon_40x.png">
+      <Filter>Plugins\MyPlugin\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\MyPlugin\Resources\Icon128.png">
+      <Filter>Plugins\MyPlugin\Resources</Filter>
+    </None>
+    <Filter Include="Source\Design3D">
+      <UniqueIdentifier>{0A3F297A-6C68-4F0F-9C03-A3242EDB0B73}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Design3D\Design3D.Build.cs">
+      <Filter>Source\Design3D</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Design3D\Design3D.cpp">
+      <Filter>Source\Design3D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Design3D\Design3D.h">
+      <Filter>Source\Design3D</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Design3D\Design3DGameModeBase.cpp">
+      <Filter>Source\Design3D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Design3D\Design3DGameModeBase.h">
+      <Filter>Source\Design3D</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Design3D\MyStaticMeshComponent.cpp">
+      <Filter>Source\Design3D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Design3D\MyStaticMeshComponent.h">
+      <Filter>Source\Design3D</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Design3D\MyStaticMeshSceneProxy.cpp">
+      <Filter>Source\Design3D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Design3D\MyStaticMeshSceneProxy.h">
+      <Filter>Source\Design3D</Filter>
+    </ClInclude>
+    <None Include="..\..\Plugins\MyPlugin\Shaders\Private\LensDistortion.usf">
+      <Filter>Plugins\MyPlugin\Source\MyPlugin\Shaders\Private</Filter>
+    </None>
+    <None Include="..\..\Plugins\MyPlugin\Shaders\Private\SimpleComputeShader.usf">
+      <Filter>Plugins\MyPlugin\Source\MyPlugin\Shaders\Private</Filter>
+    </None>
+    <None Include="..\..\Plugins\MyPlugin\Shaders\Private\SimplePixelShader.usf">
+      <Filter>Plugins\MyPlugin\Source\MyPlugin\Shaders\Private</Filter>
+    </None>
+    <None Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\RuntimeMeshComponent.Build.cs">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent</Filter>
+    </None>
+    <None Include="..\..\Plugins\RuntimeMeshComponent\RuntimeMeshComponent.uplugin">
+      <Filter>Plugins\RuntimeMeshComponent</Filter>
+    </None>
+    <None Include="cpp.hint" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Plugins\MyPlugin\Source\MyPlugin\Private\SimplePixelShader.cpp">
+      <Filter>Plugins\MyPlugin\Source\MyPlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMesh.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshActor.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshBlueprintMeshBuilder.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshBuilder.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshComponent.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshComponentPlugin.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshComponentProxy.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshCore.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshData.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshLegacySerialization.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshLibrary.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshProxy.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshRendering.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshSection.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshSectionProxy.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshShapeGenerator.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshSlicer.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshTessellationUtilities.cpp">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Design3D\Manager.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Design3D\LevelStreamingLoad.cpp">
+      <Filter>Source\Design3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Design3D\MyActor.cpp">
+      <Filter>Source\Design3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Design3D\MyCharacter.cpp">
+      <Filter>Source\Design3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Design3D\LevelLoadCharacter.cpp">
+      <Filter>Source\Design3D</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Plugins\MyPlugin\Source\MyPlugin\Public\SimplePixelShader.h">
+      <Filter>Plugins\MyPlugin\Source\MyPlugin\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshComponentProxy.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshInternalUtilities.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshLegacySerialization.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshProxy.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshRendering.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshSectionProxy.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshTessellationUtilities.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private\RuntimeMeshUpdateCommands.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public\RuntimeMesh.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public\RuntimeMeshActor.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public\RuntimeMeshBlueprint.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public\RuntimeMeshBlueprintMeshBuilder.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public\RuntimeMeshBuilder.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public\RuntimeMeshCollision.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public\RuntimeMeshComponent.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public\RuntimeMeshComponentPlugin.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public\RuntimeMeshCore.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public\RuntimeMeshData.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public\RuntimeMeshGenericVertex.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public\RuntimeMeshLibrary.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public\RuntimeMeshManager.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public\RuntimeMeshSection.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public\RuntimeMeshShapeGenerator.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public\RuntimeMeshSlicer.h">
+      <Filter>Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Design3D\Manager.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Design3D\LevelStreamingLoad.h">
+      <Filter>Source\Design3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Design3D\MyActor.h">
+      <Filter>Source\Design3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Design3D\MyCharacter.h">
+      <Filter>Source\Design3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Design3D\LevelLoadCharacter.h">
+      <Filter>Source\Design3D</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Plugins\MyPlugin\Source\MyPlugin\Shaders">
+      <UniqueIdentifier>{ffb3657a-665e-472c-aa67-70e38cacc948}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\MyPlugin\Source\MyPlugin\Shaders\Private">
+      <UniqueIdentifier>{280c47af-fbb5-4433-bfe6-fb72e3bb8faa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\RuntimeMeshComponent">
+      <UniqueIdentifier>{1cd83019-c6ba-44aa-b9ea-84e5543d0760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\RuntimeMeshComponent\Source">
+      <UniqueIdentifier>{d483588a-80e8-41af-b4fd-b7816d63e2f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent">
+      <UniqueIdentifier>{3124cc57-ad5a-4088-b48f-839529ab5653}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Private">
+      <UniqueIdentifier>{8e8b0e55-eba5-40a2-bbdf-c2bccb17f358}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\RuntimeMeshComponent\Source\RuntimeMeshComponent\Public">
+      <UniqueIdentifier>{dd878537-9997-4867-a710-8ae75f84b33d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

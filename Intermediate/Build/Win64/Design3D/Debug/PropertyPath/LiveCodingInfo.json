@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PropertyPath.cpp.obj": [
+			"PropertyPathHelpers.cpp.obj",
+			"PropertyPathModule.cpp.obj"
+		],
+		"Module.PropertyPath.gen.cpp.obj": [
+			"PropertyPath.init.gen.cpp.obj",
+			"PropertyPathHelpers.gen.cpp.obj"
+		]
+	}
+}

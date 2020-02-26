@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AutomationWorker.cpp.obj": [
+			"AutomationAnalytics.cpp.obj",
+			"AutomationWorkerModule.cpp.obj"
+		]
+	}
+}

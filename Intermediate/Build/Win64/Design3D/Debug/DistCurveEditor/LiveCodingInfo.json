@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.DistCurveEditor.cpp.obj": [
+			"CurveEditorActions.cpp.obj",
+			"CurveEditorHitProxies.cpp.obj",
+			"CurveEditorSharedData.cpp.obj",
+			"CurveEditorViewportClient.cpp.obj",
+			"DistCurveEditorModule.cpp.obj",
+			"SCurveEditorViewport.cpp.obj",
+			"SDistributionCurveEditor.cpp.obj"
+		]
+	}
+}

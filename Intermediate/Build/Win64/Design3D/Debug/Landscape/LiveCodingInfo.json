@@ -1,0 +1,71 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Landscape.1_of_3.cpp.obj": [
+			"Landscape.cpp.obj",
+			"LandscapeBlueprintSupport.cpp.obj",
+			"LandscapeBPCustomBrush.cpp.obj",
+			"LandscapeCollision.cpp.obj",
+			"LandscapeComponent.cpp.obj",
+			"LandscapeDataAccess.cpp.obj",
+			"LandscapeEdit.cpp.obj"
+		],
+		"Module.Landscape.2_of_3.cpp.obj": [
+			"LandscapeEditInterface.cpp.obj",
+			"LandscapeEditProcedural.cpp.obj",
+			"LandscapeGizmoActor.cpp.obj",
+			"LandscapeGrass.cpp.obj"
+		],
+		"Module.Landscape.3_of_3.cpp.obj": [
+			"LandscapeInfo.cpp.obj",
+			"LandscapeInfoMap.cpp.obj",
+			"LandscapeLight.cpp.obj",
+			"LandscapeModule.cpp.obj",
+			"LandscapeProxy.cpp.obj",
+			"LandscapeRender.cpp.obj",
+			"LandscapeRenderMobile.cpp.obj",
+			"LandscapeSplineProxies.cpp.obj",
+			"LandscapeSplineRaster.cpp.obj",
+			"LandscapeSplines.cpp.obj",
+			"MaterialExpressionLandscapeLayerBlend.cpp.obj",
+			"MaterialExpressionLandscapeLayerCoords.cpp.obj",
+			"MaterialExpressionLandscapeLayerSample.cpp.obj",
+			"MaterialExpressionLandscapeLayerSwitch.cpp.obj",
+			"MaterialExpressionLandscapeLayerWeight.cpp.obj",
+			"MaterialExpressionLandscapeVisibilityMask.cpp.obj"
+		],
+		"Module.Landscape.gen.1_of_2.cpp.obj": [
+			"ControlPointMeshComponent.gen.cpp.obj",
+			"Landscape.gen.cpp.obj",
+			"Landscape.init.gen.cpp.obj",
+			"LandscapeBPCustomBrush.gen.cpp.obj",
+			"LandscapeComponent.gen.cpp.obj",
+			"LandscapeGizmoActiveActor.gen.cpp.obj",
+			"LandscapeGizmoActor.gen.cpp.obj",
+			"LandscapeGizmoRenderComponent.gen.cpp.obj",
+			"LandscapeGrassType.gen.cpp.obj",
+			"LandscapeHeightfieldCollisionComponent.gen.cpp.obj",
+			"LandscapeInfo.gen.cpp.obj",
+			"LandscapeInfoMap.gen.cpp.obj",
+			"LandscapeLayerInfoObject.gen.cpp.obj",
+			"LandscapeMaterialInstanceConstant.gen.cpp.obj",
+			"LandscapeMeshCollisionComponent.gen.cpp.obj",
+			"LandscapeMeshProxyActor.gen.cpp.obj",
+			"LandscapeMeshProxyComponent.gen.cpp.obj",
+			"LandscapeProxy.gen.cpp.obj"
+		],
+		"Module.Landscape.gen.2_of_2.cpp.obj": [
+			"LandscapeSplineControlPoint.gen.cpp.obj",
+			"LandscapeSplinesComponent.gen.cpp.obj",
+			"LandscapeSplineSegment.gen.cpp.obj",
+			"LandscapeStreamingProxy.gen.cpp.obj",
+			"MaterialExpressionLandscapeGrassOutput.gen.cpp.obj",
+			"MaterialExpressionLandscapeLayerBlend.gen.cpp.obj",
+			"MaterialExpressionLandscapeLayerCoords.gen.cpp.obj",
+			"MaterialExpressionLandscapeLayerSample.gen.cpp.obj",
+			"MaterialExpressionLandscapeLayerSwitch.gen.cpp.obj",
+			"MaterialExpressionLandscapeLayerWeight.gen.cpp.obj",
+			"MaterialExpressionLandscapeVisibilityMask.gen.cpp.obj"
+		]
+	}
+}

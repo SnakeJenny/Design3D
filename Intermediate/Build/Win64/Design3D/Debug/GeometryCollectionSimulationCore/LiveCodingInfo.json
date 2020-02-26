@@ -1,0 +1,18 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.GeometryCollectionSimulationCore.cpp.obj": [
+			"GeometryCollectionCollisionStructureManager.cpp.obj",
+			"GeometryCollectionPhysicsFieldCommands.cpp.obj",
+			"GeometryCollectionPhysicsProxy.cpp.obj",
+			"GeometryCollectionSimulationCorePlugin.cpp.obj",
+			"GeometryCollectionSolverCallbacks.cpp.obj",
+			"StaticMeshSimulationComponentPhysicsProxy.cpp.obj",
+			"StaticMeshSolverCallbacks.cpp.obj"
+		],
+		"Module.GeometryCollectionSimulationCore.gen.cpp.obj": [
+			"GeometryCollectionSimulationCore.init.gen.cpp.obj",
+			"GeometryCollectionSimulationTypes.gen.cpp.obj"
+		]
+	}
+}

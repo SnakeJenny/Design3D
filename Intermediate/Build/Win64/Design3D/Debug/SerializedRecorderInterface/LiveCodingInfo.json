@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SerializedRecorderInterface.cpp.obj": [
+			"MovieSceneSectionSerialization.cpp.obj",
+			"SerializedRecorderInterfaceModule.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.DesktopPlatform.cpp.obj": [
+			"DesktopPlatformBase.cpp.obj",
+			"DesktopPlatformModule.cpp.obj",
+			"PlatformInfo.cpp.obj",
+			"DesktopPlatformWindows.cpp.obj",
+			"WindowsNativeFeedbackContext.cpp.obj",
+			"WindowsRegistry.cpp.obj"
+		]
+	}
+}

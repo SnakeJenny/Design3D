@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ImageWrapper.cpp.obj": [
+			"BmpImageWrapper.cpp.obj",
+			"ExrImageWrapper.cpp.obj",
+			"IcnsImageWrapper.cpp.obj",
+			"IcoImageWrapper.cpp.obj",
+			"JpegImageWrapper.cpp.obj",
+			"PngImageWrapper.cpp.obj",
+			"ImageWrapperBase.cpp.obj",
+			"ImageWrapperModule.cpp.obj"
+		]
+	}
+}

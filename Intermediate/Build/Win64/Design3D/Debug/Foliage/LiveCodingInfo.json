@@ -1,0 +1,38 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Foliage.cpp.obj": [
+			"FoliageComponent.cpp.obj",
+			"FoliageInstanceBase.cpp.obj",
+			"FoliageModule.cpp.obj",
+			"FoliageStatistics.cpp.obj",
+			"FoliageTypeObject.cpp.obj",
+			"InstancedFoliage.cpp.obj",
+			"InteractiveFoliageActor.cpp.obj",
+			"ProceduralFoliageBlockingVolume.cpp.obj",
+			"ProceduralFoliageBroadphase.cpp.obj",
+			"ProceduralFoliageComponent.cpp.obj",
+			"ProceduralFoliageInstance.cpp.obj",
+			"ProceduralFoliageSpawner.cpp.obj",
+			"ProceduralFoliageTile.cpp.obj",
+			"ProceduralFoliageVolume.cpp.obj"
+		],
+		"Module.Foliage.gen.cpp.obj": [
+			"Foliage.init.gen.cpp.obj",
+			"FoliageInstancedStaticMeshComponent.gen.cpp.obj",
+			"FoliageStatistics.gen.cpp.obj",
+			"FoliageType.gen.cpp.obj",
+			"FoliageType_InstancedStaticMesh.gen.cpp.obj",
+			"FoliageTypeObject.gen.cpp.obj",
+			"InstancedFoliageActor.gen.cpp.obj",
+			"InteractiveFoliageActor.gen.cpp.obj",
+			"InteractiveFoliageComponent.gen.cpp.obj",
+			"ProceduralFoliageBlockingVolume.gen.cpp.obj",
+			"ProceduralFoliageComponent.gen.cpp.obj",
+			"ProceduralFoliageInstance.gen.cpp.obj",
+			"ProceduralFoliageSpawner.gen.cpp.obj",
+			"ProceduralFoliageTile.gen.cpp.obj",
+			"ProceduralFoliageVolume.gen.cpp.obj"
+		]
+	}
+}

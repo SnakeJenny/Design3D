@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MeshUtilitiesCommon.cpp.obj": [
+			"Allocator2D.cpp.obj",
+			"LayoutUV.cpp.obj",
+			"OverlappingCorners.cpp.obj"
+		]
+	}
+}

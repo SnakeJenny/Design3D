@@ -1,0 +1,33 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.GameplayDebugger.cpp.obj": [
+			"GameplayDebuggerCategoryConfigCustomization.cpp.obj",
+			"GameplayDebuggerEdMode.cpp.obj",
+			"GameplayDebuggerExtensionConfigCustomization.cpp.obj",
+			"GameplayDebuggerInputConfigCustomization.cpp.obj",
+			"GameplayDebuggerToolkit.cpp.obj",
+			"GameplayDebuggerAddonBase.cpp.obj",
+			"GameplayDebuggerAddonManager.cpp.obj",
+			"GameplayDebuggerCategory.cpp.obj",
+			"GameplayDebuggerCategoryReplicator.cpp.obj",
+			"GameplayDebuggerConfig.cpp.obj",
+			"GameplayDebuggerExtension.cpp.obj",
+			"GameplayDebuggerExtension_HUD.cpp.obj",
+			"GameplayDebuggerExtension_Spectator.cpp.obj",
+			"GameplayDebuggerLocalController.cpp.obj",
+			"GameplayDebuggerModule.cpp.obj",
+			"GameplayDebuggerPlayerManager.cpp.obj",
+			"GameplayDebuggerRenderingComponent.cpp.obj",
+			"GameplayDebuggerTypes.cpp.obj"
+		],
+		"Module.GameplayDebugger.gen.cpp.obj": [
+			"GameplayDebugger.init.gen.cpp.obj",
+			"GameplayDebuggerCategoryReplicator.gen.cpp.obj",
+			"GameplayDebuggerConfig.gen.cpp.obj",
+			"GameplayDebuggerLocalController.gen.cpp.obj",
+			"GameplayDebuggerPlayerManager.gen.cpp.obj",
+			"GameplayDebuggerRenderingComponent.gen.cpp.obj"
+		]
+	}
+}

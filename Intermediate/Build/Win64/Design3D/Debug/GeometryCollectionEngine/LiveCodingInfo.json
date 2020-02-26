@@ -1,0 +1,31 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.GeometryCollectionEngine.cpp.obj": [
+			"GeometryCollectionActor.cpp.obj",
+			"GeometryCollectionActor_ImmediateImpl.cpp.obj",
+			"GeometryCollectionCache.cpp.obj",
+			"GeometryCollectionComponent.cpp.obj",
+			"GeometryCollectionComponentPlugin.cpp.obj",
+			"GeometryCollectionDebugDrawActor.cpp.obj",
+			"GeometryCollectionDebugDrawComponent.cpp.obj",
+			"GeometryCollectionEngineUtility.cpp.obj",
+			"GeometryCollectionObject.cpp.obj",
+			"GeometryCollectionRenderLevelSetActor.cpp.obj",
+			"GeometryCollectionSceneProxy.cpp.obj",
+			"GeometryCollectionSQAccelerator.cpp.obj",
+			"StaticMeshSimulationComponent.cpp.obj"
+		],
+		"Module.GeometryCollectionEngine.gen.cpp.obj": [
+			"GeometryCollectionActor.gen.cpp.obj",
+			"GeometryCollectionCache.gen.cpp.obj",
+			"GeometryCollectionComponent.gen.cpp.obj",
+			"GeometryCollectionDebugDrawActor.gen.cpp.obj",
+			"GeometryCollectionDebugDrawComponent.gen.cpp.obj",
+			"GeometryCollectionEngine.init.gen.cpp.obj",
+			"GeometryCollectionObject.gen.cpp.obj",
+			"GeometryCollectionRenderLevelSetActor.gen.cpp.obj",
+			"StaticMeshSimulationComponent.gen.cpp.obj"
+		]
+	}
+}

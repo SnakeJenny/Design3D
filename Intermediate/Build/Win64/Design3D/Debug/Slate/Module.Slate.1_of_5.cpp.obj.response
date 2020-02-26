@@ -1,0 +1,80 @@
+/Zc:inline
+/nologo
+/Oi
+/c
+/Gw
+/Gy
+/Zm850
+/wd4819
+/D_CRT_STDIO_LEGACY_WIDE_SPECIFIERS=1
+/D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1
+/D_DISABLE_EXTENDED_ALIGNED_STORAGE
+/source-charset:utf-8
+/execution-charset:utf-8
+/Od
+/Os
+/Ob2
+/RTCs
+/errorReport:prompt
+/Z7
+/MD
+/bigobj
+/fp:fast
+/Zp8
+/wd4463
+/wd4838
+/we4668
+/I .
+/I Runtime\Slate\Private
+/I Runtime\Slate\Private\Framework
+/I Runtime\Slate\Private\Framework\Application
+/I Runtime\Slate\Private\Framework\Commands
+/I Runtime\Slate\Private\Framework\Docking
+/I Runtime\Slate\Private\Framework\Layout
+/I Runtime\Slate\Private\Framework\MultiBox
+/I Runtime\Slate\Private\Framework\Notifications
+/I Runtime\Slate\Private\Framework\Styling
+/I Runtime\Slate\Private\Framework\Text
+/I Runtime\Slate\Private\Framework\Text\IOS
+/I Runtime\Slate\Private\Widgets\Colors
+/I Runtime\Slate\Private\Widgets\Docking
+/I Runtime\Slate\Private\Widgets\Images
+/I Runtime\Slate\Private\Widgets\Input
+/I Runtime\Slate\Private\Widgets\Layout
+/I Runtime\Slate\Private\Widgets\Notifications
+/I Runtime\Slate\Private\Widgets\Text
+/I Runtime\Slate\Private\Widgets\Views
+/I Runtime\Toolbox\Public
+/I ThirdParty\Windows
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\Slate
+/I Runtime
+/I Runtime\Slate\Public
+/I Runtime\Core\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\CoreUObject
+/I Runtime\CoreUObject\Public
+/I Runtime\ApplicationCore\Public
+/I Runtime\RHI\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\InputCore
+/I Runtime\InputCore\Classes
+/I Runtime\InputCore\Public
+/I Runtime\Json\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\SlateCore
+/I Runtime\SlateCore\Public
+/I Runtime\ImageWrapper\Public
+/I ThirdParty\Windows\DirectX\include
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\INCLUDE"
+/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"
+/I "D:\Windows Kits\10\include\10.0.17763.0\ucrt"
+/I "D:\Windows Kits\10\include\10.0.17763.0\shared"
+/I "D:\Windows Kits\10\include\10.0.17763.0\um"
+/I "D:\Windows Kits\10\include\10.0.17763.0\winrt"
+/D_HAS_EXCEPTIONS=0
+/FI"D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Debug\CoreUObject\SharedPCH.CoreUObject.h"
+/Yu"D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Debug\CoreUObject\SharedPCH.CoreUObject.h"
+/Fp"D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Debug\CoreUObject\SharedPCH.CoreUObject.h.pch"
+"D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Debug\Slate\Module.Slate.1_of_5.cpp"
+/FI"D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Debug\Slate\Definitions.Slate.h"
+/Fo"D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Debug\Slate\Module.Slate.1_of_5.cpp.obj"
+/TP
+/GR-
+/W4

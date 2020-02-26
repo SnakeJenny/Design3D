@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MaterialUtilities.cpp.obj": [
+			"MaterialUtilities.cpp.obj",
+			"MeshRendering.cpp.obj"
+		],
+		"Module.MaterialUtilities.gen.cpp.obj": [
+			"MaterialUtilities.gen.cpp.obj",
+			"MaterialUtilities.init.gen.cpp.obj"
+		]
+	}
+}

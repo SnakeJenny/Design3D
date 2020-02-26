@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Invalid|x64">
+      <Configuration>Invalid</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_Program|x64">
+      <Configuration>Debug_Program</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugGame_Program|x64">
+      <Configuration>DebugGame_Program</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Development_Program|x64">
+      <Configuration>Development_Program</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Shipping_Program|x64">
+      <Configuration>Shipping_Program</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test_Program|x64">
+      <Configuration>Test_Program</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{91A822D1-4B57-4E0E-A934-91A854FE98C1}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+    <RootNamespace>WebRTCProxy</RootNamespace>
+    <PlatformToolset>v141</PlatformToolset>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <TargetRuntime>Native</TargetRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectCapability Include="MLProject" />
+    <PropertyPageSchema Include="$(LOCALAPPDATA)\Microsoft\VisualStudio\MagicLeap\debugger.xaml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Invalid|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Program|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test_Program|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Invalid|x64'">
+    <NMakeBuildCommandLine>echo The selected platform/configuration is not valid for this target.</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>echo The selected platform/configuration is not valid for this target.</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>echo The selected platform/configuration is not valid for this target.</NMakeCleanCommandLine>
+    <NMakeOutput>Invalid Output</NMakeOutput>
+    <OutDir>D:\Github\UnrealEngine4\Engine\Intermediate\Build\Unused\</OutDir>
+    <IntDir>D:\Github\UnrealEngine4\Engine\Intermediate\Build\Unused\</IntDir>
+  </PropertyGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|x64'">
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+    <OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+    <IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+    <NMakeBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Build.bat WebRTCProxy Win64 Debug -WaitMutex -FromMsBuild</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Rebuild.bat WebRTCProxy Win64 Debug -WaitMutex -FromMsBuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Clean.bat WebRTCProxy Win64 Debug -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
+    <NMakeOutput>D:\Github\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\bin\WebRTCProxy-Win64-Debug.exe</NMakeOutput>
+  </PropertyGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Program|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Program|x64'">
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+    <OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+    <IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+    <NMakeBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Build.bat WebRTCProxy Win64 DebugGame -WaitMutex -FromMsBuild</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Rebuild.bat WebRTCProxy Win64 DebugGame -WaitMutex -FromMsBuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Clean.bat WebRTCProxy Win64 DebugGame -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
+    <NMakeOutput>D:\Github\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\bin\WebRTCProxy-Win64-DebugGame.exe</NMakeOutput>
+  </PropertyGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'">
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+    <OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+    <IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+    <NMakeBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Build.bat WebRTCProxy Win64 Development -WaitMutex -FromMsBuild</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Rebuild.bat WebRTCProxy Win64 Development -WaitMutex -FromMsBuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Clean.bat WebRTCProxy Win64 Development -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
+    <NMakeOutput>D:\Github\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\bin\WebRTCProxy.exe</NMakeOutput>
+  </PropertyGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|x64'">
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+    <OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+    <IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+    <NMakeBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Build.bat WebRTCProxy Win64 Shipping -WaitMutex -FromMsBuild</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Rebuild.bat WebRTCProxy Win64 Shipping -WaitMutex -FromMsBuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Clean.bat WebRTCProxy Win64 Shipping -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
+    <NMakeOutput>D:\Github\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\bin\WebRTCProxy-Win64-Shipping.exe</NMakeOutput>
+  </PropertyGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test_Program|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test_Program|x64'">
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+    <OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+    <IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+    <NMakeBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Build.bat WebRTCProxy Win64 Test -WaitMutex -FromMsBuild</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Rebuild.bat WebRTCProxy Win64 Test -WaitMutex -FromMsBuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>D:\Github\UnrealEngine4\Engine\Build\BatchFiles\Clean.bat WebRTCProxy Win64 Test -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
+    <NMakeOutput>D:\Github\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\bin\WebRTCProxy-Win64-Test.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\WebRTCProxy.Target.cs"/>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\README.md"/>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\WebRTCProxy.Build.cs"/>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\_clang-format"/>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\bin\Start_AWS_WebRTCProxy.bat"/>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\bin\Start_AWS_WebRTCProxy.ps1"/>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\bin\Start_WebRTCProxy.bat"/>
+    <None Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\bin\WebRTCProxy.exe"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\AsyncConnection.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\AsyncConnection.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\CirrusConnection.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\CirrusConnection.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\ClientSession.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\ClientSession.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\CmdLine.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\CmdLine.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\Conductor.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\Conductor.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\Console.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\Console.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\CrashDetection.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\CrashDetection.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\FileLogOutput.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\FileLogOutput.h"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\H264FrameBuffer.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\Logging.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\Logging.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\NetworkAudioCapturer.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\NetworkAudioCapturer.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\NetworkVideoCapturer.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\NetworkVideoCapturer.h"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\ScopeGuard.h"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\Semaphore.h"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\SetSessionDescriptionObserver.h"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\SharedQueue.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\StringUtils.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\StringUtils.h"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\targetver.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\TimeUtils.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\TimeUtils.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\UE4Connection.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\UE4Connection.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\VideoEncoder.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\VideoEncoder.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\WebRTCLogging.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\WebRTCLogging.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\WebRTCProxy.cpp"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\WebRTCProxyCommon.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\WebRTCProxyCommon.h"/>
+    <ClCompile Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\WebRTCProxyPCH.cpp"/>
+    <ClInclude Include="..\..\..\..\..\UnrealEngine4\Engine\Source\Programs\PixelStreaming\WebRTCProxy\src\WebRTCProxyPCH.h"/>
+  </ItemGroup>
+  <PropertyGroup>
+    <NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);IS_PROGRAM=1;WEBRTC_WIN;INCL_EXTRA_HTON_FUNCTIONS;ENABLE_PGO_PROFILE=0;USE_VORBIS_FOR_STREAMING=1;ENGINE_BASE_DIR_ADJUST=7;WITH_DEV_AUTOMATION_TESTS=1;WITH_PERF_AUTOMATION_TESTS=1;UNICODE;_UNICODE;__UNREAL__;IS_MONOLITHIC=1;WITH_ENGINE=0;WITH_UNREAL_DEVELOPER_TOOLS=0;WITH_APPLICATION_CORE=1;WITH_COREUOBJECT=0;USE_STATS_WITHOUT_ENGINE=0;WITH_PLUGIN_SUPPORT=0;WITH_PERFCOUNTERS=0;USE_LOGGING_IN_SHIPPING=0;WITH_LOGGING_TO_MEMORY=0;USE_CACHE_FREED_OS_ALLOCS=1;USE_CHECKS_IN_SHIPPING=0;WITH_EDITOR=0;WITH_EDITORONLY_DATA=0;WITH_SERVER_CODE=1;WITH_CEF3=1;WITH_LIVE_CODING=1;WITH_XGE_CONTROLLER=0;UBT_MODULE_MANIFEST="WebRTCProxy.modules";UBT_MODULE_MANIFEST_DEBUGGAME="WebRTCProxy-Win64-DebugGame.modules";UBT_COMPILED_PLATFORM=Win64;UBT_COMPILED_TARGET=Program;UE_APP_NAME="WebRTCProxy";WIN32=1;_WIN32_WINNT=0x0601;WINVER=0x0601;PLATFORM_WINDOWS=1;OVERRIDE_PLATFORM_HEADER_NAME=Windows;NDEBUG=1;UE_BUILD_DEVELOPMENT=1;UE_IS_ENGINE_MODULE=0;IMPLEMENT_ENCRYPTION_KEY_REGISTRATION()=;IMPLEMENT_SIGNING_KEY_REGISTRATION()=;DEPRECATED_FORGAME=DEPRECATED;UE_DEPRECATED_FORGAME=UE_DEPRECATED;UE_ENABLE_ICU=1;WITH_VS_PERF_PROFILER=0;WITH_DIRECTXMATH=0;WITH_MALLOC_STOMP=1;CORE_API=;WEBRTCPROXY_API=</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);D:\Github\UnrealEngine4\Engine\Source;D:\Github\UnrealEngine4\Engine\Source\ThirdParty\WebRTC\rev.23789\include\Win64\VS2017;D:\Github\UnrealEngine4\Engine\Source\ThirdParty\WebRTC\rev.23789\include\Win64\VS2017\third_party\jsoncpp\source\include;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\WebRTCProxy\Inc\Core;D:\Github\UnrealEngine4\Engine\Source\Runtime;D:\Github\UnrealEngine4\Engine\Source\Runtime\Core\Public;D:\Github\UnrealEngine4\Engine\Intermediate\Build\Win64\WebRTCProxy\Inc\WebRTCProxy;D:\Github\UnrealEngine4\Engine\Source\Programs\PixelStreaming;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\INCLUDE;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um;D:\Windows Kits\10\include\10.0.17763.0\ucrt;D:\Windows Kits\10\include\10.0.17763.0\shared;D:\Windows Kits\10\include\10.0.17763.0\um;D:\Windows Kits\10\include\10.0.17763.0\winrt;;</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+    <NMakeForcedUsingAssemblies>$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

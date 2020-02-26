@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.LocalizationService.cpp.obj": [
+			"DefaultLocalizationServiceProvider.cpp.obj",
+			"LocalizationServiceHelpers.cpp.obj",
+			"LocalizationServiceModule.cpp.obj",
+			"LocalizationServiceSettings.cpp.obj",
+			"ScopedLocalizationServiceProgress.cpp.obj"
+		]
+	}
+}

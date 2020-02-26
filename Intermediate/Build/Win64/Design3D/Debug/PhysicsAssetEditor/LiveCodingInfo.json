@@ -1,0 +1,46 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PhysicsAssetEditor.cpp.obj": [
+			"PhysicsAssetDetailsCustomization.cpp.obj",
+			"PhysicsAssetEditor.cpp.obj",
+			"PhysicsAssetEditorActions.cpp.obj",
+			"PhysicsAssetEditorAnimInstance.cpp.obj",
+			"PhysicsAssetEditorAnimInstanceProxy.cpp.obj",
+			"PhysicsAssetEditorEditMode.cpp.obj",
+			"PhysicsAssetEditorHitProxies.cpp.obj",
+			"PhysicsAssetEditorMode.cpp.obj",
+			"PhysicsAssetEditorModule.cpp.obj",
+			"PhysicsAssetEditorProfilesSummoner.cpp.obj",
+			"PhysicsAssetEditorSharedData.cpp.obj",
+			"PhysicsAssetEditorSkeletalMeshComponent.cpp.obj",
+			"PhysicsAssetEditorSkeletonTreeBuilder.cpp.obj",
+			"PhysicsAssetEditorToolsSummoner.cpp.obj",
+			"PhysicsAssetGraph.cpp.obj",
+			"PhysicsAssetGraphNode.cpp.obj",
+			"PhysicsAssetGraphNode_Bone.cpp.obj",
+			"PhysicsAssetGraphNode_Constraint.cpp.obj",
+			"PhysicsAssetGraphPanelNodeFactory.cpp.obj",
+			"PhysicsAssetGraphSchema.cpp.obj",
+			"PhysicsAssetGraphSummoner.cpp.obj",
+			"SBoneNode.cpp.obj",
+			"SConstraintNode.cpp.obj",
+			"SPhysicsAssetGraph.cpp.obj",
+			"SPhysicsAssetGraphNode.cpp.obj",
+			"SkeletonTreePhysicsBodyItem.cpp.obj",
+			"SkeletonTreePhysicsConstraintItem.cpp.obj",
+			"SkeletonTreePhysicsShapeItem.cpp.obj"
+		],
+		"Module.PhysicsAssetEditor.gen.cpp.obj": [
+			"PhysicsAssetEditor.init.gen.cpp.obj",
+			"PhysicsAssetEditorAnimInstance.gen.cpp.obj",
+			"PhysicsAssetEditorAnimInstanceProxy.gen.cpp.obj",
+			"PhysicsAssetEditorSkeletalMeshComponent.gen.cpp.obj",
+			"PhysicsAssetGraph.gen.cpp.obj",
+			"PhysicsAssetGraphNode.gen.cpp.obj",
+			"PhysicsAssetGraphNode_Bone.gen.cpp.obj",
+			"PhysicsAssetGraphNode_Constraint.gen.cpp.obj",
+			"PhysicsAssetGraphSchema.gen.cpp.obj"
+		]
+	}
+}

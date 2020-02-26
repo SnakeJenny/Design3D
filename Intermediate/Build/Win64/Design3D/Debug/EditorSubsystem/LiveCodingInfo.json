@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.EditorSubsystem.cpp.obj": [
+			"EditorSubsystem.cpp.obj",
+			"EditorSubsystemModule.cpp.obj"
+		],
+		"Module.EditorSubsystem.gen.cpp.obj": [
+			"EditorSubsystem.gen.cpp.obj",
+			"EditorSubsystem.init.gen.cpp.obj"
+		]
+	}
+}

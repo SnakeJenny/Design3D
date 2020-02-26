@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.HTML5TargetPlatform.cpp.obj": [
+			"HTML5TargetDevice.cpp.obj",
+			"HTML5TargetPlatform.cpp.obj",
+			"HTML5TargetPlatformModule.cpp.obj"
+		]
+	}
+}

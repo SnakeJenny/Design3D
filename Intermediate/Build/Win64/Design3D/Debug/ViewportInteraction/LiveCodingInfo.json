@@ -1,0 +1,47 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ViewportInteraction.cpp.obj": [
+			"ActorTransformer.cpp.obj",
+			"ActorViewportTransformable.cpp.obj",
+			"VIBaseTransformGizmo.cpp.obj",
+			"VIGizmoHandle.cpp.obj",
+			"VIGizmoHandleMeshComponent.cpp.obj",
+			"VIPivotTransformGizmo.cpp.obj",
+			"VIStretchGizmoHandle.cpp.obj",
+			"VIUniformScaleGizmoHandle.cpp.obj",
+			"MouseCursorInteractor.cpp.obj",
+			"ViewportDragOperation.cpp.obj",
+			"ViewportInteractableInterface.cpp.obj",
+			"ViewportInteractionDragOperations.cpp.obj",
+			"ViewportInteractionInputProcessor.cpp.obj",
+			"ViewportInteractionModule.cpp.obj",
+			"ViewportInteractionStyle.cpp.obj",
+			"ViewportInteractionUtils.cpp.obj",
+			"ViewportInteractor.cpp.obj",
+			"ViewportTransformable.cpp.obj",
+			"ViewportTransformer.cpp.obj",
+			"ViewportWorldInteraction.cpp.obj"
+		],
+		"Module.ViewportInteraction.gen.cpp.obj": [
+			"ActorTransformer.gen.cpp.obj",
+			"MouseCursorInteractor.gen.cpp.obj",
+			"VIBaseTransformGizmo.gen.cpp.obj",
+			"ViewportDragOperation.gen.cpp.obj",
+			"ViewportInteractableInterface.gen.cpp.obj",
+			"ViewportInteraction.init.gen.cpp.obj",
+			"ViewportInteractionAssetContainer.gen.cpp.obj",
+			"ViewportInteractionDragOperations.gen.cpp.obj",
+			"ViewportInteractionTypes.gen.cpp.obj",
+			"ViewportInteractor.gen.cpp.obj",
+			"ViewportTransformer.gen.cpp.obj",
+			"ViewportWorldInteraction.gen.cpp.obj",
+			"VIGizmoHandle.gen.cpp.obj",
+			"VIGizmoHandleMeshComponent.gen.cpp.obj",
+			"VIPivotTransformGizmo.gen.cpp.obj",
+			"VISettings.gen.cpp.obj",
+			"VIStretchGizmoHandle.gen.cpp.obj",
+			"VIUniformScaleGizmoHandle.gen.cpp.obj"
+		]
+	}
+}

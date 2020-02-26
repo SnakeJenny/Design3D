@@ -1,0 +1,22 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.LocalizationDashboard.cpp.obj": [
+			"GatherTextDetailCustomizations.cpp.obj",
+			"LocalizationDashboard.cpp.obj",
+			"LocalizationDashboardModule.cpp.obj",
+			"LocalizationDashboardSettings.cpp.obj",
+			"LocalizationDashboardSettingsDetailCustomization.cpp.obj",
+			"LocalizationTargetDetailCustomization.cpp.obj",
+			"LocalizationTargetSetDetailCustomization.cpp.obj",
+			"SLocalizationDashboardTargetRow.cpp.obj",
+			"SLocalizationTargetEditor.cpp.obj",
+			"SLocalizationTargetEditorCultureRow.cpp.obj",
+			"SLocalizationTargetStatusButton.cpp.obj"
+		],
+		"Module.LocalizationDashboard.gen.cpp.obj": [
+			"LocalizationDashboard.init.gen.cpp.obj",
+			"LocalizationDashboardSettings.gen.cpp.obj"
+		]
+	}
+}

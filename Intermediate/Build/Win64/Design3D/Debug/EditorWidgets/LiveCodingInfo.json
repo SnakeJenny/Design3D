@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.EditorWidgets.cpp.obj": [
+			"EditorWidgetsModule.cpp.obj",
+			"SAssetDiscoveryIndicator.cpp.obj",
+			"SAssetDropTarget.cpp.obj",
+			"SAssetSearchBox.cpp.obj",
+			"SDropTarget.cpp.obj",
+			"SObjectNameEditableTextBox.cpp.obj",
+			"STextPropertyEditableTextBox.cpp.obj",
+			"STransportControl.cpp.obj"
+		]
+	}
+}

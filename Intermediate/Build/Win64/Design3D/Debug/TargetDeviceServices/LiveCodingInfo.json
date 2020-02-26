@@ -1,0 +1,16 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.TargetDeviceServices.cpp.obj": [
+			"TargetDeviceProxy.cpp.obj",
+			"TargetDeviceProxyManager.cpp.obj",
+			"TargetDeviceService.cpp.obj",
+			"TargetDeviceServiceManager.cpp.obj",
+			"TargetDeviceServicesModule.cpp.obj"
+		],
+		"Module.TargetDeviceServices.gen.cpp.obj": [
+			"TargetDeviceServiceMessages.gen.cpp.obj",
+			"TargetDeviceServices.init.gen.cpp.obj"
+		]
+	}
+}

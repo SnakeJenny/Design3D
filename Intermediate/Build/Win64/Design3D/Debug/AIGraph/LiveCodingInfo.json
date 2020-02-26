@@ -1,0 +1,25 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AIGraph.cpp.obj": [
+			"AIGraph.cpp.obj",
+			"AIGraphConnectionDrawingPolicy.cpp.obj",
+			"AIGraphEditor.cpp.obj",
+			"AIGraphModule.cpp.obj",
+			"AIGraphNode.cpp.obj",
+			"AIGraphSchema.cpp.obj",
+			"AIGraphTypes.cpp.obj",
+			"K2Node_AIMoveTo.cpp.obj",
+			"SGraphEditorActionMenuAI.cpp.obj",
+			"SGraphNodeAI.cpp.obj"
+		],
+		"Module.AIGraph.gen.cpp.obj": [
+			"AIGraph.gen.cpp.obj",
+			"AIGraph.init.gen.cpp.obj",
+			"AIGraphNode.gen.cpp.obj",
+			"AIGraphSchema.gen.cpp.obj",
+			"AIGraphTypes.gen.cpp.obj",
+			"K2Node_AIMoveTo.gen.cpp.obj"
+		]
+	}
+}

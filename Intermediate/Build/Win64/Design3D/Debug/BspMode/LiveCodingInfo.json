@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.BspMode.cpp.obj": [
+			"BspMode.cpp.obj",
+			"BspModeModule.cpp.obj",
+			"BspModeStyle.cpp.obj",
+			"SBspPalette.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AdvancedPreviewScene.cpp.obj": [
+			"AdvancedPreviewScene.cpp.obj",
+			"AdvancedPreviewSceneCommands.cpp.obj",
+			"AdvancedPreviewSceneModule.cpp.obj",
+			"AssetViewerSettings.cpp.obj",
+			"SAdvancedPreviewDetailsTab.cpp.obj"
+		],
+		"Module.AdvancedPreviewScene.gen.cpp.obj": [
+			"AdvancedPreviewScene.init.gen.cpp.obj",
+			"AssetViewerSettings.gen.cpp.obj"
+		]
+	}
+}

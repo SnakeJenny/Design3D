@@ -1,0 +1,19 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.LiveLinkInterface.cpp.obj": [
+			"LiveLinkInterfaceModule.cpp.obj",
+			"LiveLinkSourceFactory.cpp.obj",
+			"LiveLinkSourceSettings.cpp.obj",
+			"LiveLinkTypes.cpp.obj"
+		],
+		"Module.LiveLinkInterface.gen.cpp.obj": [
+			"ILiveLinkSource.gen.cpp.obj",
+			"LiveLinkInterface.init.gen.cpp.obj",
+			"LiveLinkRefSkeleton.gen.cpp.obj",
+			"LiveLinkSourceFactory.gen.cpp.obj",
+			"LiveLinkSourceSettings.gen.cpp.obj",
+			"LiveLinkTypes.gen.cpp.obj"
+		]
+	}
+}

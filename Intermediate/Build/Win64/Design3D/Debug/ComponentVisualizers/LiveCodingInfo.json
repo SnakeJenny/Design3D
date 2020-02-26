@@ -1,0 +1,26 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ComponentVisualizers.cpp.obj": [
+			"ComponentVisualizers.cpp.obj",
+			"ConstraintComponentVisualizer.cpp.obj",
+			"DecalComponentVisualizer.cpp.obj",
+			"Manipulator.cpp.obj",
+			"PhysicalAnimationComponentVisualizer.cpp.obj",
+			"PointLightComponentVisualizer.cpp.obj",
+			"RadialForceComponentVisualizer.cpp.obj",
+			"RectLightComponentVisualizer.cpp.obj",
+			"SensingComponentVisualizer.cpp.obj",
+			"SplineComponentVisualizer.cpp.obj",
+			"SplineMeshComponentVisualizer.cpp.obj",
+			"SpotLightComponentVisualizer.cpp.obj",
+			"SpringArmComponentVisualizer.cpp.obj",
+			"SpringComponentVisualizer.cpp.obj",
+			"StereoLayerComponentVisualizer.cpp.obj"
+		],
+		"Module.ComponentVisualizers.gen.cpp.obj": [
+			"ComponentVisualizers.init.gen.cpp.obj",
+			"Manipulator.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.HTML5PlatformEditor.cpp.obj": [
+			"HTML5PlatformEditorClasses.cpp.obj",
+			"HTML5PlatformEditorModule.cpp.obj",
+			"HTML5SDKSettings.cpp.obj",
+			"HTML5TargetSettingsCustomization.cpp.obj"
+		],
+		"Module.HTML5PlatformEditor.gen.cpp.obj": [
+			"HTML5PlatformEditor.init.gen.cpp.obj",
+			"HTML5SDKSettings.gen.cpp.obj",
+			"HTML5TargetSettings.gen.cpp.obj"
+		]
+	}
+}

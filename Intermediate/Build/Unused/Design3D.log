@@ -1,0 +1,12 @@
+﻿  Creating makefile for ShaderCompileWorker (ini files are newer than makefile)
+  Creating makefile for Design3DEditor (ini files are newer than makefile)
+  Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.17763.0 SDK (D:\Windows Kits\10).
+  Building 4 actions with 8 processes...
+    [1/4] MyCharacter.cpp
+    [2/4] UE4Editor-Design3D-Win64-Debug.lib
+      正在创建库 D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\UE4Editor\Debug\Design3D\UE4Editor-Design3D-Win64-Debug.lib 和对象 D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\UE4Editor\Debug\Design3D\UE4Editor-Design3D-Win64-Debug.exp
+    [3/4] UE4Editor-Design3D-Win64-Debug.dll
+      正在创建库 D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\UE4Editor\Debug\Design3D\UE4Editor-Design3D-Win64-Debug.suppressed.lib 和对象 D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\UE4Editor\Debug\Design3D\UE4Editor-Design3D-Win64-Debug.suppressed.exp
+    [4/4] Design3DEditor-Win64-Debug.target
+  Total time in Parallel executor: 6.08 seconds
+  Total execution time: 27.41 seconds

@@ -1,0 +1,23 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AddContentDialog.cpp.obj": [
+			"AddContentDialogModule.cpp.obj",
+			"AddContentDialogStyle.cpp.obj",
+			"ContentSourceDragDropOp.cpp.obj",
+			"ContentSourceProviderManager.cpp.obj",
+			"FeaturePackContentSource.cpp.obj",
+			"FeaturePackContentSourceProvider.cpp.obj",
+			"SAddContentDialog.cpp.obj",
+			"SAddContentWidget.cpp.obj",
+			"AddContentWidgetViewModel.cpp.obj",
+			"CategoryViewModel.cpp.obj",
+			"ContentSourceViewModel.cpp.obj"
+		],
+		"Module.AddContentDialog.gen.cpp.obj": [
+			"AddContentDialog.init.gen.cpp.obj",
+			"FeaturePackContentSource.gen.cpp.obj",
+			"IContentSource.gen.cpp.obj"
+		]
+	}
+}

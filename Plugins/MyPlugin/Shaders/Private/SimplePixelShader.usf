@@ -1,0 +1,50 @@
+#include "/Engine/Public/Platform.ush"
+#include "/Engine/Private/Common.ush"  
+
+float4 SimpleColor;
+Texture2D TextureVal;  
+SamplerState TextureSampler;
+
+
+// 顶点着色器，获取UV和位置（没有UV，则使用材质网格体坐标）
+// 注意，ATTRIBUTE是UE4的语义，0/1与顶点输入布局类FTextureVertexDeclaration中Elements.Add对应
+void MainVS(
+ in float4 InPosition : ATTRIBUTE0,
+ in float2 InUV : ATTRIBUTE1,  
+ out float2 OutUV : TEXCOORD0,
+ out float4 OutPosition : SV_POSITION
+ )
+{
+    OutPosition = InPosition;
+    OutUV = InUV; 
+}
+
+// 像素着色器，修改颜色信息
+void MainPS(
+    in float2 UV : TEXCOORD0, 
+    out float4 OutColor : SV_Target0
+    )
+{
+	// 纹理取样
+    OutColor = float4(TextureVal.Sample(TextureSampler, UV.xy).rgb, 1.0f);  
+
+	// 颜色取样
+    switch (SimpleUniformStruct.ColorIndex)  
+    {  
+        case 0 :  
+            OutColor *= SimpleUniformStruct.Color1;  
+            break;  
+        case 1:  
+            OutColor *= SimpleUniformStruct.Color2;  
+            break;  
+        case 2:  
+            OutColor *= SimpleUniformStruct.Color3;  
+            break;  
+        case 3:  
+            OutColor *= SimpleUniformStruct.Color4;  
+            break;  
+    }
+
+	// 颜色取样，也可以从CS的计算结果中取（左下角第3行，第3列的值）
+	// OutColor = TextureVal.Load(int3(2, 2, 0))
+}

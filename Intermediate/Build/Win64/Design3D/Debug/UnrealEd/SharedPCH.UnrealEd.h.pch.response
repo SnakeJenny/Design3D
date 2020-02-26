@@ -1,0 +1,199 @@
+/Zc:inline
+/nologo
+/Oi
+/c
+/Gw
+/Gy
+/Zm850
+/wd4819
+/D_CRT_STDIO_LEGACY_WIDE_SPECIFIERS=1
+/D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1
+/D_DISABLE_EXTENDED_ALIGNED_STORAGE
+/source-charset:utf-8
+/execution-charset:utf-8
+/Od
+/Os
+/Ob2
+/RTCs
+/errorReport:prompt
+/Z7
+/MD
+/bigobj
+/fp:fast
+/Zp8
+/wd4463
+/wd4838
+/we4668
+/I .
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\UnrealEd
+/I Editor
+/I Programs\UnrealLightmass\Public
+/I Developer\Android\AndroidDeviceDetection\Public\Interfaces
+/I Editor\UnrealEd\Classes
+/I Editor\UnrealEd\Public
+/I Editor\BspMode\Public
+/I Runtime
+/I Runtime\Core\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\CoreUObject
+/I Runtime\CoreUObject\Public
+/I Runtime\ApplicationCore\Public
+/I Runtime\RHI\Public
+/I Developer
+/I Developer\DirectoryWatcher\Public
+/I Editor\Documentation\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\Engine
+/I Runtime\Engine\Classes
+/I Runtime\Engine\Public
+/I Runtime\Json\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\SlateCore
+/I Runtime\SlateCore\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\InputCore
+/I Runtime\InputCore\Classes
+/I Runtime\InputCore\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\Slate
+/I Runtime\Slate\Public
+/I Runtime\ImageWrapper\Public
+/I Runtime\Messaging\Public
+/I Runtime\MessagingCommon\Public
+/I Runtime\RenderCore\Public
+/I Runtime\Sockets\Public
+/I Runtime\UtilityShaders\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\AssetRegistry
+/I Runtime\AssetRegistry\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\EngineMessages
+/I Runtime\EngineMessages\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\EngineSettings
+/I Runtime\EngineSettings\Classes
+/I Runtime\EngineSettings\Public
+/I Runtime\SynthBenchmark\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\Renderer
+/I Runtime\Renderer\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\GameplayTags
+/I Runtime\GameplayTags\Classes
+/I Runtime\GameplayTags\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\PacketHandler
+/I Runtime\PacketHandlers
+/I Runtime\PacketHandlers\PacketHandler\Classes
+/I Runtime\PacketHandlers\PacketHandler\Public
+/I Runtime\PacketHandlers\ReliabilityHandlerComponent\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\AudioPlatformConfiguration
+/I Runtime\AudioPlatformConfiguration\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\MeshDescription
+/I Runtime\MeshDescription\Public
+/I Runtime\PakFile\Public
+/I Runtime\RSA\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\ClothingSystemRuntimeInterface
+/I Runtime\ClothingSystemRuntimeInterface\Public
+/I Runtime\NetworkReplayStreaming
+/I Runtime\NetworkReplayStreaming\NetworkReplayStreaming\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\AudioMixer
+/I Runtime\AudioMixer\Classes
+/I Runtime\AudioMixer\Public
+/I ThirdParty
+/I ThirdParty\libSampleRate\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\AnimationCore
+/I Runtime\AnimationCore\Public
+/I Runtime\Projects\Public
+/I Runtime\SandboxFile\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\EditorStyle
+/I Editor\EditorStyle\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\SourceControl
+/I Developer\SourceControl\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\UnrealEdMessages
+/I Editor\UnrealEdMessages\Classes
+/I Editor\UnrealEdMessages\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\GameplayDebugger
+/I Developer\GameplayDebugger\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\BlueprintGraph
+/I Editor\BlueprintGraph\Classes
+/I Editor\BlueprintGraph\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\EditorSubsystem
+/I Editor\EditorSubsystem\Public
+/I Runtime\Online
+/I Runtime\Online\HTTP\Public
+/I Runtime\UnrealAudio\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\FunctionalTesting
+/I Developer\FunctionalTesting\Classes
+/I Developer\FunctionalTesting\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\AutomationController
+/I Developer\AutomationController\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\Localization
+/I Developer\Localization\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\AudioEditor
+/I Editor\AudioEditor\Classes
+/I Editor\AudioEditor\Public
+/I Editor\LevelEditor\Public
+/I Developer\Settings\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\IntroTutorials
+/I Editor\IntroTutorials\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\HeadMountedDisplay
+/I Runtime\HeadMountedDisplay\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\VREditor
+/I Editor\VREditor
+/I Editor\VREditor\Public
+/I Editor\CommonMenuExtensions\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\Landscape
+/I Runtime\Landscape\Classes
+/I Runtime\Landscape\Public
+/I Editor\PropertyEditor\Public
+/I Editor\ActorPickerMode\Public
+/I Editor\SceneDepthPickerMode\Public
+/I Editor\DetailCustomizations\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\ClassViewer
+/I Editor\ClassViewer\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\GraphEditor
+/I Editor\GraphEditor\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\ContentBrowser
+/I Editor\ContentBrowser\Public
+/I Runtime\NetworkFileSystem\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\UMG
+/I Runtime\UMG\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\MovieScene
+/I Runtime\MovieScene\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\TimeManagement
+/I Runtime\TimeManagement\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\MovieSceneTracks
+/I Runtime\MovieSceneTracks\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\PropertyPath
+/I Runtime\PropertyPath\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\NavigationSystem
+/I Runtime\NavigationSystem\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\MeshDescriptionOperations
+/I Developer\MeshDescriptionOperations\Public
+/I Developer\MeshBuilder\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\MaterialShaderQualitySettings
+/I Runtime\MaterialShaderQualitySettings\Classes
+/I Runtime\Windows
+/I Runtime\Windows\XAudio2\Public
+/I Developer\CollectionManager\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\AddContentDialog
+/I Editor\AddContentDialog\Public
+/I ThirdParty\IntelEmbree\Embree2140\Win64\include
+/I Developer\MeshUtilities\Public
+/I Developer\MeshMergeUtilities\Public
+/I Developer\HierarchicalLODUtilities\Public
+/I Developer\MeshReductionInterface\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\AssetTools
+/I Developer\AssetTools\Public
+/I Editor\KismetCompiler\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\GameplayTasks
+/I Runtime\GameplayTasks\Classes
+/I Runtime\GameplayTasks\Public
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Inc\AIModule
+/I Runtime\AIModule\Public
+/I Runtime\AIModule\Classes
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\INCLUDE"
+/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"
+/I "D:\Windows Kits\10\include\10.0.17763.0\ucrt"
+/I "D:\Windows Kits\10\include\10.0.17763.0\shared"
+/I "D:\Windows Kits\10\include\10.0.17763.0\um"
+/I "D:\Windows Kits\10\include\10.0.17763.0\winrt"
+/D_HAS_EXCEPTIONS=0
+/I D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Debug\UnrealEd
+/Yc"D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Debug\UnrealEd\SharedPCH.UnrealEd.h"
+/Fp"D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Debug\UnrealEd\SharedPCH.UnrealEd.h.pch"
+"D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Debug\UnrealEd\SharedPCH.UnrealEd.cpp"
+/Fo"D:\Github\master_szu\ue4_project\Design3D\Intermediate\Build\Win64\Design3D\Debug\UnrealEd\SharedPCH.UnrealEd.h.obj"
+/TP
+/GR-
+/W4

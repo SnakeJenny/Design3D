@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.NetworkFileSystem.cpp.obj": [
+			"NetworkFileServer.cpp.obj",
+			"NetworkFileServerConnection.cpp.obj",
+			"NetworkFileServerHttp.cpp.obj",
+			"NetworkFileSystemModule.cpp.obj"
+		]
+	}
+}

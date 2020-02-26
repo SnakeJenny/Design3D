@@ -1,0 +1,32 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.StatsViewer.cpp.obj": [
+			"ActorArrayHyperlinkColumn.cpp.obj",
+			"ObjectHyperlinkColumn.cpp.obj",
+			"SStatsViewer.cpp.obj",
+			"StatsCustomColumn.cpp.obj",
+			"CookerStats.cpp.obj",
+			"LightingBuildInfo.cpp.obj",
+			"PrimitiveStats.cpp.obj",
+			"StaticMeshLightingInfo.cpp.obj",
+			"TextureStats.cpp.obj",
+			"StatsPageManager.cpp.obj",
+			"CookerStatsPage.cpp.obj",
+			"LightingBuildInfoStatsPage.cpp.obj",
+			"PrimitiveStatsPage.cpp.obj",
+			"StaticMeshLightingInfoStatsPage.cpp.obj",
+			"TextureStatsPage.cpp.obj",
+			"StatsViewerModule.cpp.obj",
+			"StatsViewerUtils.cpp.obj"
+		],
+		"Module.StatsViewer.gen.cpp.obj": [
+			"CookerStats.gen.cpp.obj",
+			"LightingBuildInfo.gen.cpp.obj",
+			"PrimitiveStats.gen.cpp.obj",
+			"StaticMeshLightingInfo.gen.cpp.obj",
+			"StatsViewer.init.gen.cpp.obj",
+			"TextureStats.gen.cpp.obj"
+		]
+	}
+}

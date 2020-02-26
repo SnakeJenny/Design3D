@@ -1,0 +1,16 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.InputCore.cpp.obj": [
+			"GenericPlatformInput.cpp.obj",
+			"InputCore.cpp.obj",
+			"InputCoreModule.cpp.obj",
+			"InputCoreTypes.cpp.obj",
+			"WindowsPlatformInput.cpp.obj"
+		],
+		"Module.InputCore.gen.cpp.obj": [
+			"InputCore.init.gen.cpp.obj",
+			"InputCoreTypes.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.LocalizationCommandletExecution.cpp.obj": [
+			"LocalizationCommandletExecution.cpp.obj",
+			"LocalizationCommandletExecutionModule.cpp.obj",
+			"LocalizationCommandletTasks.cpp.obj"
+		]
+	}
+}

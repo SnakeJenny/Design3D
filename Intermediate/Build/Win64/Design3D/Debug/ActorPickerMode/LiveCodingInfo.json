@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ActorPickerMode.cpp.obj": [
+			"ActorPickerMode.cpp.obj",
+			"EditorModeActorPicker.cpp.obj"
+		]
+	}
+}

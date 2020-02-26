@@ -1,0 +1,19 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.RHI.cpp.obj": [
+			"BoundShaderStateCache.cpp.obj",
+			"DynamicRHI.cpp.obj",
+			"GPUDefragAllocator.cpp.obj",
+			"GPUProfiler.cpp.obj",
+			"MultiGPU.cpp.obj",
+			"PipelineFileCache.cpp.obj",
+			"PipelineStateCache.cpp.obj",
+			"RHI.cpp.obj",
+			"RHICommandList.cpp.obj",
+			"RHIGPUReadback.cpp.obj",
+			"RHIUtilities.cpp.obj",
+			"WindowsDynamicRHI.cpp.obj"
+		]
+	}
+}

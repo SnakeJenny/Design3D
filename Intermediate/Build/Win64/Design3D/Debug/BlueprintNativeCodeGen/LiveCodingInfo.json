@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.BlueprintNativeCodeGen.cpp.obj": [
+			"BlueprintNativeCodeGenManifest.cpp.obj",
+			"BlueprintNativeCodeGenModule.cpp.obj",
+			"BlueprintNativeCodeGenUtils.cpp.obj",
+			"NativeCodeGenerationTool.cpp.obj"
+		],
+		"Module.BlueprintNativeCodeGen.gen.cpp.obj": [
+			"BlueprintNativeCodeGen.init.gen.cpp.obj",
+			"BlueprintNativeCodeGenManifest.gen.cpp.obj"
+		]
+	}
+}

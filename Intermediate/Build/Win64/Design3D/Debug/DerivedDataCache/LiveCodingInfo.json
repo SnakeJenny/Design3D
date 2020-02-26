@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.DerivedDataCache.cpp.obj": [
+			"DDCCleanup.cpp.obj",
+			"DerivedDataBackendAsyncPutWrapper.cpp.obj",
+			"DerivedDataBackends.cpp.obj",
+			"DerivedDataCache.cpp.obj",
+			"FileSystemDerivedDataBackend.cpp.obj",
+			"MemoryDerivedDataBackend.cpp.obj",
+			"PakFileDerivedDataBackend.cpp.obj"
+		]
+	}
+}
