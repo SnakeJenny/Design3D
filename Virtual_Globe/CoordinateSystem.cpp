@@ -19,7 +19,7 @@ FVector CoordinateSystem::FromUE_CoordinateSystem(const FVector &inPt)
 
 
 
-
+/////////////////////////////////////Sphere_CoordinateSystem/////////////////////////////////////////////
 
 //构造椭球坐标系
 //Rotation(Pitch,Roll,Yaw)
@@ -54,8 +54,9 @@ Sphere_CoordinateSystem::Sphere_CoordinateSystem(const FVector &radii,
 FVector Sphere_CoordinateSystem::ToUE_CoordinateSystem(const FVector& inPt)
 {
 	Geographic3D GeographicCoordinates = Geographic3D(inPt);
+	//经纬度转笛卡尔球面坐标系
 	FVector DescartesCoordinates = ToVector3F(GeographicCoordinates);
-
+	//笛卡尔球面，经坐标空间变换到ue 坐标系
 	return this->Transform.TransformPosition(DescartesCoordinates);
 }
 
@@ -190,9 +191,29 @@ Vector3D Sphere_CoordinateSystem::GeodgraphicSurfaceNormal(const Geographic3D &i
 		FMath::Sin(inPosition.Latitude));
 }
 
-
 //通过经纬度，计算椭球笛卡尔坐标系中xyz值，高度值取地表0，有效位6位
 FVector Sphere_CoordinateSystem::ToVector3F(const Geographic2D &inPosition)
 {
 	return ToVector3F(Geographic3D(inPosition.Longitude, inPosition.Latitude, 0.0));
+}
+
+/////////////////////////////////////Plane_CoordinateSystem/////////////////////////////////////////////
+
+Plane_CoordinateSystem::Plane_CoordinateSystem(const FRotator& InRotation,
+	const FVector &InTranslation,
+	const FVector &InScale3D)
+{	
+	//用于平面坐标系到UE坐标系的变换
+	this->Transform = FTransform(InRotation, InTranslation, InScale3D);
+}
+
+
+FVector Plane_CoordinateSystem::ToUE_CoordinateSystem(const FVector& inPt)
+{	
+	return this->Transform.TransformPosition(inPt);
+}
+
+FVector Plane_CoordinateSystem::FromUE_CoordinateSystem(const FVector& inPt)
+{
+	return this->Transform.InverseTransformPosition(inPt);
 }

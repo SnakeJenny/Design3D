@@ -161,8 +161,6 @@ public:
 	//2. 高度从编码转换为实际的坐标，精度0.2米
 	//3. vertexBuffer 转换后，顶点的法线方向重新计算
 	//4. 转换后再存回去
-
-
 };
 
 
@@ -172,6 +170,14 @@ public:
 
 //定义平面坐标系统类，继承自CoordinateSystem，假想将地球经纬度坐标延展到矩形平面上
 class Plane_CoordinateSystem :CoordinateSystem
-{};
+{
+	Plane_CoordinateSystem(const FRotator& InRotation,
+		const FVector &InTranslation,
+		const FVector &InScale3D);
+
+	FVector ToUE_CoordinateSystem(const FVector &inPt);
+
+	FVector FromUE_CoordinateSystem(const FVector &inPt);
+};
 
 

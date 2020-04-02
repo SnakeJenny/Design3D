@@ -4,6 +4,10 @@
 #include "Math/Rotator.h"
 
 
+//完善这个类
+class TileItem
+{};
+
 //用于定义瓦片描述信息的基类
 //四叉树瓦片、r树瓦片、osgb数据的索引瓦片等，一切瓦片类型的描述信息均继承自该基类
 class TileInfo
@@ -32,14 +36,16 @@ public:
 	FString GetBasePath();
 };
 
-//矩形的瓦片描述信息类，继承自TileInfo基类
+//矩形的瓦片描述信息类，继承自TileInfo基类,全球瓦片
 class TileInfo_Grid :TileInfo
 {
 public:
-	//该瓦片的层级、在特定层级下的行号、列号，基于此信息可以唯一确定该瓦片
-	int32 LayerNum;
+	//该瓦片的层级
+	int32 LevelNum;
+	//该瓦片的行号
 	int32 Row;
-	int32 Col;
+	//该瓦片的列号
+	int32 Col;	
 
 	FVector2D GeographicGridOriginPt = FVector2D(-180.0, -90.0);
 
@@ -49,8 +55,17 @@ public:
 	//该瓦片的右上角点，记录二维平面上该瓦片的x_max、y_max，相对于downLeftPt
 	FVector2D UpRightPt;
 
+	TileInfo_Grid();
 
 	TileInfo_Grid(const int32 layerNum, const int32 Row, const int32 Col);
+
+	bool IsTileValid();
+
+	double GetTileGridSize();
+
+	int32 GetTileRowCountInGlobe();
+
+	int32 GetTileColCountInGlobe();
 
 	FVector2D GetTileMin();
 
@@ -70,6 +85,12 @@ public:
 	//       3 	 
 	void GetNeighbor_4(TArray<TileInfo_Grid>& neighbor_4);
 
+	//基于当前瓦片，返回紧邻的三个瓦片，并且紧邻三个瓦片和本瓦片共同构成上一级的父瓦片
+	//可能情况：*为本瓦片
+	//   *0       0*       01       01
+	//   12       12       *2       2*
+	void GetNeighbor_3(TArray<TileInfo_Grid>& neighbor_3);
+
 	//基于本瓦片描述信息，四叉树编码规则，返回本瓦片的15邻域瓦片的描述信息
 	//具体邻域情况如下图所示，*为本瓦片，+为邻域瓦片
 	//      0   1  2  3    0   1  2  3    0   1  2  3    0   1  2  3
@@ -83,11 +104,12 @@ public:
 
 	//基于本瓦片描述信息，四叉树编码规则，返回本瓦片的父节点瓦片描述信息
 	TileInfo_Grid& GetParent();
+
+	//判断两个瓦片是否是同一个瓦片
+	bool Equal(TileInfo_Grid &other);
 };
 
-//完善这个类
-class TileItem
-{};
+
 
 class Tile_DEM :TileItem
 {
@@ -147,9 +169,6 @@ public:
 	TArray<TileNode*> children;
 	//该瓦片节点的父节点
 	TileNode *parent;
-
-	
-
 	//基于特定的索引规则，判定该节点的孩子节点瓦片是否均存在
 	bool IsAllChildrenExist();
 
