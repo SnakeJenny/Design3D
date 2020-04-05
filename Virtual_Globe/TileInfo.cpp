@@ -89,13 +89,30 @@ void TileInfo_Grid::GetChildren(TArray<TileInfo_Grid>& children)
 
 //返回当前瓦片的父瓦片
 //若当前瓦片为0级瓦片，父瓦片为空瓦片
-TileInfo_Grid& TileInfo_Grid::GetParent()
+TileInfo_Grid TileInfo_Grid::GetParent()
 {
+	TileInfo_Grid result_TileInfo_Grid = TileInfo_Grid();
 	//返回空瓦片
 	if (this->LevelNum == 0)
-		return TileInfo_Grid();
+	{		
+		return result_TileInfo_Grid;
+	}
+		
+	result_TileInfo_Grid = TileInfo_Grid(this->LevelNum - 1, FMath::FloorToInt(this->Row / 2), FMath::FloorToInt(this->Col / 2));
 
-	return TileInfo_Grid(this->LevelNum - 1, FMath::FloorToInt(this->Row / 2), FMath::FloorToInt(this->Col / 2));
+	return result_TileInfo_Grid;
+}
+
+TileInfo_Grid TileInfo_Grid::GetTileByLevelNumAndCoord(int32 thisLevelNum, Geographic2D Coordinate)
+{
+	static TileInfo_Grid tile;
+	tile.LevelNum = thisLevelNum;
+
+	int rowNum = pow(2, thisLevelNum);
+	// 根据输入点，确定该点所属行列号，
+	tile.Col = Coordinate.Longitude  * (2 * rowNum) / 360 + rowNum; // lon
+	tile.Row = Coordinate.Latitude * rowNum / 180 + rowNum / 2.0;   // lat
+	return tile;
 }
 
 
@@ -161,19 +178,21 @@ void TileInfo_Grid::GetNeighbor_8(TArray<TileInfo_Grid>& neighbor_8)
 	}
 }
 
+
+
 //基于当前瓦片，返回紧邻的三个瓦片，并且紧邻三个瓦片和本瓦片共同构成上一级的父瓦片
 //可能情况：*为本瓦片
 //   *0       0*       01       01
 //   12       12       *2       2*
 void TileInfo_Grid::GetNeighbor_3(TArray<TileInfo_Grid>& neighbor_3)
 {
-	neighbor_3.AddDefaulted(3);
+	//neighbor_3.AddDefaulted(3);
 
 	TArray<TileInfo_Grid> all4ChildrenTileFromParent;
-	this->GetParent.GetChildren(all4ChildrenTileFromParent);
-	if (all4ChildrenTileFromParent.Num == 4)
+	this->GetParent().GetChildren(all4ChildrenTileFromParent);
+	if (all4ChildrenTileFromParent.Num() == 4)
 	{		
-		for (int i = 0; i < all4ChildrenTileFromParent.Num; i++)
+		for (int i = 0; i < all4ChildrenTileFromParent.Num(); i++)
 		{
 			if (this->Equal(all4ChildrenTileFromParent[i]))
 				continue;
@@ -321,11 +340,11 @@ void TileInfo_Grid::GetNeighbor_15(TArray<TileInfo_Grid>& neighbor_15)
 	this->GetParent().GetParent().GetChildren(fourUpLevelTiles);
 	
 	TArray<TileInfo_Grid> thisLevelTilesIn16;
-	for (int i = 0; i < fourUpLevelTiles.Num; i++)
+	for (int i = 0; i < fourUpLevelTiles.Num(); i++)
 	{
 		TArray<TileInfo_Grid> currentFourTileInThisLevel;
 		fourUpLevelTiles[i].GetChildren(currentFourTileInThisLevel);
-		for (int j = 0; j < currentFourTileInThisLevel.Num; j++)
+		for (int j = 0; j < currentFourTileInThisLevel.Num(); j++)
 		{
 			thisLevelTilesIn16.Add(currentFourTileInThisLevel[j]);		
 		}	
@@ -346,7 +365,7 @@ void TileInfo_Grid::GetNeighbor_15(TArray<TileInfo_Grid>& neighbor_15)
 		skipIndex = 10;
 
 	int neighborIndex = 0;
-	for (int k = 0; k < thisLevelTilesIn16.Num; k++)
+	for (int k = 0; k < thisLevelTilesIn16.Num(); k++)
 	{
 		if (k == skipIndex)
 			continue;
@@ -356,5 +375,15 @@ void TileInfo_Grid::GetNeighbor_15(TArray<TileInfo_Grid>& neighbor_15)
 			neighborIndex++;
 		}
 	}
+}
+
+TileNode::TileNode(int levelNum, int row, int col)
+{	
+	this->tileInfo = TileInfo_Grid(levelNum, row, col);		
+}
+
+TileNode::TileNode(TileInfo_Grid inputTileInfo)
+{
+	this->tileInfo = inputTileInfo;
 }
 

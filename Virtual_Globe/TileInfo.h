@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "Math/Vector.h"
 #include "Math/Rotator.h"
+#include "CoordinateSystem.h"
 
 
 //完善这个类
@@ -10,7 +11,7 @@ class TileItem
 
 //用于定义瓦片描述信息的基类
 //四叉树瓦片、r树瓦片、osgb数据的索引瓦片等，一切瓦片类型的描述信息均继承自该基类
-class TileInfo
+struct TileInfo
 {
 public:
 	//用于记录瓦片存储的根目录路径
@@ -37,7 +38,7 @@ public:
 };
 
 //矩形的瓦片描述信息类，继承自TileInfo基类,全球瓦片
-class TileInfo_Grid :TileInfo
+struct TileInfo_Grid :TileInfo
 {
 public:
 	//该瓦片的层级
@@ -103,10 +104,12 @@ public:
 	void GetChildren(TArray<TileInfo_Grid>& children);
 
 	//基于本瓦片描述信息，四叉树编码规则，返回本瓦片的父节点瓦片描述信息
-	TileInfo_Grid& GetParent();
+	TileInfo_Grid GetParent();
 
 	//判断两个瓦片是否是同一个瓦片
 	bool Equal(TileInfo_Grid &other);
+
+	static TileInfo_Grid GetTileByLevelNumAndCoord(int32 thisLevelNum, Geographic2D Coordinate);
 };
 
 
@@ -171,6 +174,10 @@ public:
 	TileNode *parent;
 	//基于特定的索引规则，判定该节点的孩子节点瓦片是否均存在
 	bool IsAllChildrenExist();
+
+	TileNode(int levelNum, int row, int col);
+
+	TileNode(TileInfo_Grid inputTileInfo);
 
 };
 
