@@ -113,6 +113,12 @@ Vector3D Vector3D::operator/(double Scale) const
 		return X * X + Y * Y + Z * Z; 
 	}
 
+	Vector3D Vector3D::Normalize() const
+	{		
+		double m = Magnitude();
+		return Vector3D(X /m, Y / m, Z / m);
+	}
+
 
 
 	

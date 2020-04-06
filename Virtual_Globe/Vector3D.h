@@ -32,6 +32,9 @@ public:
 
 	double MagnitudeSquared() const;
 
+	Vector3D Normalize() const;
+	
+
 	FVector ToVector3F();
 
 	Vector3D operator*(double Scale) const;
