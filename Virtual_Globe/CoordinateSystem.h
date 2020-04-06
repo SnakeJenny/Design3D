@@ -24,6 +24,7 @@ public:
 
 	CoordinateSystem();
 
+	virtual ~CoordinateSystem();
 	//本坐标系统转UE坐标系统，单点转换
 	virtual FVector ToUE_CoordinateSystem(const FVector &inPt);
 
@@ -100,7 +101,7 @@ public:
 };
 
 //定义球体坐标系统类，继承自CoordinateSystem
-class Sphere_CoordinateSystem :CoordinateSystem
+class Sphere_CoordinateSystem :public CoordinateSystem
 {
 private:
 	//球体坐标系，三个坐标轴的半径长度，默认情况xoy平面为赤道平面
@@ -118,6 +119,8 @@ private:
 	
 
 public:
+
+	Sphere_CoordinateSystem();
 	//不同形式构造函数，定义椭球的三个轴长度
 	//若为wgs84椭球，或cgcs2000椭球，三个轴的值分别为
 	//x=6378130.0，y=6378130.0，z=6356750.0，考虑到float有效位仅6位的取值，并非准确值
@@ -131,9 +134,9 @@ public:
 		const FVector &InTranslation,
 		const FVector &InScale3D);
 
-	FVector ToUE_CoordinateSystem(const FVector &inPt);
+	FVector ToUE_CoordinateSystem(const FVector &inPt) override;
 
-	FVector FromUE_CoordinateSystem(const FVector &inPt);
+	FVector FromUE_CoordinateSystem(const FVector &inPt) override;
 
 	//通过椭球笛卡尔坐标系xyz返回椭球上经纬度，高度值，有效位6位
 	FVector ToGeography3F(const FVector &inPosition);

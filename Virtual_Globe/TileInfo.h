@@ -175,6 +175,8 @@ public:
 	//基于特定的索引规则，判定该节点的孩子节点瓦片是否均存在
 	bool IsAllChildrenExist();
 
+	TileNode();
+
 	TileNode(int levelNum, int row, int col);
 
 	TileNode(TileInfo_Grid inputTileInfo);

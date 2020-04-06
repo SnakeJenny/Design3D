@@ -105,7 +105,7 @@ TileInfo_Grid TileInfo_Grid::GetParent()
 
 TileInfo_Grid TileInfo_Grid::GetTileByLevelNumAndCoord(int32 thisLevelNum, Geographic2D Coordinate)
 {
-	static TileInfo_Grid tile;
+	static TileInfo_Grid tile;  
 	tile.LevelNum = thisLevelNum;
 
 	int rowNum = pow(2, thisLevelNum);
@@ -385,5 +385,9 @@ TileNode::TileNode(int levelNum, int row, int col)
 TileNode::TileNode(TileInfo_Grid inputTileInfo)
 {
 	this->tileInfo = inputTileInfo;
+}
+
+TileNode::TileNode()
+{	
 }
 

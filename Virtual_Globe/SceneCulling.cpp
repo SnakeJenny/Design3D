@@ -10,7 +10,9 @@ SceneCulling::SceneCulling()
 {	
 }
 
-SceneCulling_CenterTileStrategy::SceneCulling_CenterTileStrategy(CoordinateSystem coordinateSystem)
+
+
+SceneCulling_CenterTileStrategy::SceneCulling_CenterTileStrategy(Sphere_CoordinateSystem coordinateSystem)
 {
 	this->TileCoordinateSystem = coordinateSystem;
 }
@@ -44,12 +46,12 @@ void SceneCulling_CenterTileStrategy::GetCameraHalfLine(CameraState cameraState,
 TileInfo_Grid SceneCulling_CenterTileStrategy::GetTileByDistance(CameraState cameraState, FVector Intersect)
 {
 	float distance = Intersect.Z;
-	float pixelDegree = distance * abs(tan(cameraState.FOV * PI / 360.0)) / 500;
+	float pixelDegree = distance * FMath::Abs(FMath::Tan(cameraState.FOV * PI / 360.0)) / 500;
 	int i;
 	for (i = 0; i < 20; ++i)
 	{
-		float degree = 180.0f / (256 * pow(2, i));
-		float degreeNext = 180.0f / (256 * pow(2, i + 1));
+		float degree = 180.0f / (256 * FMath::Pow(2, i));
+		float degreeNext = 180.0f / (256 * FMath::Pow(2, i + 1));
 
 		if (pixelDegree >= degree)
 			break;
@@ -117,9 +119,9 @@ TileInfo_Grid SceneCulling_CenterTileStrategy::GetTileByCenterIntersect(CameraSt
 }
 
 //根据种子瓦片，计算应该加载的所有其他瓦片，存入集合
-TSet<TileNode> SceneCulling_CenterTileStrategy::GetTileSetBySeedTile(CameraState cameraState, TileInfo_Grid seedTile, int MaxIteration)
+TSet<TileNode*> SceneCulling_CenterTileStrategy::GetTileSetBySeedTile(CameraState cameraState, TileInfo_Grid seedTile, int MaxIteration)
 {
-	TSet<TileNode> resultArray;
+	TSet<TileNode*> resultArray;
 	//若当前计算的最精细瓦片层级小于3，加载全部第二层级瓦片
 	if (seedTile.LevelNum < 3)
 	{
@@ -129,18 +131,22 @@ TSet<TileNode> SceneCulling_CenterTileStrategy::GetTileSetBySeedTile(CameraState
 		{
 			for (int j = 0; j < totalCol; j++)
 			{
-				resultArray.Add(TileNode(seedTile.LevelNum, i, j));
+				TileNode currentTileNode = TileNode(seedTile.LevelNum, i, j);
+				resultArray.Add(&currentTileNode);
 			}
 		}
 	}//若当前最精细瓦片层级大于3，则按照核心4*4方阵，外扩策略加载
 	else
 	{
-		resultArray.Add(seedTile);
+		TileNode seedTileNode = TileNode(seedTile);
+		resultArray.Add(&seedTileNode);
+
 		TArray<TileInfo_Grid> Neighbor_15_Tile;
 		seedTile.GetNeighbor_15(Neighbor_15_Tile);
 		for (int i = 0; i < Neighbor_15_Tile.Num(); i++)
 		{
-			resultArray.Add(TileNode(Neighbor_15_Tile[i]));
+			TileNode currentTileNode = TileNode(Neighbor_15_Tile[i]);
+			resultArray.Add(&currentTileNode);			
 		}
 		//设定基于屏幕分辨率的外扩停止判定条件
 		int breakScreenSize = FMath::Max(cameraState.screenResolution.X, cameraState.screenResolution.Y);
@@ -163,10 +169,11 @@ TSet<TileNode> SceneCulling_CenterTileStrategy::GetTileSetBySeedTile(CameraState
 		{
 			thisLevelNeighborTiles = upLevelBoundary12_Tile;
 			for (int i = 0; i < thisLevelNeighborTiles.Num(); i++)
-			{
-				resultArray.Add(TileInfo_Grid(thisLevelNeighborTiles[i]));
+			{				
+				TileNode currentTileNode = TileNode(thisLevelNeighborTiles[i]);
+				resultArray.Add(&currentTileNode);
 			}			
-			upLevelBoundary12_Tile.RemoveAll(upLevelBoundary12_Tile);
+			upLevelBoundary12_Tile.RemoveAt(0, upLevelBoundary12_Tile.Num());
 
 			thisLevelNeighborTiles[0].GetParent().GetNeighbor_3(upLevelBoundary12_Tile);
 			thisLevelNeighborTiles[3].GetParent().GetNeighbor_3(upLevelBoundary12_Tile);
@@ -176,11 +183,12 @@ TSet<TileNode> SceneCulling_CenterTileStrategy::GetTileSetBySeedTile(CameraState
 			currentTotalTileSize *= 2;			
 		}
 	}
+	return resultArray;
 }
 
 
 //计算当前应该加载的瓦片
-TSet<TileNode> SceneCulling_CenterTileStrategy::GetTilesShouldbeLoaded(CameraState UE_CameraState, FVector2D CurrentScreenResolution)
+TSet<TileNode*> SceneCulling_CenterTileStrategy::GetTilesShouldbeLoaded(CameraState UE_CameraState, FVector2D CurrentScreenResolution)
 {
 	//1，通过变换将ue相机状态转为地理相机状态
 	this->GeoCameraState = UEToGeoCameraState(UE_CameraState);
@@ -193,7 +201,7 @@ TSet<TileNode> SceneCulling_CenterTileStrategy::GetTilesShouldbeLoaded(CameraSta
 	TileInfo_Grid seedTile = GetTileByCenterIntersect(GeoCameraState, Intersect);
 
 	//4，根据种子瓦片，计算当前视角需要加载的所有瓦片集合
-	TSet<TileNode> resultArray = GetTileSetBySeedTile(GeoCameraState, seedTile,4);
+	TSet<TileNode*> resultArray = GetTileSetBySeedTile(GeoCameraState, seedTile,4);
 		
 	return resultArray;
 }

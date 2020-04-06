@@ -16,10 +16,13 @@ FVector CoordinateSystem::FromUE_CoordinateSystem(const FVector &inPt)
 	return inPt;
 }
 
-
+CoordinateSystem::~CoordinateSystem()
+{}
 
 
 /////////////////////////////////////Sphere_CoordinateSystem/////////////////////////////////////////////
+
+Sphere_CoordinateSystem::Sphere_CoordinateSystem() {}
 
 //构造椭球坐标系
 //Rotation(Pitch,Roll,Yaw)
@@ -84,7 +87,11 @@ FVector Sphere_CoordinateSystem::ToGeography3F(const FVector &inPosition)
 	Vector3D h = position - p;
 	double height = FMath::Sign(h.Dot(position)) * h.Magnitude();
 
-	return (Geographic3D(ToGeographic2D(p), height)).ToFVector();
+	Geographic2D resultGeo2D = ToGeographic2D(p);
+
+	Geographic3D resultGeo3D = Geographic3D(resultGeo2D, height);
+
+	return resultGeo3D.ToFVector();
 }
 
 
@@ -172,12 +179,9 @@ Vector3D Sphere_CoordinateSystem::GeodgraphicSurfaceNormal(const FVector &inPosi
 
 Vector3D Sphere_CoordinateSystem::GeodgraphicSurfaceNormal(const Vector3D &inPosition)
 {
-	double cosLatitude = FMath::Cos(inPosition.Y);
-
-	return Vector3D(
-		cosLatitude * FMath::Cos(inPosition.X),
-		cosLatitude * FMath::Sin(inPosition.X),
-		FMath::Sin(inPosition.Y));
+	//Vector3D ors = this->_oneOverRadiiSquared;
+	Vector3D positionOnEllipsoid = Vector3D(inPosition.X, inPosition.Y, inPosition.Z);
+	return (positionOnEllipsoid.MultiplyComponents(_oneOverRadiiSquared)).Normalize();
 }
 
 Vector3D Sphere_CoordinateSystem::GeodgraphicSurfaceNormal(const Geographic3D &inPosition)

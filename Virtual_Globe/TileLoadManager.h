@@ -11,7 +11,7 @@ class TileLoadManager
 public:
 		
 	
-	TSet<TileNode> loadedTileSet;
+	TSet<TileNode*> loadedTileSet;
 	//
 	TileLoadManager();
 
@@ -30,16 +30,16 @@ public:
 
 	//5.更新瓦片节点的加载和卸载队列,基于各个tileNode的tileLoadState进行判断
 	//已加载且需要加载的从加载队列中移除，已加载且不需要加载的，放入卸载队列......
-	TSet<TileNode> UpdateLoadingTileArray(TSet<TileNode> &tileShouldBeLoaded);
+	TSet<TileNode*> UpdateLoadingTileArray(TSet<TileNode*> tileShouldBeLoaded);
 
-	TSet<TileNode> UpdateUnLoadingTileArray(TSet<TileNode> &tileShouldBeLoaded);
+	TSet<TileNode*> UpdateUnLoadingTileArray(TSet<TileNode*> tileShouldBeLoaded);
 
 	
 
 	//6.在具体的加载和卸载任务函数中，执行具体的加载和卸载步骤，基于UE接口
-	void DoLoadingTasks(TArray<TileNode> loadingTileQueue, bool isAsyn);
+	void DoLoadingTasks(TArray<TileNode*> loadingTileQueue, bool isAsyn);
 
-	void DoUnloadingTasks(TArray<TileNode> unloadingTileQueue, bool isAsyn);
+	void DoUnloadingTasks(TArray<TileNode*> unloadingTileQueue, bool isAsyn);
 	
 
 	//描述该节点的加载状态，考虑放到 tileloadmanager类中

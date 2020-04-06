@@ -29,11 +29,12 @@ struct HalfLine
 class SceneCulling
 {
 public:
+
 	//世界相机的状态
 	CameraState GeoCameraState;
 
 	//当前瓦片的坐标系统
-	CoordinateSystem TileCoordinateSystem;
+	//CoordinateSystem TileCoordinateSystem;
 
 	//构造函数
 	SceneCulling();		
@@ -42,16 +43,20 @@ public:
 class SceneCulling_CenterTileStrategy :SceneCulling
 {
 public:
-	SceneCulling_CenterTileStrategy(CoordinateSystem coordinateSystem);
+
+	Sphere_CoordinateSystem TileCoordinateSystem;
+
+	SceneCulling_CenterTileStrategy(Sphere_CoordinateSystem coordinateSystem);
 	//根据瓦片数据集（内含瓦片划分规则），相机位置，屏幕分辨率，
 	//计算当前视口应该加载并显示的瓦片数据集
 	//本方法基于四叉树索引
-	TSet<TileNode> GetTilesShouldbeLoaded(CameraState UE_CameraState, FVector2D CurrentScreenResolution);
+	TSet<TileNode*> GetTilesShouldbeLoaded(CameraState UE_CameraState, FVector2D CurrentScreenResolution);
+
+private:
 
 	//从ue相机状态，转换为当前地理场景的相机状态
 	CameraState UEToGeoCameraState(CameraState UE_CameraState);
 
-private:
 	void GetCameraHalfLine(CameraState cameraState, TArray<HalfLine>& lines);
 
 	FVector GetHalfLineIntersect(HalfLine line);
@@ -60,7 +65,7 @@ private:
 
 	TileInfo_Grid GetTileByCenterIntersect(CameraState cameraState, FVector &intersect);
 
-	TSet<TileNode> GetTileSetBySeedTile(CameraState cameraState, TileInfo_Grid seedTile, int MaxIteration);
+	TSet<TileNode*> GetTileSetBySeedTile(CameraState cameraState, TileInfo_Grid seedTile, int MaxIteration);
 };
 
 
