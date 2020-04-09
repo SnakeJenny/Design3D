@@ -34,6 +34,8 @@ public:
 
 	TSet<TileNode*> UpdateUnLoadingTileArray(TSet<TileNode*> tileShouldBeLoaded);
 
+	void UpdateLoadedTileArray(TileNode* loadedTileNode);
+
 	
 
 	//6.在具体的加载和卸载任务函数中，执行具体的加载和卸载步骤，基于UE接口

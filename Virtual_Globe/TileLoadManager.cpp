@@ -13,7 +13,7 @@ TSet<TileNode*> TileLoadManager::UpdateLoadingTileArray(TSet<TileNode*> tileShou
 	{
 		bool thisNodeShouldBeLoading = true;
 		TileInfo_Grid* thisTileInfo_Grid = (TileInfo_Grid*)tileNodeShouldBeLoading->tileInfo;
-
+		
 		for (TileNode* tileNodeLoaded : this->loadedTileSet)
 		{
 			TileInfo_Grid* thatTileInfo_Grid = (TileInfo_Grid*)tileNodeLoaded->tileInfo;
@@ -54,4 +54,28 @@ TSet<TileNode*> TileLoadManager::UpdateUnLoadingTileArray(TSet<TileNode*> tileSh
 	}
 
 	return unLoadingTileArray;
+}
+
+void TileLoadManager::UpdateLoadedTileArray(TileNode* loadedTileNode)
+{
+	bool thisTileHasBeenLoaded = false;
+
+	if (this->loadedTileSet.Num() == 0)
+	{
+		this->loadedTileSet.Add(loadedTileNode);
+		return;
+	}		
+	TileInfo_Grid* thisLoadedTileInfo_Grid = (TileInfo_Grid*)loadedTileNode->tileInfo;
+
+	for (TileNode* tileNodeLoaded : this->loadedTileSet)
+	{		
+		TileInfo_Grid* thisTileInfo_Grid = (TileInfo_Grid*)tileNodeLoaded->tileInfo;
+		if (thisLoadedTileInfo_Grid->Equal(thisTileInfo_Grid))
+		{
+			thisTileHasBeenLoaded = true;
+			break;
+		}				
+	}
+	if(thisTileHasBeenLoaded == false)
+		this->loadedTileSet.Add(loadedTileNode);	
 }

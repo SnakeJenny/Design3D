@@ -231,6 +231,12 @@ TSet<TileNode*> SceneCulling_CenterTileStrategy::GetTilesByBFS_Iterations()
 			}
 			else
 			{
+				//若当前加载层级跟需要加载的最精细层级相同，且屏幕中心点在该瓦片内，只加载该瓦片，不加载该瓦片子瓦片
+				if (thisTileInfo_Grid->LevelNum == this->FinestLevelNum)
+				{
+					resultTileSet.Add(tileNode);
+					continue;
+				}
 				tileNode->CreateSubTileNode();
 				for (TileNode* tileNode_Child : tileNode->children)
 				{

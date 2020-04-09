@@ -10,6 +10,11 @@
 #include "Engine/World.h"
 #include "Engine/Engine.h"
 #include "GameFramework/PlayerInput.h"
+
+#include "CoordinateSystem.h"
+#include "TileLoadManager.h"
+#include "SceneCulling.h"
+
 #include "UE_World_Camera.generated.h"
 
 UCLASS()
@@ -84,4 +89,6 @@ protected:
 	void OnKeyLeftShiftReleased();
 	void OnTurnRotate(float axisValue);
 	void OnLookAtRotate(float axisValue);
+
+	void InitializeVirtualGlobe();
 };

@@ -1,7 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "UE_World_Camera.h"
+#include "CoordinateSystem.h"
+#include "TileInfo.h"
+#include "TileLoadManager.h"
+
 
 // Sets default values
 AUE_World_Camera::AUE_World_Camera()
@@ -29,6 +31,55 @@ AUE_World_Camera::AUE_World_Camera()
 	//控制默认玩家
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
 
+
+	//地球的初始化
+	InitializeVirtualGlobe();
+}
+
+void AUE_World_Camera::InitializeVirtualGlobe()
+{
+	//创建地球，球体
+	FVector radii = FVector(6378137.0, 6378137.0, 6356752.314245);
+	FRotator InRotation = FRotator(0.0, 0.0, 0.0);
+	FVector InTranslation = FVector(0.0, 0.0, 0.0);
+	FVector InScale3D = FVector(1.0, 1.0, 1.0);
+
+	Sphere_CoordinateSystem earth3d_CoordinateSystem0 = Sphere_CoordinateSystem(radii,
+		InRotation,
+		InTranslation,
+		InScale3D); 
+
+	//设置相机初始位置
+	FVector inPt0 = FVector(FMath::DegreesToRadians(114.30), FMath::DegreesToRadians(30.51), 20000000.0);	
+
+	FVector outPt0 = earth3d_CoordinateSystem0.ToUE_CoordinateSystem(inPt0);
+
+	//更新相机位置
+	SetActorLocation(outPt0);
+
+	
+	//测试基于相机的瓦片调度逻辑
+	SceneCulling_CenterTileStrategy sccts = SceneCulling_CenterTileStrategy(earth3d_CoordinateSystem0);
+	TileLoadManager tlm = TileLoadManager();
+
+	CameraState currentCameraState;
+	currentCameraState.FOV = 120.0;
+	currentCameraState.Location = outPt0;
+	currentCameraState.Rotator = FRotator(0.0, 0.0, 0.0);
+	currentCameraState.screenResolution = FVector2D(1920, 1080);
+	currentCameraState.AspectRatio = 2.0;
+
+	//根据pt0加载
+	TSet<TileNode *> shouldLoadingTileSet = sccts.GetTilesShouldbeLoaded(currentCameraState, currentCameraState.screenResolution);
+
+	TSet<TileNode *> loadingTileSet = tlm.UpdateLoadingTileArray(shouldLoadingTileSet);
+	TSet<TileNode *> unLoadingTileSet = tlm.UpdateUnLoadingTileArray(shouldLoadingTileSet);
+
+	
+	loadingTileSet = tlm.UpdateLoadingTileArray(shouldLoadingTileSet);
+	//需要维护tlm.loadedTileSet
+	//tlm.loadedTileSet = loadingTileSet;
+	unLoadingTileSet = tlm.UpdateUnLoadingTileArray(shouldLoadingTileSet);
 }
 
 // Called when the game starts or when spawned
@@ -40,6 +91,8 @@ void AUE_World_Camera::BeginPlay()
 	ScrollWheelSpeed = 1;
 	//用于控制平移幅度的比率
 	MoveStepFactor = 0.01;
+
+
 	
 }
 
@@ -71,13 +124,13 @@ void AUE_World_Camera::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 	//设置四个键盘按键用于控制精确的平移操作
-	//UPlayerInput::AddEngineDefinedAxisMapping(FInputAxisKeyMapping("MoveForward", EKeys::W, 1.0f));
-	//UPlayerInput::AddEngineDefinedAxisMapping(FInputAxisKeyMapping("MoveForward", EKeys::S, -1.0f));
-	//PlayerInputComponent->BindAxis("MoveForward", this, &APawnWithCamera::MoveForward);
+	UPlayerInput::AddEngineDefinedAxisMapping(FInputAxisKeyMapping("MoveForward", EKeys::W, 1.0f));
+	UPlayerInput::AddEngineDefinedAxisMapping(FInputAxisKeyMapping("MoveForward", EKeys::S, -1.0f));
+	PlayerInputComponent->BindAxis("MoveForward", this, &AUE_World_Camera::MoveForward);
 
-	//UPlayerInput::AddEngineDefinedAxisMapping(FInputAxisKeyMapping("MoveRight", EKeys::A, 1.0f));
-	//UPlayerInput::AddEngineDefinedAxisMapping(FInputAxisKeyMapping("MoveRight", EKeys::D, -1.0f));
-	//PlayerInputComponent->BindAxis("MoveRight", this, &APawnWithCamera::MoveRight);
+	UPlayerInput::AddEngineDefinedAxisMapping(FInputAxisKeyMapping("MoveRight", EKeys::A, 1.0f));
+	UPlayerInput::AddEngineDefinedAxisMapping(FInputAxisKeyMapping("MoveRight", EKeys::D, -1.0f));
+	PlayerInputComponent->BindAxis("MoveRight", this, &AUE_World_Camera::MoveRight);
 
 
 	//滚轮操作	
