@@ -9,21 +9,49 @@ TSet<TileNode*> TileLoadManager::UpdateLoadingTileArray(TSet<TileNode*> tileShou
 	if (tileShouldBeLoaded.Num() == 0 && this->loadedTileSet.Num() == 0)
 		return loadingTileArray;
 
-	loadingTileArray = tileShouldBeLoaded.Difference(this->loadedTileSet);
+	for (TileNode* tileNodeShouldBeLoading : tileShouldBeLoaded)
+	{
+		bool thisNodeShouldBeLoading = true;
+		TileInfo_Grid* thisTileInfo_Grid = (TileInfo_Grid*)tileNodeShouldBeLoading->tileInfo;
 
-	//将新的需要加载的瓦片集合赋值给Loadedset，后续loadedset的数组需要实际已经完成加载的瓦片逻辑后维护
-	loadedTileSet = loadingTileArray;
-
+		for (TileNode* tileNodeLoaded : this->loadedTileSet)
+		{
+			TileInfo_Grid* thatTileInfo_Grid = (TileInfo_Grid*)tileNodeLoaded->tileInfo;
+			if (thisTileInfo_Grid->Equal(thatTileInfo_Grid))
+			{
+				thisNodeShouldBeLoading = false;
+				break;
+			}
+		}
+		if (thisNodeShouldBeLoading == true)
+			loadingTileArray.Add(tileNodeShouldBeLoading);
+	}
 	return loadingTileArray;
 }
 
 TSet<TileNode*> TileLoadManager::UpdateUnLoadingTileArray(TSet<TileNode*> tileShouldBeLoaded)
 {
-	TSet<TileNode*> loadingTileArray;
+	TSet<TileNode*> unLoadingTileArray;
 	if (tileShouldBeLoaded.Num() == 0 && this->loadedTileSet.Num() == 0)
-		return loadingTileArray;
+		return unLoadingTileArray;
 
-	loadingTileArray = this->loadedTileSet.Difference(tileShouldBeLoaded);
+	for (TileNode* tileNodeLoaded : this->loadedTileSet)
+	{
+		bool thisNodeShouldBeUnloading = true;
+		TileInfo_Grid* thisTileInfo_Grid = (TileInfo_Grid*)tileNodeLoaded->tileInfo;
 
-	return loadingTileArray;
+		for (TileNode* tileNodeShouldBeLoading : tileShouldBeLoaded)
+		{
+			TileInfo_Grid* thatTileInfo_Grid = (TileInfo_Grid*)tileNodeShouldBeLoading->tileInfo;
+			if (thisTileInfo_Grid->Equal(thatTileInfo_Grid))
+			{
+				thisNodeShouldBeUnloading = false;
+				break;
+			}
+		}
+		if (thisNodeShouldBeUnloading == true)
+			unLoadingTileArray.Add(tileNodeLoaded);
+	}
+
+	return unLoadingTileArray;
 }

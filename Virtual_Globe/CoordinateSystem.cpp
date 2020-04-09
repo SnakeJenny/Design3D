@@ -63,6 +63,7 @@ FVector Sphere_CoordinateSystem::ToUE_CoordinateSystem(const FVector& inPt)
 	return this->Transform.TransformPosition(DescartesCoordinates);
 }
 
+//从ue坐标系统，经坐标变换后，到经纬度坐标系统
 FVector Sphere_CoordinateSystem::FromUE_CoordinateSystem(const FVector& inPt)
 {
 	FVector DescartesCoordinates = this->Transform.InverseTransformPosition(inPt);

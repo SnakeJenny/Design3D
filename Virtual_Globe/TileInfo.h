@@ -22,23 +22,25 @@ public:
 		
 	TArray<TileItem> TileItemArray;
 
+	//virtual ~TileInfo();
+
 	//判定该瓦片文件是否存在
-	bool IsTileFileExist();
+	virtual bool IsTileFileExist()=0;
 
 	//返回瓦片信息
-	FString TileToString();
+	virtual FString TileToString()=0;
 
 	//通过该infoString，构建tileInfo
 	//TileInfo();
 
 	//获取该瓦片的实际物理磁盘路径
-	FString GetTileDiskPath();
+	virtual FString GetTileDiskPath()=0;
 
-	FString GetBasePath();
+	virtual FString GetBasePath()=0;
 };
 
 //矩形的瓦片描述信息类，继承自TileInfo基类,全球瓦片
-struct TileInfo_Grid :TileInfo
+struct TileInfo_Grid :public TileInfo
 {
 public:
 	//该瓦片的层级
@@ -48,6 +50,14 @@ public:
 	//该瓦片的列号
 	int32 Col;	
 
+	enum TilePositionInParent
+	{
+		SouthWest,
+		SouthEast,
+		NorthWest,
+		NorthEast,
+	};
+
 	FVector2D GeographicGridOriginPt = FVector2D(-180.0, -90.0);
 
 	//该瓦片的左下角点，记录二维平面上该瓦片的x_min、y_min，相对于upRightPt
@@ -56,11 +66,38 @@ public:
 	//该瓦片的右上角点，记录二维平面上该瓦片的x_max、y_max，相对于downLeftPt
 	FVector2D UpRightPt;
 
+	TilePositionInParent GetTilePositionInParent();
+
+	TileInfo_Grid* GetUpTile();
+	TileInfo_Grid* GetDownTile();
+	TileInfo_Grid* GetLeftTile();
+	TileInfo_Grid* GetRightTile();
+
+	TileInfo_Grid* GetUpUpTile();
+	TileInfo_Grid* GetDownDownTile();
+	//TileInfo_Grid* GetLeftLeftTile();
+	//TileInfo_Grid* GetRightRightTile();
+
+
 	TileInfo_Grid();
 
 	TileInfo_Grid(const int32 layerNum, const int32 Row, const int32 Col);
 
+
+	//判定该瓦片文件是否存在
+	virtual bool IsTileFileExist();
+
+	//返回瓦片信息
+	virtual FString TileToString();
+	
+	//获取该瓦片的实际物理磁盘路径
+	virtual FString GetTileDiskPath();
+
+	virtual FString GetBasePath();
+
 	bool IsTileValid();
+
+	bool IsPositionIn(FVector testPt);
 
 	double GetTileGridSize();
 
@@ -100,6 +137,8 @@ public:
 	//      11 12 13 14    11 12 13 14    11 12 13 14    11 12 13 14
 	void GetNeighbor_15(TArray<TileInfo_Grid>& neighbor_15);
 
+	void GetNeighbor_15(TArray<TileInfo_Grid*>& neighbor_15);
+
 	//基于本瓦片描述信息，四叉树编码规则，返回本瓦片的所有子节点瓦片描述信息
 	void GetChildren(TArray<TileInfo_Grid>& children);
 
@@ -107,7 +146,7 @@ public:
 	TileInfo_Grid GetParent();
 
 	//判断两个瓦片是否是同一个瓦片
-	bool Equal(TileInfo_Grid &other);
+	bool Equal(TileInfo_Grid *other);
 
 	static TileInfo_Grid GetTileByLevelNumAndCoord(int32 thisLevelNum, Geographic2D Coordinate);
 };
@@ -167,7 +206,7 @@ struct TileNode
 {
 public:
 	//该瓦片节点的瓦片描述信息
-	TileInfo tileInfo;
+	TileInfo* tileInfo;
 	//该瓦片节点的孩子节点集合	
 	TArray<TileNode*> children;
 	//该瓦片节点的父节点
@@ -179,7 +218,14 @@ public:
 
 	TileNode(int levelNum, int row, int col);
 
+	TileNode(int levelNum, int row, int col, TileNode* parent);
+
 	TileNode(TileInfo_Grid inputTileInfo);
+
+	TileNode(TileInfo_Grid* inputTileInfo);
+
+	//创建当前瓦片的子节点数组
+	void CreateSubTileNode();
 
 };
 
