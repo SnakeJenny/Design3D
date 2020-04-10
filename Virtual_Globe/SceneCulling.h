@@ -49,11 +49,16 @@ public:
 
 	TileNode* rootNode;
 	
-	SceneCulling_CenterTileStrategy(Sphere_CoordinateSystem coordinateSystem);
+	SceneCulling_CenterTileStrategy(Sphere_CoordinateSystem coordinateSystem, CameraState UE_CameraState);
+
+	SceneCulling_CenterTileStrategy();
 	//根据瓦片数据集（内含瓦片划分规则），相机位置，屏幕分辨率，
 	//计算当前视口应该加载并显示的瓦片数据集
 	//本方法基于四叉树索引
 	TSet<TileNode*> GetTilesShouldbeLoaded(CameraState UE_CameraState, FVector2D CurrentScreenResolution);
+
+	//基于相机方位、屏幕分辨率计算当前屏幕下的实际需要载入的最精细瓦片级别
+	float  GetDegreePerPixelInScreen();
 
 private:
 	//从ue相机状态，转换为当前地理场景的相机状态
@@ -67,7 +72,7 @@ private:
 
 	TileInfo_Grid GetTileByCenterIntersect(CameraState cameraState, FVector &intersect);
 
-	int GetTilesLevelInScreen(CameraState GeoCameraState);
+	int GetTilesLevelInScreen();
 
 	TSet<TileNode*> GetTilesByBFS_Iterations();
 

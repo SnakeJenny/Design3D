@@ -10,14 +10,19 @@ SceneCulling::SceneCulling()
 {
 }
 
+SceneCulling_CenterTileStrategy::SceneCulling_CenterTileStrategy()
+{}
 
-
-SceneCulling_CenterTileStrategy::SceneCulling_CenterTileStrategy(Sphere_CoordinateSystem coordinateSystem)
+SceneCulling_CenterTileStrategy::SceneCulling_CenterTileStrategy(Sphere_CoordinateSystem coordinateSystem, CameraState UE_CameraState)
 {
 	this->TileCoordinateSystem = coordinateSystem;
 
 	this->rootNode = new TileNode(-1, 0, 0,NULL);	
+
+	this->GeoCameraState = UEToGeoCameraState(UE_CameraState);
 }
+
+
 
 
 //UE相机状态到地理相机状态
@@ -249,7 +254,7 @@ TSet<TileNode*> SceneCulling_CenterTileStrategy::GetTilesByBFS_Iterations()
 }
 
 //基于相机方位、屏幕分辨率计算当前屏幕下的实际需要载入的最精细瓦片级别
-int  SceneCulling_CenterTileStrategy::GetTilesLevelInScreen(CameraState GeoCameraState)
+int  SceneCulling_CenterTileStrategy::GetTilesLevelInScreen()
 {
 	//使用深圳市附近的参数作为参考，后续可以修改，地球上一度经度对应于多少米，不同纬度，值不一致，此处取深圳附近的数值
 	//实际运算时，该参数为纬度的函数
@@ -258,15 +263,15 @@ int  SceneCulling_CenterTileStrategy::GetTilesLevelInScreen(CameraState GeoCamer
 	float pixelPerTile = 256;
 
 	//目前仅考虑相机位置作为相机射线与地面交点，相机与地面交点的距离用相机高度代替，后续会根据相机的方位具体来计算
-	float distance = GeoCameraState.Location.Z;
+	float distance = this->GeoCameraState.Location.Z;
 
 	//屏幕宽度/长度对应的地理距离（单位，米）
-	float groundLengthInMeter = distance * FMath::Abs(FMath::Tan(GeoCameraState.FOV * PI / 360.0)) * 2;
+	float groundLengthInMeter = distance * FMath::Abs(FMath::Tan(this->GeoCameraState.FOV * PI / 360.0)) * 2;
 	//屏幕宽度/长度对应的地理距离（单位，度）
 	float groundLengthInDegree = groundLengthInMeter / meterPerDegree;
 
 	//基于屏幕分辨率，确定屏幕单个像素对应于地理距离（单位，度）
-	float degreePerPixelInScreen = groundLengthInDegree / (FMath::Max(GeoCameraState.screenResolution.X, GeoCameraState.screenResolution.Y));
+	float degreePerPixelInScreen = groundLengthInDegree / (FMath::Max(this->GeoCameraState.screenResolution.X, this->GeoCameraState.screenResolution.Y));
 	
 	int level_i;
 	for (level_i = 0; level_i < 20; ++level_i)
@@ -283,11 +288,35 @@ int  SceneCulling_CenterTileStrategy::GetTilesLevelInScreen(CameraState GeoCamer
 	return level_i;
 }
 
+
+//基于相机方位、屏幕分辨率计算当前屏幕下的实际需要载入的最精细瓦片级别
+float  SceneCulling_CenterTileStrategy::GetDegreePerPixelInScreen()
+{
+	//使用深圳市附近的参数作为参考，后续可以修改，地球上一度经度对应于多少米，不同纬度，值不一致，此处取深圳附近的数值
+	//实际运算时，该参数为纬度的函数
+	float meterPerDegree = 111318.0;
+	//tile的pixel参数
+	float pixelPerTile = 256;
+
+	//目前仅考虑相机位置作为相机射线与地面交点，相机与地面交点的距离用相机高度代替，后续会根据相机的方位具体来计算
+	float distance = this->GeoCameraState.Location.Z;
+
+	//屏幕宽度/长度对应的地理距离（单位，米）
+	float groundLengthInMeter = distance * FMath::Abs(FMath::Tan(this->GeoCameraState.FOV * PI / 360.0)) * 2;
+	//屏幕宽度/长度对应的地理距离（单位，度）
+	float groundLengthInDegree = groundLengthInMeter / meterPerDegree;
+
+	//基于屏幕分辨率，确定屏幕单个像素对应于地理距离（单位，度）
+	float degreePerPixelInScreen = groundLengthInDegree / (FMath::Max(this->GeoCameraState.screenResolution.X, this->GeoCameraState.screenResolution.Y));
+
+	return degreePerPixelInScreen;
+}
+
 //计算当前应该加载的瓦片
 TSet<TileNode*> SceneCulling_CenterTileStrategy::GetTilesShouldbeLoaded(CameraState UE_CameraState, FVector2D CurrentScreenResolution)
 {
 	//1，通过变换将ue相机状态转为地理相机状态
-	this->GeoCameraState = UEToGeoCameraState(UE_CameraState);
+	
 
 	//2.根据UE相机位置，角度参数，计算相机射线与地球表面交点的经纬度坐标
 	HalfLine CameraShootToEarthSurface;
@@ -297,7 +326,7 @@ TSet<TileNode*> SceneCulling_CenterTileStrategy::GetTilesShouldbeLoaded(CameraSt
 	this->screenCenterPt = GetHalfLineIntersect(CameraShootToEarthSurface);
 	   	
 	//3.根据相机方位、FOV，计算当前帧屏幕所需要加载的最精细瓦片的层级
-	this->FinestLevelNum = GetTilesLevelInScreen(GeoCameraState);
+	this->FinestLevelNum = GetTilesLevelInScreen();
 
 	TSet<TileNode*> resultArray = GetTilesByBFS_Iterations();
 

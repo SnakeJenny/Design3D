@@ -92,48 +92,7 @@ void AVirtual_GlobeCharacter::BeginPlay()
 	// Call the base class  
 	Super::BeginPlay();
 
-	//测试坐标转换代码
-	FVector radii = FVector(6378137.0, 6378137.0, 6356752.314245);
-	FRotator InRotation = FRotator(0.0, 0.0, 0.0);
-	FVector InTranslation = FVector(0.0, 0.0, 0.0);
-	FVector InScale3D = FVector(1.0, 1.0, 1.0);
-
-
-	Sphere_CoordinateSystem earth3d_CoordinateSystem0 = Sphere_CoordinateSystem(radii,
-		InRotation,
-		InTranslation,
-		InScale3D);
 	
-	FVector inPt0 = FVector(FMath::DegreesToRadians(114.30), FMath::DegreesToRadians(30.51), 4000.0);
-
-	FVector inPt1 = FVector(FMath::DegreesToRadians(114.03), FMath::DegreesToRadians(22.34), 50000.0);
-
-	FVector outPt0 = earth3d_CoordinateSystem0.ToUE_CoordinateSystem(inPt0);
-
-	FVector outPt1 = earth3d_CoordinateSystem0.ToUE_CoordinateSystem(inPt1);	
-
-	//测试基于相机的瓦片调度逻辑
-	SceneCulling_CenterTileStrategy sccts = SceneCulling_CenterTileStrategy(earth3d_CoordinateSystem0);
-	TileLoadManager tlm = TileLoadManager();
-
-	CameraState currentCameraState;
-	currentCameraState.FOV = 120.0;
-	currentCameraState.Location = outPt0;
-	currentCameraState.Rotator = FRotator(0.0, 0.0, 0.0);
-	currentCameraState.screenResolution = FVector2D(1920, 1080);
-	currentCameraState.AspectRatio = 2.0;
-
-	//根据pt0加载
-	TSet<TileNode *> shouldLoadingTileSet = sccts.GetTilesShouldbeLoaded(currentCameraState, currentCameraState.screenResolution);
-
-	TSet<TileNode *> loadingTileSet = tlm.UpdateLoadingTileArray(shouldLoadingTileSet);
-	TSet<TileNode *> unLoadingTileSet = tlm.UpdateUnLoadingTileArray(shouldLoadingTileSet);
-
-	//根据pt1加载
-	currentCameraState.Location = outPt1;
-	shouldLoadingTileSet = sccts.GetTilesShouldbeLoaded(currentCameraState, currentCameraState.screenResolution);
-	loadingTileSet = tlm.UpdateLoadingTileArray(shouldLoadingTileSet);
-	unLoadingTileSet = tlm.UpdateUnLoadingTileArray(shouldLoadingTileSet);
 
 
 	//FVector backPt = earth3d_CoordinateSystem.FromUE_CoordinateSystem(outPt);

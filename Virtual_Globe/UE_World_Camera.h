@@ -23,6 +23,11 @@ class VIRTUAL_GLOBE_API AUE_World_Camera : public APawn
 	GENERATED_BODY()
 
 public:
+
+	SceneCulling_CenterTileStrategy sccts;
+	TileLoadManager tlm;
+	CameraState UE_CameraState;
+
 	// Sets default values for this pawn's properties
 	AUE_World_Camera();
 
@@ -41,6 +46,14 @@ protected:
 	UPROPERTY(EditAnywhere)
 	USpringArmComponent* OurCameraSpringArm;
 	UCameraComponent* OurCamera;
+
+	//球体的原点坐标
+	FVector SphereOrigin;
+
+	//球体的半径
+	FVector SphereR;
+
+	float MaxSphereR;
 
 	//输入变量
 	FVector2D MovementInput;

@@ -30,18 +30,15 @@ AUE_World_Camera::AUE_World_Camera()
 
 	//控制默认玩家
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
-
-
-	//地球的初始化
-	InitializeVirtualGlobe();
 }
 
 void AUE_World_Camera::InitializeVirtualGlobe()
 {
 	//创建地球，球体
-	FVector radii = FVector(6378137.0, 6378137.0, 6356752.314245);
+	//FVector radii = FVector(6378137.0, 6378137.0, 6356752.314245);
+	FVector radii = SphereR;
 	FRotator InRotation = FRotator(0.0, 0.0, 0.0);
-	FVector InTranslation = FVector(0.0, 0.0, 0.0);
+	FVector InTranslation = SphereOrigin;
 	FVector InScale3D = FVector(1.0, 1.0, 1.0);
 
 	Sphere_CoordinateSystem earth3d_CoordinateSystem0 = Sphere_CoordinateSystem(radii,
@@ -50,36 +47,38 @@ void AUE_World_Camera::InitializeVirtualGlobe()
 		InScale3D); 
 
 	//设置相机初始位置
-	FVector inPt0 = FVector(FMath::DegreesToRadians(114.30), FMath::DegreesToRadians(30.51), 20000000.0);	
+	FVector inPt0 = FVector(FMath::DegreesToRadians(114.30), FMath::DegreesToRadians(30.51), 10000.0);	
 
 	FVector outPt0 = earth3d_CoordinateSystem0.ToUE_CoordinateSystem(inPt0);
 
 	//更新相机位置
-	SetActorLocation(outPt0);
+	//SetActorLocation(outPt0);
+
+	this->UE_CameraState.FOV = 120.0;
+	this->UE_CameraState.Location = outPt0;
+	this->UE_CameraState.Rotator = FRotator(0.0, 0.0, 0.0);
+	this->UE_CameraState.screenResolution = FVector2D(1920, 1080);
+	this->UE_CameraState.AspectRatio = 2.0;
 
 	
 	//测试基于相机的瓦片调度逻辑
-	SceneCulling_CenterTileStrategy sccts = SceneCulling_CenterTileStrategy(earth3d_CoordinateSystem0);
-	TileLoadManager tlm = TileLoadManager();
-
-	CameraState currentCameraState;
-	currentCameraState.FOV = 120.0;
-	currentCameraState.Location = outPt0;
-	currentCameraState.Rotator = FRotator(0.0, 0.0, 0.0);
-	currentCameraState.screenResolution = FVector2D(1920, 1080);
-	currentCameraState.AspectRatio = 2.0;
-
-	//根据pt0加载
-	TSet<TileNode *> shouldLoadingTileSet = sccts.GetTilesShouldbeLoaded(currentCameraState, currentCameraState.screenResolution);
-
-	TSet<TileNode *> loadingTileSet = tlm.UpdateLoadingTileArray(shouldLoadingTileSet);
-	TSet<TileNode *> unLoadingTileSet = tlm.UpdateUnLoadingTileArray(shouldLoadingTileSet);
+	this->sccts = SceneCulling_CenterTileStrategy(earth3d_CoordinateSystem0,this->UE_CameraState);
+	this->tlm = TileLoadManager();
 
 	
-	loadingTileSet = tlm.UpdateLoadingTileArray(shouldLoadingTileSet);
-	//需要维护tlm.loadedTileSet
-	//tlm.loadedTileSet = loadingTileSet;
-	unLoadingTileSet = tlm.UpdateUnLoadingTileArray(shouldLoadingTileSet);
+	
+
+	//根据pt0加载
+	//TSet<TileNode *> shouldLoadingTileSet = sccts.GetTilesShouldbeLoaded(currentCameraState, currentCameraState.screenResolution);
+
+	//TSet<TileNode *> loadingTileSet = tlm.UpdateLoadingTileArray(shouldLoadingTileSet);
+	//TSet<TileNode *> unLoadingTileSet = tlm.UpdateUnLoadingTileArray(shouldLoadingTileSet);
+
+	//
+	//loadingTileSet = tlm.UpdateLoadingTileArray(shouldLoadingTileSet);
+	////需要维护tlm.loadedTileSet
+	////tlm.loadedTileSet = loadingTileSet;
+	//unLoadingTileSet = tlm.UpdateUnLoadingTileArray(shouldLoadingTileSet);
 }
 
 // Called when the game starts or when spawned
@@ -92,8 +91,16 @@ void AUE_World_Camera::BeginPlay()
 	//用于控制平移幅度的比率
 	MoveStepFactor = 0.01;
 
+	//球体的原点坐标
+	this->SphereOrigin = FVector(0,0,0);
 
-	
+	//球体的半径
+	//FVector SphereR = FVector(6378137.0, 6378137.0, 6356752.314245);
+	this->SphereR = FVector(5000.0, 5000.0, 5000.0);
+	this->MaxSphereR = FMath::Max3(SphereR.X, SphereR.Y, SphereR.Z);
+
+	//地球的初始化
+	InitializeVirtualGlobe();
 }
 
 // Called every frame
@@ -113,7 +120,7 @@ void AUE_World_Camera::Tick(float DeltaTime)
 		FVector newLocation = GetActorLocation();
 		newLocation += GetActorForwardVector()*MovementInput.X;
 		newLocation += GetActorRightVector()*MovementInput.Y;
-		SetActorLocation(newLocation);
+		//SetActorLocation(newLocation);
 	}
 
 }
@@ -124,13 +131,13 @@ void AUE_World_Camera::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 	//设置四个键盘按键用于控制精确的平移操作
-	UPlayerInput::AddEngineDefinedAxisMapping(FInputAxisKeyMapping("MoveForward", EKeys::W, 1.0f));
+	/*UPlayerInput::AddEngineDefinedAxisMapping(FInputAxisKeyMapping("MoveForward", EKeys::W, 1.0f));
 	UPlayerInput::AddEngineDefinedAxisMapping(FInputAxisKeyMapping("MoveForward", EKeys::S, -1.0f));
 	PlayerInputComponent->BindAxis("MoveForward", this, &AUE_World_Camera::MoveForward);
 
 	UPlayerInput::AddEngineDefinedAxisMapping(FInputAxisKeyMapping("MoveRight", EKeys::A, 1.0f));
 	UPlayerInput::AddEngineDefinedAxisMapping(FInputAxisKeyMapping("MoveRight", EKeys::D, -1.0f));
-	PlayerInputComponent->BindAxis("MoveRight", this, &AUE_World_Camera::MoveRight);
+	PlayerInputComponent->BindAxis("MoveRight", this, &AUE_World_Camera::MoveRight);*/
 
 
 	//滚轮操作	
@@ -211,7 +218,7 @@ void AUE_World_Camera::OnKeyLeftShiftReleased()
 
 //滚动滑轮的事件响应函数
 //用于操纵当前玩家的相机视野
-//蒯希，20191225
+//蒯希，20200410
 void AUE_World_Camera::OnScrollWheelUpPress(float axisValue)
 {
 	MoveDirection = FVector::ZeroVector;
@@ -219,12 +226,24 @@ void AUE_World_Camera::OnScrollWheelUpPress(float axisValue)
 	{
 		GetWorld()->GetFirstPlayerController()->GetMousePosition(CursorPos.X, CursorPos.Y);
 		UGameplayStatics::DeprojectScreenToWorld(UGameplayStatics::GetPlayerController(GetWorld(), 0), CursorPos, WorldPos, MoveDirection);
+
+		//根据当前控制器的实际高度，确定相机移动的实际步长(ScrollWheelSpeed)，原始移动步长(axisValue)为“1”
+	    //目前逻辑为实际高度的10%作为步长，以放大视角操作为例，每次递进现有高度的10%，相机更新后的位置为原来高度的90%
+	    //（蒯希，20191225）
+
+		//默认滚轮放大，根据距离球面的距离，单次缩放距离逐渐缩小
+		float stepRadio = 0.05;
+
+		/*if (axisValue < 0)
+			stepRadio = 1.05;*/
+		
+		float cameraHeight = FVector::Dist(WorldPos, SphereOrigin) - MaxSphereR;
+		ScrollWheelSpeed = cameraHeight * stepRadio;
+		OurCamera->AddWorldOffset(MoveDirection*ScrollWheelSpeed*axisValue);
+
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, FString::SanitizeFloat(cameraHeight));
 	}
-	//根据当前控制器的实际高度，确定相机移动的实际步长(ScrollWheelSpeed)，原始移动步长(axisValue)为“1”
-	//目前逻辑为实际高度的10%作为步长，以放大视角操作为例，每次递进现有高度的10%，相机更新后的位置为原来高度的90%
-	//由于axisVaule不知为何每次两个单位，因此此处取0.05（蒯希，20191225）
-	ScrollWheelSpeed = WorldPos.Z*0.05;
-	OurCamera->AddWorldOffset(MoveDirection*ScrollWheelSpeed*axisValue);
+	
 }
 
 //鼠标右键的拖拽事件响应函数
@@ -232,6 +251,7 @@ void AUE_World_Camera::OnScrollWheelUpPress(float axisValue)
 //蒯希20191225
 void AUE_World_Camera::OnMouseRightDrag(float axisValue)
 {
+	//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, FString::SanitizeFloat(axisValue));
 	if (FMath::Abs(axisValue) < KINDA_SMALL_NUMBER)
 	{
 		CurrentCursorPos = PreviousCursorPos = FVector2D::ZeroVector;
@@ -240,18 +260,18 @@ void AUE_World_Camera::OnMouseRightDrag(float axisValue)
 	}
 	else
 	{
-		//按下左shift键，开始拖拽		
+		//按下左shift键，绕鼠标点旋转		
 		if (IsBindShiftKey)
 		{
 			//拖拽状态			
-			IsMoveCameraState = true;
-			IsRotateCameraState = false;
+			IsMoveCameraState = false;
+			IsRotateCameraState = true;
 		}
-		//没有按下左Shift键时候绕鼠标点旋转		
+		//没有按下左Shift键时候，开始拖拽		
 		else
 		{
-			IsRotateCameraState = true;
-			IsMoveCameraState = false;
+			IsRotateCameraState = false;
+			IsMoveCameraState = true;
 		}
 	}
 }
@@ -269,19 +289,49 @@ void AUE_World_Camera::CalcCameraMoveDragDirection()
 	}
 	else
 	{
+		//1.获取相机当前在ue坐标系中的位置，并计算其在经纬度椭球上的坐标，及高度
+		FVector currentCameraLocation = GetActorLocation();
+		FVector currentCameraLocationInGlobe = this->sccts.TileCoordinateSystem.FromUE_CoordinateSystem(currentCameraLocation);
+		//2.根据当前相机在经纬度椭球中的高度，计算单个像素对应的经纬度长度
+		float degreePerPixel = this->sccts.GetDegreePerPixelInScreen();
+
+		//3.获取当前鼠标位置，与之前记录的鼠标位置做差，得到在屏幕上的鼠标位移
 		GetWorld()->GetFirstPlayerController()->GetMousePosition(CurrentCursorPos.X, CurrentCursorPos.Y);
 		FVector2D MoveOffset = CurrentCursorPos - PreviousCursorPos;
+
+		if(MoveOffset.X >10)
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, FString::SanitizeFloat(MoveOffset.X));
+		
 		PreviousCursorPos = CurrentCursorPos;
+
+		//4.计算屏幕上的鼠标位移对应的经纬度位移
+		FVector MoveOffsetInGlobe = FVector(MoveOffset.X*degreePerPixel, MoveOffset.Y*degreePerPixel,0);
+
+		//5.计算最终的鼠标经纬度位置，并根据该位置反算UE中的坐标，将相机平移到该位置
+		currentCameraLocationInGlobe = currentCameraLocationInGlobe.operator+(MoveOffsetInGlobe);
+		FVector nextCameraLocation = this->sccts.TileCoordinateSystem.ToUE_CoordinateSystem(currentCameraLocationInGlobe);
+		SetActorLocation(nextCameraLocation);
+
+		//6.根据相机新的位置，计算相机位置到ue椭球原点的方向向量，通过该向量设置相机的偏转角度
+		FVector nextCameraShootToOriginVector =  SphereOrigin - nextCameraLocation;
+		OurCamera->RelativeRotation = nextCameraShootToOriginVector.Rotation();
 
 		//根据实际高度，调整平移量
 		//初步设置每次平移单位为高度值的0.01倍（经验值）
 		//后续完善需要将该值设置为一个可以供用户修改的参数
-		MoveDirection = FVector::ZeroVector;
-		GetWorld()->GetFirstPlayerController()->GetMousePosition(CursorPos.X, CursorPos.Y);
-		UGameplayStatics::DeprojectScreenToWorld(UGameplayStatics::GetPlayerController(GetWorld(), 0), CursorPos, WorldPos, MoveDirection);
-		int32 moveStep = WorldPos.Z*MoveStepFactor;
+		//MoveDirection = FVector::ZeroVector;
+		//GetWorld()->GetFirstPlayerController()->GetMousePosition(CursorPos.X, CursorPos.Y);
+		//UGameplayStatics::DeprojectScreenToWorld(UGameplayStatics::GetPlayerController(GetWorld(), 0), CursorPos, WorldPos, MoveDirection);
 
-		OurCamera->AddLocalOffset(FVector(0, -MoveOffset.X*moveStep, MoveOffset.Y*moveStep));
+		//
+		/////*if (axisValue < 0)
+		////	stepRadio = 1.05;*/
+
+		//float cameraHeight = FVector::Dist(WorldPos, SphereOrigin) - MaxSphereR;	
+
+		//int32 moveStep = cameraHeight *MoveStepFactor;
+
+		//OurCamera->AddLocalOffset(FVector(0, -MoveOffset.X*moveStep, MoveOffset.Y*moveStep));
 	}
 }
 
