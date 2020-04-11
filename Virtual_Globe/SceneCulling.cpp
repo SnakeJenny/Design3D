@@ -17,7 +17,7 @@ SceneCulling_CenterTileStrategy::SceneCulling_CenterTileStrategy(Sphere_Coordina
 {
 	this->TileCoordinateSystem = coordinateSystem;
 
-	this->rootNode = new TileNode(-1, 0, 0,NULL);	
+	this->rootNode = new TileNode(-1, 0, 0, NULL);
 
 	this->GeoCameraState = UEToGeoCameraState(UE_CameraState);
 }
@@ -30,7 +30,7 @@ CameraState SceneCulling_CenterTileStrategy::UEToGeoCameraState(CameraState UE_C
 {
 	CameraState geoCameraState;
 	//geoCameraState.Location = UEToGeoPosition(UE_CameraState.Location);
-	geoCameraState.Location = this->TileCoordinateSystem.FromUE_CoordinateSystem( UE_CameraState.Location);
+	geoCameraState.Location = this->TileCoordinateSystem.FromUE_CoordinateSystem(UE_CameraState.Location);
 	//geoCameraState.Rotator = UEToGeoRotator(UE_CameraState.Rotator);
 	geoCameraState.Rotator = UE_CameraState.Rotator;
 	geoCameraState.AspectRatio = UE_CameraState.AspectRatio;
@@ -159,19 +159,19 @@ TSet<TileNode*> SceneCulling_CenterTileStrategy::GetTileSetBySeedTile(CameraStat
 
 		TArray<TileInfo_Grid*> neighbor_15_tiles;
 		seedTile.GetNeighbor_15(neighbor_15_tiles);
-		
+
 		for (TileInfo_Grid* val : neighbor_15_tiles)
-			resultArray.Add(new TileNode(val)); 
-		
+			resultArray.Add(new TileNode(val));
+
 		//设定基于屏幕分辨率的外扩停止判定条件
 		int breakScreenSize = FMath::Max(cameraState.screenResolution.X, cameraState.screenResolution.Y);
 		//当前默认为当个瓦片256*256分辨率，后续改成通用变量
 		int currentTotalTileSize = 4 * 256;
 		int currentIterationIndex = 0;
-		
 
 
-		
+
+
 
 
 		//currentIterationIndex += 1;
@@ -198,6 +198,64 @@ TSet<TileNode*> SceneCulling_CenterTileStrategy::GetTileSetBySeedTile(CameraStat
 	return resultArray;
 }
 
+//判定依据为当前屏幕的实际经纬度坐标是否与当前瓦片相交，如果相交，则调取其子瓦片，继续加载
+TSet<TileNode*> SceneCulling_CenterTileStrategy::GetTilesByBFS_Iterations2()
+{
+	//FVector screenCenterPtInDegree = FVector(FMath::RadiansToDegrees(this->screenCenterPt.X), FMath::RadiansToDegrees(this->screenCenterPt.Y), screenCenterPt.Z);
+	this->GeoRangeInScreen = GetGeoRangeInScreen();
+	
+		TSet<TileNode*> resultTileSet;
+	std::queue<TileNode *> BFS_Iteration_Queue;
+	if (this->rootNode != NULL)
+	{
+		rootNode->CreateSubTileNode();
+		for (TileNode* child : rootNode->children)
+		{
+			//0级两个瓦片不加载，最开始加载1级瓦片
+			//BFS_Iteration_Queue.push(child);
+			child->CreateSubTileNode();
+			for (TileNode* childChild : child->children)
+			{
+				BFS_Iteration_Queue.push(childChild);
+			}
+		}
+
+		while (!BFS_Iteration_Queue.empty())
+		{
+			TileNode *tileNode = BFS_Iteration_Queue.front();
+			TileInfo_Grid * thisTileInfo_Grid = (TileInfo_Grid *)(tileNode->tileInfo);
+
+			BFS_Iteration_Queue.pop();
+			if (tileNode == NULL || thisTileInfo_Grid == NULL)
+				continue;
+
+			if (thisTileInfo_Grid->LevelNum > this->FinestLevelNum)
+				continue;
+
+			if (!thisTileInfo_Grid->IsGeoRangeIntersect(this->GeoRangeInScreen))
+			{
+				resultTileSet.Add(tileNode);
+			}
+			else
+			{
+				//若当前加载层级跟需要加载的最精细层级相同，且屏幕中心点在该瓦片内，只加载该瓦片，不加载该瓦片子瓦片
+				if (thisTileInfo_Grid->LevelNum == this->FinestLevelNum)
+				{
+					resultTileSet.Add(tileNode);
+					continue;
+				}
+				tileNode->CreateSubTileNode();
+				for (TileNode* tileNode_Child : tileNode->children)
+				{
+					BFS_Iteration_Queue.push(tileNode_Child);
+				}
+			}
+		}
+	}
+	return resultTileSet;
+}
+
+//判定依据为屏幕中心点是否落在当前瓦片中，如果落在当前瓦片中，则加载其子瓦片
 TSet<TileNode*> SceneCulling_CenterTileStrategy::GetTilesByBFS_Iterations()
 {
 	FVector screenCenterPtInDegree = FVector(FMath::RadiansToDegrees(this->screenCenterPt.X), FMath::RadiansToDegrees(this->screenCenterPt.Y), screenCenterPt.Z);
@@ -224,7 +282,7 @@ TSet<TileNode*> SceneCulling_CenterTileStrategy::GetTilesByBFS_Iterations()
 			TileInfo_Grid * thisTileInfo_Grid = (TileInfo_Grid *)(tileNode->tileInfo);
 
 			BFS_Iteration_Queue.pop();
-			if (tileNode == NULL|| thisTileInfo_Grid == NULL)
+			if (tileNode == NULL || thisTileInfo_Grid == NULL)
 				continue;
 
 			if (thisTileInfo_Grid->LevelNum > this->FinestLevelNum)
@@ -248,7 +306,7 @@ TSet<TileNode*> SceneCulling_CenterTileStrategy::GetTilesByBFS_Iterations()
 					BFS_Iteration_Queue.push(tileNode_Child);
 				}
 			}
-		}		
+		}
 	}
 	return resultTileSet;
 }
@@ -272,7 +330,7 @@ int  SceneCulling_CenterTileStrategy::GetTilesLevelInScreen()
 
 	//基于屏幕分辨率，确定屏幕单个像素对应于地理距离（单位，度）
 	float degreePerPixelInScreen = groundLengthInDegree / (FMath::Max(this->GeoCameraState.screenResolution.X, this->GeoCameraState.screenResolution.Y));
-	
+
 	int level_i;
 	for (level_i = 0; level_i < 20; ++level_i)
 	{
@@ -288,6 +346,40 @@ int  SceneCulling_CenterTileStrategy::GetTilesLevelInScreen()
 	return level_i;
 }
 
+//基于相机方位、屏幕分辨率计算当前屏幕下的实际需要载入的最精细瓦片级别,基于此计算当前屏幕实际的经纬度范围
+//返回结果为四个点pt0(minX,minY) pt1(maxX,minY) pt2(maxX,maxY) pt3(minX,maxY)
+TArray<FVector2D>  SceneCulling_CenterTileStrategy::GetGeoRangeInScreen()
+{
+	TArray<FVector2D> result;
+	FVector screenCenterPtInDegree = FVector(FMath::RadiansToDegrees(this->screenCenterPt.X), FMath::RadiansToDegrees(this->screenCenterPt.Y), screenCenterPt.Z);
+
+	float pixelLengthInDegree = GetDegreePerPixelInScreen();
+
+	if (pixelLengthInDegree == 0||this->GeoCameraState.screenResolution.X ==0|| this->GeoCameraState.screenResolution.Y == 0)
+		return result;
+
+	FVector2D minPt = FVector2D(screenCenterPtInDegree.X - (this->GeoCameraState.screenResolution.X * pixelLengthInDegree) / 2
+		, screenCenterPtInDegree.Y - (this->GeoCameraState.screenResolution.Y * pixelLengthInDegree) / 2);
+	if (minPt.X < -180.0)
+		minPt.X += 360.0;
+	if (minPt.Y < -90.0)
+		minPt.Y = (minPt.Y + 180.0)*-1.0;
+	result.Add(minPt);
+
+
+	FVector2D maxPt = FVector2D(screenCenterPtInDegree.X + (this->GeoCameraState.screenResolution.X * pixelLengthInDegree) / 2
+		, screenCenterPtInDegree.Y + (this->GeoCameraState.screenResolution.Y * pixelLengthInDegree) / 2);
+	if (maxPt.X > 180.0)
+		maxPt.X -= 360.0;
+	if (maxPt.Y > 90.0)
+		maxPt.Y = 180.0 - maxPt.Y;	
+
+	result.Add(FVector2D(maxPt.X,minPt.Y));
+	result.Add(maxPt);
+	result.Add(FVector2D(minPt.X, maxPt.Y));
+
+	return result;
+}
 
 //基于相机方位、屏幕分辨率计算当前屏幕下的实际需要载入的最精细瓦片级别
 float  SceneCulling_CenterTileStrategy::GetDegreePerPixelInScreen()
@@ -316,7 +408,9 @@ float  SceneCulling_CenterTileStrategy::GetDegreePerPixelInScreen()
 TSet<TileNode*> SceneCulling_CenterTileStrategy::GetTilesShouldbeLoaded(CameraState UE_CameraState, FVector2D CurrentScreenResolution)
 {
 	//1，通过变换将ue相机状态转为地理相机状态
-	
+	this->GeoCameraState = UEToGeoCameraState(UE_CameraState);
+	//FString Message = "X = " + FString::SanitizeFloat(FMath::RadiansToDegrees(this->GeoCameraState.Location.X)) + "; Y = " + FString::SanitizeFloat(FMath::RadiansToDegrees(this->GeoCameraState.Location.Y)) + "; Z = " + FString::SanitizeFloat(this->GeoCameraState.Location.Z);
+	//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, Message);
 
 	//2.根据UE相机位置，角度参数，计算相机射线与地球表面交点的经纬度坐标
 	HalfLine CameraShootToEarthSurface;
@@ -324,12 +418,19 @@ TSet<TileNode*> SceneCulling_CenterTileStrategy::GetTilesShouldbeLoaded(CameraSt
 	CameraShootToEarthSurface.Direction = UE_CameraState.Rotator;
 
 	this->screenCenterPt = GetHalfLineIntersect(CameraShootToEarthSurface);
-	   	
+
 	//3.根据相机方位、FOV，计算当前帧屏幕所需要加载的最精细瓦片的层级
 	this->FinestLevelNum = GetTilesLevelInScreen();
 
-	TSet<TileNode*> resultArray = GetTilesByBFS_Iterations();
+	//4.获取当前帧，屏幕地理范围
+	this->GeoRangeInScreen = GetGeoRangeInScreen();
+
+	TSet<TileNode*> resultArray = GetTilesByBFS_Iterations2();
 
 	return resultArray;
 }
 
+void SceneCulling_CenterTileStrategy::UpdateGeoCameraLocation(FVector &inLocation)
+{
+	this->GeoCameraState.Location = inLocation;
+}

@@ -99,6 +99,10 @@ public:
 
 	bool IsPositionIn(FVector testPt);
 
+	bool IsPositionIn(FVector2D testPt);
+
+	bool IsGeoRangeIntersect(TArray<FVector2D> geoRange);
+
 	double GetTileGridSize();
 
 	int32 GetTileRowCountInGlobe();

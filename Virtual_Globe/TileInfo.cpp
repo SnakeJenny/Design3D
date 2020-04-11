@@ -87,6 +87,25 @@ bool TileInfo_Grid::IsPositionIn(FVector testPt)
 	return true;
 }
 
+bool TileInfo_Grid::IsPositionIn(FVector2D testPt)
+{
+	if (testPt.X < this->DownLeftPt.X || testPt.X > this->UpRightPt.X
+		|| testPt.Y < this->DownLeftPt.Y || testPt.Y > this->UpRightPt.Y)
+		return false;
+	return true;
+}
+
+bool TileInfo_Grid::IsGeoRangeIntersect(TArray<FVector2D> geoRange)
+{	
+	for (FVector2D geoRangePt : geoRange)
+	{
+		if (IsPositionIn(geoRangePt))
+			return true;
+	}
+	return false;
+}
+
+
 //返回该瓦片的四个子瓦片构成的数组
 // 01
 // 23
