@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 
 /**
- * 
+ *
  */
 class Vector3D
 {
@@ -33,7 +33,7 @@ public:
 	double MagnitudeSquared() const;
 
 	Vector3D Normalize() const;
-	
+
 
 	FVector ToVector3F();
 

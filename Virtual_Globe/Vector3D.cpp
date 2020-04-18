@@ -18,17 +18,17 @@ Vector3D Vector3D::Zero()
 
 Vector3D Vector3D::UnitX()
 {
-	return  Vector3D(1.0, 0.0, 0.0); 
+	return  Vector3D(1.0, 0.0, 0.0);
 }
 
 Vector3D Vector3D::UnitY()
 {
-	return Vector3D(0.0, 1.0, 0.0); 
+	return Vector3D(0.0, 1.0, 0.0);
 }
 
 Vector3D Vector3D::UnitZ()
 {
-	return Vector3D(0.0, 0.0, 1.0); 
+	return Vector3D(0.0, 0.0, 1.0);
 }
 
 Vector3D::Vector3D(double x, double y, double z)
@@ -78,47 +78,43 @@ Vector3D Vector3D::operator/(double Scale) const
 	return Vector3D(X / Scale, Y / Scale, Z / Scale);
 }
 
-	Vector3D Vector3D::operator*(double Scale) const
-	{
-		return Vector3D(X * Scale, Y * Scale, Z * Scale);
-	}	
+Vector3D Vector3D::operator*(double Scale) const
+{
+	return Vector3D(X * Scale, Y * Scale, Z * Scale);
+}
 
-	/*Vector3D Vector3D::operator*(float Scale, const Vector3D& V)
-	{
-		return V.operator*(Scale);
-	}*/
+/*Vector3D Vector3D::operator*(float Scale, const Vector3D& V)
+{
+	return V.operator*(Scale);
+}*/
 
-	Vector3D Vector3D::operator*(const Vector3D& V) const
-	{
-		return Vector3D(X * V.X, Y * V.Y, Z * V.Z);
-	}
-	
-	FVector Vector3D::ToVector3F()
-	{
-		return FVector((float)X, (float)Y, (float)Z);
-	}
+Vector3D Vector3D::operator*(const Vector3D& V) const
+{
+	return Vector3D(X * V.X, Y * V.Y, Z * V.Z);
+}
 
-	Vector3D  Vector3D::Multiply(double Scale)
-	{
-		return Vector3D(X * Scale, Y * Scale, Z * Scale);
-	}
+FVector Vector3D::ToVector3F()
+{
+	return FVector((float)X, (float)Y, (float)Z);
+}
 
-	double Vector3D::Magnitude() const
-	{
-		return FMath::Sqrt(MagnitudeSquared());
-	}
+Vector3D  Vector3D::Multiply(double Scale)
+{
+	return Vector3D(X * Scale, Y * Scale, Z * Scale);
+}
 
-	double Vector3D::MagnitudeSquared() const
-	{
-		return X * X + Y * Y + Z * Z; 
-	}
+double Vector3D::Magnitude() const
+{
+	return FMath::Sqrt(MagnitudeSquared());
+}
 
-	Vector3D Vector3D::Normalize() const
-	{		
-		double m = Magnitude();
-		return Vector3D(X /m, Y / m, Z / m);
-	}
+double Vector3D::MagnitudeSquared() const
+{
+	return X * X + Y * Y + Z * Z;
+}
 
-
-
-	
+Vector3D Vector3D::Normalize() const
+{
+	double m = Magnitude();
+	return Vector3D(X / m, Y / m, Z / m);
+}

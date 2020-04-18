@@ -4,55 +4,63 @@
 #include "CoordinateSystem.h"
 #include "TileInfo.h"
 #include "SceneCulling.h"
-#include <queue>
 
-class TileLoadManager
+//åœ¨å®Œæˆéœ€è¦åŠ è½½ç“¦ç‰‡è®¡ç®—çš„åŸºç¡€ä¸Šï¼Œä¸ºäº†ä¿éšœå‰ç«¯æ˜¾ç¤ºè°ƒåº¦çš„æµç•…æ€§ï¼Œæ–°å¢ä¸­é—´è¿‡ç¨‹ï¼Œå¯¹åº”è¯¥åŠ è½½çš„ç“¦ç‰‡é›†åˆè¿›è¡Œè¿›ä¸€æ­¥çš„ä¼˜åŒ–
+class ITileLoadRefiningStrategy
 {
 public:
-		
-	
-	TSet<TileNode*> loadedTileSet;
-	//
-	TileLoadManager();
+	virtual void GetRefiningLoadingTiles(const TSet<ITileInfo*> &inTilesShouldBeLoaded, TSet<ITileInfo*> &outTilesLoading) = 0;
+};
 
+class TileGridLoadRefiningStrategy:public ITileLoadRefiningStrategy
+{
+public:
+	void GetRefiningLoadingTiles(const TSet<ITileInfo*> &inTilesShouldBeLoaded, TSet<ITileInfo*> &outTilesLoading) ;
+};
 
-	//Êµ¼ÊÍßÆ¬¼ÓÔØ²ßÂÔ£º
+//è´Ÿè´£ç“¦ç‰‡åŠ è½½ç®¡ç†é€»è¾‘çš„åŸºç¡€æ¥å£ç±»
+class ITileLoadManager
+{
+public:
+	virtual void GetLoadingTiles(const TSet<ITileInfo*> &inTilesShouldBeLoaded, TSet<ITileInfo*> &outTilesLoading, TSet<ITileInfo*> &outTilesUnloading)=0;
 
-	//1.Í¨¹ıworldCameraManager¼ÆËã³öµÄseedtileNode£¬È·¶¨15ÁÚÓòµÄÏàÍ¬²ã¼¶µÄ´ı¼ÓÔØÍßÆ¬
-	//Í¨¹ıµ÷ÓÃtileInfo.GetNeighbor_15(TArray<TileInfo_Quadtree>& neighbor_15)º¯Êı
-	//2.ÔÚºËĞÄ16¸öÍßÆ¬µÄ»ù´¡ÉÏ£¬¼ÆËãÍâÀ©µÄ´ÖÒ»¼¶±ğ´ı¼ÓÔØÍßÆ¬
-	//3.Ñ­»·2²½Öè£¬Ö±µ½¼ÆËã³öµÄÍßÆ¬³äÂúÕû¸öÆÁÄ»£¬»òÕßÒÑ¼ÆËãµ½×î´ÖÒ»¼¶ÍßÆ¬
-	/*void GetTileShouldBeLoaded(TileNode_Quadtree seedTileNode, FVector2D screenResolution
-		, TArray<TileSet> &tileNodeShouldBeLoaded);*/
-		//4.»ñÈ¡µ½½Ï´ÖÒ»¼¶£¬Ô¤ÏÈ¼ÓÔØµÄÍßÆ¬¼¯ºÏ
-	/*void GetRoughTileShouldBeLoaded(TArray<TileSet> &tileNodeShouldBeLoaded
-		, int32 roughingStep, TArray<TileSet> &roughTileNodeShouldBeLoaded);*/
+	virtual void UpdateLoadedTile(ITileInfo* loadedTile)=0;
 
-	//5.¸üĞÂÍßÆ¬½ÚµãµÄ¼ÓÔØºÍĞ¶ÔØ¶ÓÁĞ,»ùÓÚ¸÷¸ötileNodeµÄtileLoadState½øĞĞÅĞ¶Ï
-	//ÒÑ¼ÓÔØÇÒĞèÒª¼ÓÔØµÄ´Ó¼ÓÔØ¶ÓÁĞÖĞÒÆ³ı£¬ÒÑ¼ÓÔØÇÒ²»ĞèÒª¼ÓÔØµÄ£¬·ÅÈëĞ¶ÔØ¶ÓÁĞ......
-	TSet<TileNode*> UpdateLoadingTileArray(TSet<TileNode*> tileShouldBeLoaded);
+	virtual void UpdateUnloadedTile(ITileInfo* unloadedTile)=0;
 
-	TSet<TileNode*> UpdateUnLoadingTileArray(TSet<TileNode*> tileShouldBeLoaded);
+	//virtual ~ITileLoadManager();
+};
 
-	void UpdateLoadedTileArray(TileNode* loadedTileNode);
+//æ ¼ç½‘ç“¦ç‰‡çš„åŠ è½½ç®¡ç†ç±»
+class TileGridLoadManager:public ITileLoadManager
+{
+public:
+	//é»˜è®¤æ„é€ å‡½æ•°
+	TileGridLoadManager();	
+	//ä»åº”åŠ è½½ç“¦ç‰‡é›†åˆAï¼Œåœºæ™¯ä¸­å·²ç»åŠ è½½ç“¦ç‰‡é›†åˆBä¸­ï¼Œè®¡ç®—å½“å‰å®é™…åº”è¯¥åŠ è½½çš„ç“¦ç‰‡é›†åˆC
+	//ä»åº”åŠ è½½ç“¦ç‰‡é›†åˆAï¼Œåœºæ™¯ä¸­å·²ç»åŠ è½½ç“¦ç‰‡é›†åˆBä¸­ï¼Œè®¡ç®—å½“å‰å®é™…åº”è¯¥å¸è½½çš„ç“¦ç‰‡é›†åˆD
+	//C=A-B
+	//D=B-A
+	void GetLoadingTiles(const TSet<ITileInfo*> &inTilesShouldBeLoaded, TSet<ITileInfo*> &outTilesLoading, TSet<ITileInfo*> &outTilesUnloading) override;
 
-	
+	//å®Œæˆå®é™…ç‰¹å®šç“¦ç‰‡åŠ è½½åçš„çŠ¶æ€æ›´æ–°ï¼Œæ›´æ–°å·²åŠ è½½ç“¦ç‰‡é›†åˆï¼ˆloadedTileSetï¼‰
+	//å°†loadedTileåŠ å…¥loadedTileSet
+	void UpdateLoadedTile(ITileInfo* loadedTile) ;
 
-	//6.ÔÚ¾ßÌåµÄ¼ÓÔØºÍĞ¶ÔØÈÎÎñº¯ÊıÖĞ£¬Ö´ĞĞ¾ßÌåµÄ¼ÓÔØºÍĞ¶ÔØ²½Öè£¬»ùÓÚUE½Ó¿Ú
-	void DoLoadingTasks(TArray<TileNode*> loadingTileQueue, bool isAsyn);
+	//å®Œæˆå®é™…ç‰¹å®šç“¦ç‰‡å¸è½½åçš„çŠ¶æ€æ›´æ–°ï¼Œæ›´æ–°å·²åŠ è½½ç“¦ç‰‡é›†åˆï¼ˆloadedTileSetï¼‰
+	//å°†unloadedTileä»loadedTileSetä¸­ç§»é™¤
+	void UpdateUnloadedTile(ITileInfo* unloadedTile);
 
-	void DoUnloadingTasks(TArray<TileNode*> unloadingTileQueue, bool isAsyn);
-	
+private:
 
-	//ÃèÊö¸Ã½ÚµãµÄ¼ÓÔØ×´Ì¬£¬¿¼ÂÇ·Åµ½ tileloadmanagerÀàÖĞ
+	TSet<ITileInfo*> loadedTileSet;	
+
+	//æè¿°è¯¥èŠ‚ç‚¹çš„åŠ è½½çŠ¶æ€ï¼Œè€ƒè™‘æ”¾åˆ° tileloadmanagerç±»ä¸­
 	enum tileLoadState
 	{
-		LOADED,//Ó¦¼ÓÔØ£¬ÇÒÒÑ¼ÓÔØ
-		UNLOADED,//Ó¦¼ÓÔØ£¬µ«Î´¼ÓÔØ		
-		REPLACED_BY_CHILDREN,//ÒÑ¼ÓÔØ£¬ÒÑ±»×Ó½ÚµãÌæ»»
+		LOADED,//åº”åŠ è½½ï¼Œä¸”å·²åŠ è½½
+		UNLOADED,//åº”åŠ è½½ï¼Œä½†æœªåŠ è½½		
+		REPLACED_BY_CHILDREN,//å·²åŠ è½½ï¼Œå·²è¢«å­èŠ‚ç‚¹æ›¿æ¢
 	};
 
 };
-//¼ÌĞø²ğ·Ö¼ÓÔØÂß¼­
-
-

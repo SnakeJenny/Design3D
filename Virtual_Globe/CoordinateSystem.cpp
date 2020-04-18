@@ -1,22 +1,11 @@
-
 #include "CoordinateSystem.h"
 #include "Math/Vector.h"
 
 
-CoordinateSystem::CoordinateSystem()
+CoordinateSystem::~CoordinateSystem()
 {}
 
-FVector CoordinateSystem::ToUE_CoordinateSystem(const FVector &inPt)
-{
-	return inPt;
-}
-
-FVector CoordinateSystem::FromUE_CoordinateSystem(const FVector &inPt)
-{
-	return inPt;
-}
-
-CoordinateSystem::~CoordinateSystem()
+CoordinateSystem::CoordinateSystem()
 {}
 
 
@@ -29,7 +18,6 @@ Sphere_CoordinateSystem::Sphere_CoordinateSystem() {}
 //Pitch俯仰角	Rotation around the right axis (around Y axis), Looking up and down (0=Straight Ahead, +Up, -Down)
 //Yaw偏航角，地球自转平面Rotation around the up axis (around Z axis), Running in circles 0=East, +North, -South.
 //Roll侧倾角，翻滚角	Rotation around the forward axis (around X axis), Tilting your head, 0=Straight, +Clockwise, -CCW.
-
 Sphere_CoordinateSystem::Sphere_CoordinateSystem(const FVector &radii,
 	const FRotator& InRotation,
 	const FVector &InTranslation,
@@ -42,19 +30,14 @@ Sphere_CoordinateSystem::Sphere_CoordinateSystem(const FVector &radii,
 
 	//用于椭球坐标系到UE坐标系的变换
 	this->Transform = FTransform(InRotation, InTranslation, InScale3D);
-
 	this->_radii = radii;
-
 	this->_radiiSquared = Vector3D(_radii)*Vector3D(_radii);
-
-	this->_radiiToTheFourth = _radiiSquared * _radiiSquared;	
-
-	this->_oneOverRadiiSquared = Vector3D(1.0/ _radiiSquared.X, 1.0 / _radiiSquared.Y, 1.0 / _radiiSquared.Z);
-	
+	this->_radiiToTheFourth = _radiiSquared * _radiiSquared;
+	this->_oneOverRadiiSquared = Vector3D(1.0 / _radiiSquared.X, 1.0 / _radiiSquared.Y, 1.0 / _radiiSquared.Z);
 }
 
-
-FVector Sphere_CoordinateSystem::ToUE_CoordinateSystem(const FVector& inPt)
+//坐标点，单点转换，从地理坐标系转换到本球体笛卡尔坐标系
+FVector Sphere_CoordinateSystem::FromGeoCoordinateSystem(const FVector& inPt)
 {
 	Geographic3D GeographicCoordinates = Geographic3D(inPt);
 	//经纬度转笛卡尔球面坐标系
@@ -63,11 +46,11 @@ FVector Sphere_CoordinateSystem::ToUE_CoordinateSystem(const FVector& inPt)
 	return this->Transform.TransformPosition(DescartesCoordinates);
 }
 
-//从ue坐标系统，经坐标变换后，到经纬度坐标系统
-FVector Sphere_CoordinateSystem::FromUE_CoordinateSystem(const FVector& inPt)
+//坐标点，单点转换，从本球体笛卡尔坐标系到经纬度地理坐标系统
+FVector Sphere_CoordinateSystem::ToGeoCoordinateSystem(const FVector& inPt)
 {
 	FVector DescartesCoordinates = this->Transform.InverseTransformPosition(inPt);
-	
+
 	return ToGeography3F(DescartesCoordinates);
 }
 
@@ -168,8 +151,8 @@ FVector Sphere_CoordinateSystem::ToVector3F(const Geographic3D	&inPosition)
 	return result3D.ToVector3F();
 }
 
-Vector3D Sphere_CoordinateSystem::GeodgraphicSurfaceNormal(const FVector &inPosition) 
-{	
+Vector3D Sphere_CoordinateSystem::GeodgraphicSurfaceNormal(const FVector &inPosition)
+{
 	double cosLatitude = FMath::Cos(inPosition.Y);
 
 	return Vector3D(
@@ -187,7 +170,7 @@ Vector3D Sphere_CoordinateSystem::GeodgraphicSurfaceNormal(const Vector3D &inPos
 
 Vector3D Sphere_CoordinateSystem::GeodgraphicSurfaceNormal(const Geographic3D &inPosition)
 {
-	
+
 	double cosLatitude = FMath::Cos(inPosition.Latitude);
 
 	return Vector3D(
@@ -207,18 +190,17 @@ FVector Sphere_CoordinateSystem::ToVector3F(const Geographic2D &inPosition)
 Plane_CoordinateSystem::Plane_CoordinateSystem(const FRotator& InRotation,
 	const FVector &InTranslation,
 	const FVector &InScale3D)
-{	
+{
 	//用于平面坐标系到UE坐标系的变换
 	this->Transform = FTransform(InRotation, InTranslation, InScale3D);
 }
 
-
-FVector Plane_CoordinateSystem::ToUE_CoordinateSystem(const FVector& inPt)
-{	
+FVector Plane_CoordinateSystem::FromGeoCoordinateSystem(const FVector& inPt)
+{
 	return this->Transform.TransformPosition(inPt);
 }
 
-FVector Plane_CoordinateSystem::FromUE_CoordinateSystem(const FVector& inPt)
+FVector Plane_CoordinateSystem::ToGeoCoordinateSystem(const FVector& inPt)
 {
 	return this->Transform.InverseTransformPosition(inPt);
 }
