@@ -2,6 +2,9 @@
 
 
 #include "GridTileLoader.h"
+#include "UObject/ConstructorHelpers.h"
+#include "Misc/FileHelper.h"
+#include "Engine/StaticMesh.h"
 
 // Sets default values
 AGridTileLoader::AGridTileLoader()

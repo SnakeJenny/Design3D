@@ -40,6 +40,9 @@ public:
 	float degreePerPixelInScreen;
 	float meterPerPixelInScreen;
 
+	ISceneCulling* pISceneCulling;
+	//SceneCulling_CenterTileStrategy* pSceneCulling_CenterTileStrategy;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

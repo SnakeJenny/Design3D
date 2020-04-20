@@ -112,12 +112,17 @@ void AViewerCameraController::BeginPlay()
 
 	UGameplayStatics::GetPlayerController(GetWorld(), 0)->bShowMouseCursor = true;
 	
+	//获取初始位置
+	FVector currentCameraLocation = OurCamera->GetComponentLocation();
+	FVector nextCameraShootToOriginVector = SphereOrigin - currentCameraLocation;
+	OurCamera->SetRelativeRotation(nextCameraShootToOriginVector.Rotation());
 }
 
 // Called every frame
 void AViewerCameraController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
 
 	//若相机平移标识为true，调用CalcCameraMoveDragDirection完成操作逻辑
 	if (IsMoveCameraState)
@@ -328,8 +333,17 @@ void AViewerCameraController::CalcCameraMoveDragDirection()
 		//FVector currentCameraLocation = GetActorLocation();
 		FVector currentCameraLocation = OurCamera->GetComponentLocation();
 		FVector currentCameraLocationInGlobe = this->geoCoordinateSystem->ToGeoCoordinateSystem(currentCameraLocation);
-		//2.根据当前相机在经纬度椭球中的高度，计算单个像素对应的经纬度长度		
+		//2.根据当前相机在经纬度椭球中的高度，计算单个像素对应的经纬度长度
+
+		SceneCulling_CenterTileStrategy* pSceneCulling_CenterTileStrategy = (SceneCulling_CenterTileStrategy*)this->pISceneCulling;
+		if (pSceneCulling_CenterTileStrategy)
+		{
+			this->degreePerPixelInScreen = pSceneCulling_CenterTileStrategy->GetDegreePerPixelInScreen(111318, 256);
+		}
 		float degreePerPixel = this->degreePerPixelInScreen;
+
+		if (degreePerPixel == 0)
+			return;
 
 		//3.获取当前鼠标位置，与之前记录的鼠标位置做差，得到在屏幕上的鼠标位移
 		GetWorld()->GetFirstPlayerController()->GetMousePosition(CurrentCursorPos.X, CurrentCursorPos.Y);
@@ -337,13 +351,17 @@ void AViewerCameraController::CalcCameraMoveDragDirection()
 				
 		PreviousCursorPos = CurrentCursorPos;
 
+		if(MoveOffset.X > 10)
+			PreviousCursorPos = CurrentCursorPos;
+
 		float moveSpeed = 0.05;
 
 		//4.计算屏幕上的鼠标位移对应的经纬度位移
-		FVector MoveOffsetInGlobe = FVector(MoveOffset.X*degreePerPixel*moveSpeed, MoveOffset.Y*degreePerPixel*moveSpeed, 0);
+		FVector MoveOffsetInGlobe = FVector(-1.0*MoveOffset.X*degreePerPixel*moveSpeed, MoveOffset.Y*degreePerPixel*moveSpeed, 0);
 
 		//5.计算最终的鼠标经纬度位置，并根据该位置反算UE中的坐标，将相机平移到该位置
 		currentCameraLocationInGlobe = currentCameraLocationInGlobe.operator+(MoveOffsetInGlobe);
+		//currentCameraLocation = currentCameraLocation.operator+(MoveOffsetInGlobe);
 		FVector nextCameraLocation = this->geoCoordinateSystem->FromGeoCoordinateSystem(currentCameraLocationInGlobe);
 		//SetActorLocation(nextCameraLocation);
 		OurCamera->SetWorldLocation(nextCameraLocation);

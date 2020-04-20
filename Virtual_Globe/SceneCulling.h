@@ -34,7 +34,8 @@ struct HalfLine
 class ISceneCulling
 {
 public:
-
+	CameraState currentCameraState;
+	FVector currentGeoCameraLocation;
 	virtual void GetTilesShouldbeLoaded(const CameraState &inCameraState, TSet<ITileInfo*> & outTileSet) = 0;
 };
 
@@ -42,9 +43,9 @@ class SceneCulling_CenterTileStrategy :public ISceneCulling
 {
 public:
 
-	Sphere_CoordinateSystem TileCoordinateSystem;	
+	Sphere_CoordinateSystem* TileCoordinateSystem;	
 
-	SceneCulling_CenterTileStrategy();	
+	SceneCulling_CenterTileStrategy(CoordinateSystem* inCoordinateSystem);
 
 	//virtual ~SceneCulling_CenterTileStrategy();
 
@@ -58,7 +59,7 @@ public:
 
 private:
 
-	CameraState currentCameraState;
+	
 
 	TileInfo_Grid* rootTile;
 

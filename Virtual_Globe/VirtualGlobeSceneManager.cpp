@@ -33,7 +33,7 @@ void AVirtualGlobeSceneManager::InitializeVirtualGlobeSphere()
 	FVector radii = FVector(6378137.0, 6378137.0, 6356752.314245);
 	FRotator InRotation = FRotator(0.0, 0.0, 0.0);
 	FVector InTranslation = FVector(0.0, 0.0, 0.0);
-	FVector InScale3D = FVector(1.0, 1.0, 1.0);
+	FVector InScale3D = FVector(1.0, -1.0, 1.0);
 
 	Sphere_CoordinateSystem* earth3d_CoordinateSystem = new Sphere_CoordinateSystem(radii,
 		InRotation,
@@ -49,11 +49,13 @@ void AVirtualGlobeSceneManager::InitializeVirtualGlobeSphere()
 	this->geoCameraState.AspectRatio = 2.0;
 
 	//是否需要增加从uecamera到geocamera的矩阵变换？
-	this->geoCameraState.Location = worldToUE_Transform.InverseTransformPosition(geoCameraState.Location);
+	//this->geoCameraState.Location = worldToUE_Transform.InverseTransformPosition(geoCameraState.Location);
 	this->geoCameraState.Rotator = worldToUE_Transform.InverseTransformRotation(geoCameraState.Rotator.Quaternion()).Rotator();
 
 	//创建map对象
-	this->virtualGlobeMap = new GeoMap(earth3d_CoordinateSystem, this->geoCameraState,this);
+	this->virtualGlobeMap = new GeoMap(earth3d_CoordinateSystem, this->geoCameraState,this, UE_CameraController);
+
+	this->UE_CameraController->geoCoordinateSystem = earth3d_CoordinateSystem;
 
 	//往map中添加layer数据源	
 	//获取场景中的相机UE_World_Camera
@@ -67,7 +69,7 @@ void AVirtualGlobeSceneManager::InitializeVirtualGlobeSphere()
 		if (gridTileLoaderActor)
 		{
 			FString basePath = "/Game/Data/";
-			GridTileLayer* pGridTileLayer = new GridTileLayer(basePath, (AActor*)gridTileLoaderActor);
+			GridTileLayer* pGridTileLayer = new GridTileLayer(basePath, (AActor*)gridTileLoaderActor, UE_CameraController, earth3d_CoordinateSystem);
 			this->virtualGlobeMap->AddLayer((GeoLayer*)pGridTileLayer);
 		}
 	}	
@@ -114,8 +116,9 @@ void AVirtualGlobeSceneManager::Tick(float DeltaTime)
 	this->geoCameraState.Location = UE_CameraController->OurCamera->GetComponentLocation();
 	this->geoCameraState.Rotator = UE_CameraController->OurCamera->GetComponentRotation();
 
-	this->geoCameraState.Location = worldToUE_Transform.InverseTransformPosition(geoCameraState.Location);
+	//this->geoCameraState.Location = worldToUE_Transform.InverseTransformPosition(geoCameraState.Location);
 	this->geoCameraState.Rotator = worldToUE_Transform.InverseTransformRotation(geoCameraState.Rotator.Quaternion()).Rotator();
+
 	this->virtualGlobeMap->OnTick(this->geoCameraState);
 
 }

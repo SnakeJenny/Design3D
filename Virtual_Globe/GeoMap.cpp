@@ -1,10 +1,12 @@
 #include "GeoMap.h"
 
-GeoMap::GeoMap(CoordinateSystem* pCoordinateSystem, CameraState initCameraState, AActor* pActor)
+GeoMap::GeoMap(CoordinateSystem* pCoordinateSystem, CameraState initCameraState, AActor* pActor, AViewerCameraController* inViewerCameraController)
 {
 	this->lastCameraState = initCameraState;
 	this->mapCoordinateSystem = pCoordinateSystem;
 	this->rootActor = pActor;
+
+	this->pViewerCameraController = inViewerCameraController;
 }
 
 void GeoMap::AddLayer(GeoLayer* addingLayer)

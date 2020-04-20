@@ -3,6 +3,7 @@
 #include "SceneCulling.h"
 #include "TileLoadManager.h"
 #include "TileLoadTaskExcutor.h"
+#include "ViewerCameraController.h"
 class GeoLayer
 {
 public:
@@ -23,11 +24,14 @@ public:
 	
 	void OnCameraStateChange(const CameraState &newCameraState, const CameraState &lastCameraState);	
 
+public:
+	AViewerCameraController* pViewerCameraController;
 };
 
-class GridTileLayer :GeoLayer
+class GridTileLayer : public GeoLayer
 {
 public:
-	GridTileLayer(const FString layerSourcePath, AActor* rootActor);
+	//virtual void OnTick() override;
+	GridTileLayer(const FString layerSourcePath, AActor* rootActor, AViewerCameraController* inViewerCameraController, CoordinateSystem* inCoordinateSystem);
 };
 

@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GeoLayer.h"
+#include "ViewerCameraController.h"
 //#include "UE_World_Camera.h"
 class GeoMap
 {
@@ -15,11 +16,13 @@ private:
 
 	bool IsCameraStateChange(const CameraState &lastCameraState, const CameraState &newCameraState);
 
+	AViewerCameraController* pViewerCameraController;
+
 public:
 	//检查前后帧相机的差异
 	//如果变化了，通知所有layer，把新的相机位置通知给各个layer
 	void OnTick(CameraState newCameraState);
-	GeoMap(CoordinateSystem* pCoordinateSystem, CameraState initCameraState, AActor* pActor);
+	GeoMap(CoordinateSystem* pCoordinateSystem, CameraState initCameraState, AActor* pActor, AViewerCameraController* inViewerCameraController);
 
 	void AddLayer(GeoLayer* addingLayer);
 	

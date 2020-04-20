@@ -6,9 +6,9 @@
 #include "Math/Rotator.h"
 
 
-SceneCulling_CenterTileStrategy::SceneCulling_CenterTileStrategy()
+SceneCulling_CenterTileStrategy::SceneCulling_CenterTileStrategy(CoordinateSystem* inCoordinateSystem)
 {
-	
+	this->TileCoordinateSystem = (Sphere_CoordinateSystem*)inCoordinateSystem;
 }
 
 
@@ -23,7 +23,9 @@ float  SceneCulling_CenterTileStrategy::GetDegreePerPixelInScreen(const float me
 	//float pixelPerTile = 256;
 	
 	//目前仅考虑相机位置作为相机射线与地面交点，相机与地面交点的距离用相机高度代替，后续会根据相机的方位具体来计算
-	float distance = this->currentCameraState.Location.Z;
+	//FVector geoCameraLocation = TileCoordinateSystem->ToGeoCoordinateSystem(this->currentCameraState.Location);
+	float distance = this->currentGeoCameraLocation.Z;
+
 
 	//屏幕宽度/长度对应的地理距离（单位，米）
 	float groundLengthInMeter = distance * FMath::Abs(FMath::Tan(this->currentCameraState.FOV * PI / 360.0)) * 2;
@@ -204,7 +206,7 @@ void SceneCulling_CenterTileStrategy::GetTilesByBFS_Iterations(TSet<ITileInfo*> 
 int  SceneCulling_CenterTileStrategy::GetTilesLevelInScreen(const float meterPerDegree, const float pixelPerTile)
 {
 	//目前仅考虑相机位置作为相机射线与地面交点，相机与地面交点的距离用相机高度代替，后续会根据相机的方位具体来计算
-	float distance = this->currentCameraState.Location.Z;
+	float distance = this->currentGeoCameraLocation.Z;
 
 	//屏幕宽度/长度对应的地理距离（单位，米）
 	float groundLengthInMeter = distance * FMath::Abs(FMath::Tan(this->currentCameraState.FOV * PI / 360.0)) * 2;
@@ -273,12 +275,13 @@ void SceneCulling_CenterTileStrategy::GetTilesShouldbeLoaded(const CameraState &
 {
 	//1，通过变换将ue相机状态转为地理相机状态
 	this->currentCameraState = inCameraState;
+	this->currentGeoCameraLocation = this->TileCoordinateSystem->ToGeoCoordinateSystem(inCameraState.Location);
 	//FString Message = "X = " + FString::SanitizeFloat(FMath::RadiansToDegrees(this->GeoCameraState.Location.X)) + "; Y = " + FString::SanitizeFloat(FMath::RadiansToDegrees(this->GeoCameraState.Location.Y)) + "; Z = " + FString::SanitizeFloat(this->GeoCameraState.Location.Z);
 	//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, Message);
 
 	//2.根据UE相机位置，角度参数，计算相机射线与地球表面交点的经纬度坐标
 	HalfLine CameraShootToEarthSurface;
-	CameraShootToEarthSurface.BasePoint = currentCameraState.Location;
+	CameraShootToEarthSurface.BasePoint = this->currentGeoCameraLocation;
 	CameraShootToEarthSurface.Direction = currentCameraState.Rotator;
 
 	//使用深圳市附近的参数作为参考，后续可以修改，地球上一度经度对应于多少米，不同纬度，值不一致，此处取深圳附近的数值
