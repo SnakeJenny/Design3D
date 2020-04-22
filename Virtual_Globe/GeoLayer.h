@@ -9,7 +9,7 @@ class GeoLayer
 public:
 	ISceneCulling* sceneCulling;
 	ITileLoadRefiningStrategy* tileLoadStrategy;
-	ITileLoadManager* loadManager;
+	TileLoadManager* loadManager;
 	ITileLoadTaskExcutor* tileLoadTaskExcutor;
 
 	//当前图层数据源路径，磁盘路径或网络路径跟目录

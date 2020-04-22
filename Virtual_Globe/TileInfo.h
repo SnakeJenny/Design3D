@@ -29,6 +29,8 @@ public:
 
 	//返回瓦片信息的字符串
 	virtual FString TileToString() = 0;
+
+	virtual bool Equal(const ITileInfo* otherTile) = 0;
 };
 
 //矩形的瓦片描述信息类，继承自TileInfo基类,全球瓦片
@@ -58,7 +60,7 @@ public:
 		NorthEast,
 	};
 
-	static TileInfo_Grid GetTileByLevelNumAndCoord(const int32 thisLevelNum, const Geographic2D Coordinate);
+	//static TileInfo_Grid GetTileByLevelNumAndCoord(const int32 thisLevelNum, const Geographic2D Coordinate);
 
 	TileInfo_Grid();
 
@@ -88,7 +90,7 @@ public:
 	TileInfo_Grid* GetParent();
 
 	//判断两个瓦片是否是同一个瓦片
-	bool Equal(const TileInfo_Grid *other);
+	bool Equal(const ITileInfo *other);
 
 	//获取该瓦片的格网边长，格网为正方形
 	double GetTileGridSize();
@@ -201,8 +203,54 @@ class Tile_DOM :TileItem
 	};
 };
 
-class TileInfo_Rtree :ITileInfo
+struct TileInfo_Rtree :ITileInfo
 {};
 
-class TileInfo_OSGB :ITileInfo
-{};
+struct TileInfo_OSGB :ITileInfo
+{
+public:
+
+	FString id;
+
+	//可视范围最小值
+	float min;
+	//可视范围最大值
+	float max;
+
+	//子节点
+	TArray<TileInfo_OSGB*> Childlist;
+
+	//该层级osgb平均三角形面积
+	float triangleSize;
+
+	//层级
+	int levelNum;
+
+	//BoundingBox
+	TArray<FVector2D> boudingBox;
+
+	FTransform tileTransform;
+
+	bool Equal(ITileInfo* otherTile);
+
+	bool IsGeoRangeIntersect(const TArray<FVector2D> geoRange);
+
+	//用于记录瓦片存储的路径
+	FString GetTilePath();
+
+	//判定该瓦片文件是否存在
+	bool IsTileFileExist();
+
+	//返回瓦片信息的字符串
+	FString TileToString();
+
+	FTransform GetTileTransform();
+
+	static void readOSGTree(FString txtFilePath, TArray<TileInfo_OSGB> &osgTree);
+};
+
+struct TileInfo_3dModel :ITileInfo
+{
+public:
+	bool Equal(ITileInfo* otherTile);
+};

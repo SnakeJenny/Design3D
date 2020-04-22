@@ -7,30 +7,30 @@ void TileGridLoadRefiningStrategy::GetRefiningLoadingTiles(const TSet<ITileInfo*
 	return;
 }
 
-TileGridLoadManager::TileGridLoadManager()
+//从当前应加载集合中，增加逻辑，保证瓦片加载流畅性、高效性
+void OSGB_GridLoadRefiningStrategy::GetRefiningLoadingTiles(const TSet<ITileInfo*> &inTilesShouldBeLoaded, TSet<ITileInfo*> &outTilesLoading)
+{
+	outTilesLoading = inTilesShouldBeLoaded;
+	return;
+}
+
+TileLoadManager::TileLoadManager()
 {}
 
 //从应加载瓦片集合A，场景中已经加载瓦片集合B中，计算当前实际应该加载的瓦片集合C
 //从应加载瓦片集合A，场景中已经加载瓦片集合B中，计算当前实际应该卸载的瓦片集合D
 //C=A-B
 //D=B-A
-void TileGridLoadManager::GetLoadingTiles(const TSet<ITileInfo*> &inTilesShouldBeLoaded, TSet<ITileInfo*> &outTilesLoading, TSet<ITileInfo*> &outTilesUnloading)
+void TileLoadManager::GetLoadingTiles(const TSet<ITileInfo*> &inTilesShouldBeLoaded, TSet<ITileInfo*> &outTilesLoading, TSet<ITileInfo*> &outTilesUnloading)
 {
 	//更新loading集合
 	for (ITileInfo* thisTile : inTilesShouldBeLoaded)
 	{
-		bool thisTileShouldBeLoading = true;
-		TileInfo_Grid* thisTileInfo_Grid = (TileInfo_Grid*)thisTile;
-		if (thisTileInfo_Grid == NULL)
-			continue;
+		bool thisTileShouldBeLoading = true;	
 
 		for (ITileInfo* tileLoaded : this->loadedTileSet)
-		{
-			TileInfo_Grid* thatTileInfo_Grid = (TileInfo_Grid*)tileLoaded;
-			if (thatTileInfo_Grid == NULL)
-				continue;
-
-			if (thisTileInfo_Grid->Equal(thatTileInfo_Grid))
+		{		
+			if (thisTile->Equal(tileLoaded))
 			{
 				thisTileShouldBeLoading = false;
 				break;
@@ -43,17 +43,10 @@ void TileGridLoadManager::GetLoadingTiles(const TSet<ITileInfo*> &inTilesShouldB
 	//更新unloading集合
 	for (ITileInfo* tileLoaded : this->loadedTileSet)
 	{
-		bool thisTileShouldBeUnloading = true;
-		TileInfo_Grid* thisTileInfo_Grid = (TileInfo_Grid*)tileLoaded;
-		if (thisTileInfo_Grid == NULL)
-			continue;
-
+		bool thisTileShouldBeUnloading = true;	
 		for (ITileInfo* tileShouldBeLoading : inTilesShouldBeLoaded)
-		{
-			TileInfo_Grid* thatTileInfo_Grid = (TileInfo_Grid*)tileShouldBeLoading;
-			if (thatTileInfo_Grid == NULL)
-				continue;
-			if (thisTileInfo_Grid->Equal(thatTileInfo_Grid))
+		{			
+			if (tileLoaded->Equal(tileShouldBeLoading))
 			{
 				thisTileShouldBeUnloading = false;
 				break;
@@ -66,7 +59,7 @@ void TileGridLoadManager::GetLoadingTiles(const TSet<ITileInfo*> &inTilesShouldB
 
 //完成实际特定瓦片加载后的状态更新，更新已加载瓦片集合（loadedTileSet）
 //将loadedTile加入loadedTileSet
-void TileGridLoadManager::UpdateLoadedTile(ITileInfo* loadedTile)
+void TileLoadManager::UpdateLoadedTile(ITileInfo* loadedTile)
 {
 	bool thisTileHasBeenLoaded = false;
 
@@ -74,18 +67,11 @@ void TileGridLoadManager::UpdateLoadedTile(ITileInfo* loadedTile)
 	{
 		this->loadedTileSet.Add(loadedTile);
 		return;
-	}
-	TileInfo_Grid* thisLoadedTileInfo_Grid = (TileInfo_Grid*)loadedTile;
-	if (thisLoadedTileInfo_Grid == NULL)
-		return;
+	}	
 
 	for (ITileInfo* tileLoaded : this->loadedTileSet)
-	{
-		TileInfo_Grid* thisTileInfo_Grid = (TileInfo_Grid*)tileLoaded;
-		if (thisTileInfo_Grid == NULL)
-			continue;
-
-		if (thisLoadedTileInfo_Grid->Equal(thisTileInfo_Grid))
+	{	
+		if (loadedTile->Equal(tileLoaded))
 		{
 			thisTileHasBeenLoaded = true;
 			break;
@@ -97,18 +83,11 @@ void TileGridLoadManager::UpdateLoadedTile(ITileInfo* loadedTile)
 
 //完成实际特定瓦片卸载后的状态更新，更新已加载瓦片集合（loadedTileSet）
 //将unloadedTile从loadedTileSet中移除
-void TileGridLoadManager::UpdateUnloadedTile(ITileInfo* unloadedTile)
+void TileLoadManager::UpdateUnloadedTile(ITileInfo* unloadedTile)
 {
-	TileInfo_Grid* thisUnloadedTileInfo_Grid = (TileInfo_Grid*)unloadedTile;
-	if (thisUnloadedTileInfo_Grid == NULL)
-		return;
-
 	for (ITileInfo* tileLoaded : this->loadedTileSet)
-	{
-		TileInfo_Grid* thisTileInfo_Grid = (TileInfo_Grid*)tileLoaded;
-		if (thisTileInfo_Grid == NULL)
-			continue;
-		if (thisUnloadedTileInfo_Grid->Equal(thisTileInfo_Grid))
+	{		
+		if (unloadedTile->Equal(tileLoaded))
 		{
 			this->loadedTileSet.Remove(tileLoaded);
 			this->loadedTileSet.CompactStable();

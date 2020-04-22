@@ -5,7 +5,7 @@
 #include "Math/Vector.h"
 #include "Math/Rotator.h"
 
-
+//////////////////////////////////////////////////SceneCulling_CenterTileStrategy//////////////////////////////////////////////////
 SceneCulling_CenterTileStrategy::SceneCulling_CenterTileStrategy(CoordinateSystem* inCoordinateSystem)
 {
 	this->TileCoordinateSystem = (Sphere_CoordinateSystem*)inCoordinateSystem;
@@ -88,7 +88,8 @@ TileInfo_Grid SceneCulling_CenterTileStrategy::GetTileByDistance(CameraState cam
 		return tile;
 	}
 
-	return TileInfo_Grid::GetTileByLevelNumAndCoord(level_i, Geographic2D(Intersect.X, Intersect.Y));
+	//return TileInfo_Grid::GetTileByLevelNumAndCoord(level_i, Geographic2D(Intersect.X, Intersect.Y));
+	return TileInfo_Grid();
 }
 
 //通过相机射线，计算其与地球的交点
@@ -273,7 +274,7 @@ void SceneCulling_CenterTileStrategy::GetGeoRangeInScreen(const float meterPerDe
 //计算当前应该加载的瓦片
 void SceneCulling_CenterTileStrategy::GetTilesShouldbeLoaded(const CameraState &inCameraState, TSet<ITileInfo*> & outTileSet)
 {
-	//1，通过变换将ue相机状态转为地理相机状态
+	//1，通过变换将相机状态转为地理相机状态
 	this->currentCameraState = inCameraState;
 	this->currentGeoCameraLocation = this->TileCoordinateSystem->ToGeoCoordinateSystem(inCameraState.Location);
 	//FString Message = "X = " + FString::SanitizeFloat(FMath::RadiansToDegrees(this->GeoCameraState.Location.X)) + "; Y = " + FString::SanitizeFloat(FMath::RadiansToDegrees(this->GeoCameraState.Location.Y)) + "; Z = " + FString::SanitizeFloat(this->GeoCameraState.Location.Z);
@@ -360,3 +361,130 @@ void SceneCulling_CenterTileStrategy::GetTilesShouldbeLoaded(const CameraState &
 //	return resultTileSet;
 //}
 
+//////////////////////////////////////////////////SceneCulling_CenterTileStrategyOSGB/////////////////////////////////
+SceneCulling_CenterTileStrategyOSGB::SceneCulling_CenterTileStrategyOSGB(const FString txtFilePath)
+{
+	this->readOSGTree(txtFilePath,this->osgTree);
+
+}
+
+//读取osgtree
+void SceneCulling_CenterTileStrategyOSGB::readOSGTree(const FString txtFilePath, TArray<TileInfo_OSGB*> &osgTreeArray)
+{
+	return;
+}
+
+
+int SceneCulling_CenterTileStrategyOSGB::GetLevelbyHeight(float height)
+{
+	int level = -1;
+	if (height > 5060 && height <= 6850)
+		level = 1;
+	else if (height > 3680 && height <= 5060)
+		level = 2;
+	else if (height > 5060 && height <= 3680)
+		level = 3;
+	else if (height > 2650 && height <= 6850)
+		level = 4;
+	else if (height > 1830 && height <= 2650)
+		level = 5;
+	else if (height > 995 && height <= 1830)
+		level = 6;
+	else if (height > 494 && height <= 995)
+		level = 7;
+	else
+	{
+		level = 8;
+	}
+	return level;
+}
+
+
+//基于相机方位、屏幕分辨率计算当前屏幕下的实际需要载入的最精细瓦片级别
+float  SceneCulling_CenterTileStrategyOSGB::GetDegreePerPixelInScreen(const float meterPerDegree, const float pixelPerTile)
+{
+	//使用深圳市附近的参数作为参考，后续可以修改，地球上一度经度对应于多少米，不同纬度，值不一致，此处取深圳附近的数值
+	//实际运算时，该参数为纬度的函数
+	//float meterPerDegree = 111318.0;
+	//tile的pixel参数
+	//float pixelPerTile = 256;
+
+	//目前仅考虑相机位置作为相机射线与地面交点，相机与地面交点的距离用相机高度代替，后续会根据相机的方位具体来计算
+	//FVector geoCameraLocation = TileCoordinateSystem->ToGeoCoordinateSystem(this->currentCameraState.Location);
+	float distance = this->currentGeoCameraLocation.Z;
+
+
+	//屏幕宽度/长度对应的地理距离（单位，米）
+	float groundLengthInMeter = distance * FMath::Abs(FMath::Tan(this->currentCameraState.FOV * PI / 360.0)) * 2;
+	//屏幕宽度/长度对应的地理距离（单位，度）
+	float groundLengthInDegree = groundLengthInMeter / meterPerDegree;
+
+	//基于屏幕分辨率，确定屏幕单个像素对应于地理距离（单位，度）
+	float degreePerPixelInScreen = groundLengthInDegree / (FMath::Max(this->currentCameraState.screenResolution.X, this->currentCameraState.screenResolution.Y));
+
+	return degreePerPixelInScreen;
+}
+
+// 基于相机方位、屏幕分辨率计算当前屏幕下的实际需要载入的最精细瓦片级别, 基于此计算当前屏幕实际的经纬度范围
+//返回结果为四个点pt0(minX,minY) pt1(maxX,minY) pt2(maxX,maxY) pt3(minX,maxY)
+void SceneCulling_CenterTileStrategyOSGB::GetGeoRangeInScreen(const float meterPerDegree, const float pixelPerTile, TArray<FVector2D> &outGeoRange)
+{
+	//最精细的瓦片占整个屏幕范围比率
+	float finestRatio = 1.0;
+
+	FVector screenCenterPtInDegree = FVector(FMath::RadiansToDegrees(this->screenCenterPt.X), FMath::RadiansToDegrees(this->screenCenterPt.Y), screenCenterPt.Z);
+
+	float pixelLengthInDegree = this->GetDegreePerPixelInScreen(meterPerDegree, pixelPerTile);
+
+	if (pixelLengthInDegree == 0 || this->currentCameraState.screenResolution.X == 0 || this->currentCameraState.screenResolution.Y == 0)
+		return;
+
+	FVector2D minPt = FVector2D(screenCenterPtInDegree.X - (this->currentCameraState.screenResolution.X * pixelLengthInDegree) * finestRatio*0.5
+		, screenCenterPtInDegree.Y - (this->currentCameraState.screenResolution.Y * pixelLengthInDegree) * finestRatio*0.5);
+	//考虑零度经线、南北极极端情况
+	if (minPt.X < -180.0)
+		minPt.X += 360.0;
+	if (minPt.Y < -90.0)
+		minPt.Y = (minPt.Y + 180.0)*-1.0;
+	outGeoRange.Add(minPt);
+
+
+	FVector2D maxPt = FVector2D(screenCenterPtInDegree.X + (this->currentCameraState.screenResolution.X * pixelLengthInDegree) * finestRatio*0.5
+		, screenCenterPtInDegree.Y + (this->currentCameraState.screenResolution.Y * pixelLengthInDegree) * finestRatio*0.5);
+	//考虑零度经线、南北极极端情况
+	if (maxPt.X > 180.0)
+		maxPt.X -= 360.0;
+	if (maxPt.Y > 90.0)
+		maxPt.Y = 180.0 - maxPt.Y;
+
+	outGeoRange.Add(FVector2D(maxPt.X, minPt.Y));
+	outGeoRange.Add(maxPt);
+	outGeoRange.Add(FVector2D(minPt.X, maxPt.Y));
+}
+
+
+
+void SceneCulling_CenterTileStrategyOSGB::GetTilesShouldbeLoaded(const CameraState &inCameraState, TSet<ITileInfo*> & outTileSet)
+{
+	if (this->osgTree.Num() == 0)
+		return;
+	float height = inCameraState.Location.Z;
+
+	TArray<FVector2D> currentGeoRange;
+	this->GetGeoRangeInScreen(111318.0,256, currentGeoRange);
+
+	int level = GetLevelbyHeight(height);
+
+	for (TileInfo_OSGB* currentTile : this->osgTree)
+	{
+		if (currentTile->levelNum != level)
+			continue;
+		else
+		{
+			if (currentTile->IsGeoRangeIntersect(currentGeoRange))
+			{
+				outTileSet.Add(currentTile);
+			}
+		}
+	}
+}

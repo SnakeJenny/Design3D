@@ -61,7 +61,7 @@ GridTileLayer::GridTileLayer(const FString layerSourcePath, AActor* pActor, AVie
 	this->pViewerCameraController = inViewerCameraController;
 	this->sceneCulling = new SceneCulling_CenterTileStrategy(inCoordinateSystem);
 	this->tileLoadStrategy = new TileGridLoadRefiningStrategy();
-	this->loadManager = new TileGridLoadManager();
+	this->loadManager = new TileLoadManager();
 	this->tileLoadTaskExcutor = new GridTileLoadTaskExcutor(layerSourcePath, pActor);
 
 	inViewerCameraController->pISceneCulling = this->sceneCulling;

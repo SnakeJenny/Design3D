@@ -18,42 +18,39 @@ public:
 	void GetRefiningLoadingTiles(const TSet<ITileInfo*> &inTilesShouldBeLoaded, TSet<ITileInfo*> &outTilesLoading) ;
 };
 
-//负责瓦片加载管理逻辑的基础接口类
-class ITileLoadManager
+
+class OSGB_GridLoadRefiningStrategy :public ITileLoadRefiningStrategy
 {
 public:
-	virtual void GetLoadingTiles(const TSet<ITileInfo*> &inTilesShouldBeLoaded, TSet<ITileInfo*> &outTilesLoading, TSet<ITileInfo*> &outTilesUnloading)=0;
-
-	virtual void UpdateLoadedTile(ITileInfo* loadedTile)=0;
-
-	virtual void UpdateUnloadedTile(ITileInfo* unloadedTile)=0;
-
-	//virtual ~ITileLoadManager();
+	void GetRefiningLoadingTiles(const TSet<ITileInfo*> &inTilesShouldBeLoaded, TSet<ITileInfo*> &outTilesLoading);
 };
 
-//格网瓦片的加载管理类
-class TileGridLoadManager:public ITileLoadManager
+//负责瓦片加载管理逻辑的基础接口类
+class TileLoadManager
 {
 public:
-	//默认构造函数
-	TileGridLoadManager();	
+	TileLoadManager();
+
 	//从应加载瓦片集合A，场景中已经加载瓦片集合B中，计算当前实际应该加载的瓦片集合C
 	//从应加载瓦片集合A，场景中已经加载瓦片集合B中，计算当前实际应该卸载的瓦片集合D
 	//C=A-B
 	//D=B-A
-	void GetLoadingTiles(const TSet<ITileInfo*> &inTilesShouldBeLoaded, TSet<ITileInfo*> &outTilesLoading, TSet<ITileInfo*> &outTilesUnloading) override;
+	void GetLoadingTiles(const TSet<ITileInfo*> &inTilesShouldBeLoaded, TSet<ITileInfo*> &outTilesLoading, TSet<ITileInfo*> &outTilesUnloading);
 
 	//完成实际特定瓦片加载后的状态更新，更新已加载瓦片集合（loadedTileSet）
 	//将loadedTile加入loadedTileSet
-	void UpdateLoadedTile(ITileInfo* loadedTile) ;
+	void UpdateLoadedTile(ITileInfo* loadedTile);
 
 	//完成实际特定瓦片卸载后的状态更新，更新已加载瓦片集合（loadedTileSet）
 	//将unloadedTile从loadedTileSet中移除
 	void UpdateUnloadedTile(ITileInfo* unloadedTile);
 
+	//virtual ~ITileLoadManager();
+
+
 private:
 
-	TSet<ITileInfo*> loadedTileSet;	
+	TSet<ITileInfo*> loadedTileSet;
 
 	//描述该节点的加载状态，考虑放到 tileloadmanager类中
 	enum tileLoadState
@@ -62,5 +59,4 @@ private:
 		UNLOADED,//应加载，但未加载		
 		REPLACED_BY_CHILDREN,//已加载，已被子节点替换
 	};
-
 };

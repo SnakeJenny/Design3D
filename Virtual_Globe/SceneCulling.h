@@ -3,6 +3,7 @@
 #include "CoordinateSystem.h"
 #include "TileInfo.h"
 #include "Engine/Engine.h"
+#include "Misc/FileHelper.h"
 #include <queue>
 
 
@@ -56,10 +57,7 @@ public:
 
 	//基于相机方位、屏幕分辨率计算当前屏幕下的实际需要载入的最精细瓦片级别
 	float  GetDegreePerPixelInScreen(const float meterPerDegree, const float pixelPerTile);
-
 private:
-
-	
 
 	TileInfo_Grid* rootTile;
 
@@ -82,4 +80,44 @@ private:
 	int GetTilesLevelInScreen(const float meterPerDegree, const float pixelPerTile);
 
 	void GetTilesByBFS_Iterations(TSet<ITileInfo*> &outTileSet);	
+};
+
+
+class SceneCulling_CenterTileStrategyOSGB :ISceneCulling
+{
+public:
+
+	Sphere_CoordinateSystem TileCoordinateSystem;
+
+	SceneCulling_CenterTileStrategyOSGB(const FString txtFilePath);
+
+	int GetLevelbyHeight(float height);
+
+	//根据OSG瓦片场景树（通过外部txt文件获取），相机位置，屏幕分辨率，
+	//计算当前视口应该加载并显示的瓦片数据集
+	//本方法基于多叉树索引
+	void GetTilesShouldbeLoaded(const CameraState &inCameraState, TSet<ITileInfo*> & outTileSet);
+
+	//TArray<FString> GetTileByCameraState(const CameraState &inCameraState, TArray<TileInfo_OSGB> osgTree);
+
+private:
+
+	CameraState currentCameraState;
+
+	TileInfo_Grid* rootTile;
+
+	TArray<TileInfo_OSGB*> osgTree;
+
+	
+	TArray<FVector2D>  GeoRangeInScreen;
+
+	FVector screenCenterPt;
+
+	void readOSGTree(const FString txtFilePath, TArray<TileInfo_OSGB*> &osgTreeArray);
+
+	//基于相机方位、屏幕分辨率计算当前屏幕下的实际需要载入的最精细瓦片级别
+	float GetDegreePerPixelInScreen(const float meterPerDegree, const float pixelPerTile);
+
+	void  GetGeoRangeInScreen(const float meterPerDegree, const float pixelPerTile, TArray<FVector2D> &outGeoRange);
+	
 };

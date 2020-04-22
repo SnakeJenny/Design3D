@@ -1,7 +1,7 @@
 #include "TileInfo.h"
 
 /////////////////////////////////////////////////////////////TileInfo_Grid/////////////////////////////////////////////////////////////
-TileInfo_Grid TileInfo_Grid::GetTileByLevelNumAndCoord(const int32 thisLevelNum, const Geographic2D Coordinate)
+TileInfo_Grid GetTileByLevelNumAndCoord(const int32 thisLevelNum, const Geographic2D Coordinate)
 {
 	int rowNum = pow(2, thisLevelNum);
 	// 根据输入点，确定该点所属行列号，
@@ -128,10 +128,14 @@ TileInfo_Grid* TileInfo_Grid::GetParent()
 }
 
 //判断两个瓦片是否是同一个瓦片
-bool TileInfo_Grid::Equal(const TileInfo_Grid *other)
+bool TileInfo_Grid::Equal(const ITileInfo *other)
 {
-	if (this->LevelNum == other->LevelNum && this->Row == other->Row && this->Col == other->Col)
-		return true;
+	TileInfo_Grid* otherGrid = (TileInfo_Grid*)other;
+	if (otherGrid)
+	{
+		if (this->LevelNum == otherGrid->LevelNum && this->Row == otherGrid->Row && this->Col == otherGrid->Col)
+			return true;
+	}
 	return false;
 }
 
@@ -531,3 +535,56 @@ void TileInfo_Grid::GetNeighbor_15(TArray<TileInfo_Grid*>& neighbor_15)
 		neighbor_15.Add(this->GetRightTile()->GetDownTile());
 	}
 }
+
+
+/////////////////////////////////////////////////////////////TileInfo_OSGB////////////////////////////////////////
+
+//判断两个osgbtile是否是 同一个，依据他们id名称fstring判断
+bool TileInfo_OSGB::Equal(ITileInfo* otherTile)
+{
+	TileInfo_OSGB* otherOSGB = (TileInfo_OSGB*)otherTile;
+	if (otherOSGB)
+	{
+		if (this->id.Equals(id))
+			return true;
+	}	
+	return false;
+}
+
+
+//判断给定地理范围（矩形）是否与本瓦片相交
+bool TileInfo_OSGB::IsGeoRangeIntersect(const TArray<FVector2D> geoRange)
+{
+	float MaxLeft = 0;
+	float MaxBottom = 0;
+	float MinRight = 0;
+	float MinTop = 0;
+
+	//計算兩矩形可能的相交矩形的邊界  
+	MaxLeft = FMath::Max(this->boudingBox[1].X, geoRange[0].X);
+	MaxBottom = FMath::Max(this->boudingBox[1].Y, geoRange[0].Y);
+	MinRight = FMath::Min(this->boudingBox[0].X, geoRange[2].X);
+	MinTop = FMath::Min(this->boudingBox[0].Y, geoRange[2].Y);
+	// 判斷是否相交  
+	if (MaxLeft > MinRight || MaxBottom > MinTop)
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+
+//用于记录瓦片存储的路径
+FString TileInfo_OSGB::GetTilePath() { return FString(); }
+
+//返回当前瓦片相对于外部坐标系统的变化矩阵
+FTransform TileInfo_OSGB::GetTileTransform() { return this->tileTransform; }
+
+//判定该瓦片文件是否存在
+bool TileInfo_OSGB::IsTileFileExist() { return false; }
+
+//返回瓦片信息
+FString TileInfo_OSGB::TileToString() { return FString(); }
